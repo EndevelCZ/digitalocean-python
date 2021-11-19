@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.certificate import Certificate
+import digitalocean_client
+from digitalocean_client.model.certificate import Certificate
 globals()['Certificate'] = Certificate
-from openapi_client.model.inline_response201 import InlineResponse201
+from digitalocean_client.model.inline_response201 import InlineResponse201
 
 
 class TestInlineResponse201(unittest.TestCase):

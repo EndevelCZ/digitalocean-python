@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.update_registry import UpdateRegistry
+import digitalocean_client
+from digitalocean_client.model.update_registry import UpdateRegistry
 
 
 class TestUpdateRegistry(unittest.TestCase):

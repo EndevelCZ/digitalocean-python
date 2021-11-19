@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.node_status import NodeStatus
+import digitalocean_client
+from digitalocean_client.model.node_status import NodeStatus
 globals()['NodeStatus'] = NodeStatus
-from openapi_client.model.node import Node
+from digitalocean_client.model.node import Node
 
 
 class TestNode(unittest.TestCase):

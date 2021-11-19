@@ -12,16 +12,16 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_spec import AppSpec
-from openapi_client.model.apps_deployment import AppsDeployment
-from openapi_client.model.apps_domain import AppsDomain
-from openapi_client.model.apps_region import AppsRegion
+import digitalocean_client
+from digitalocean_client.model.app_spec import AppSpec
+from digitalocean_client.model.apps_deployment import AppsDeployment
+from digitalocean_client.model.apps_domain import AppsDomain
+from digitalocean_client.model.apps_region import AppsRegion
 globals()['AppSpec'] = AppSpec
 globals()['AppsDeployment'] = AppsDeployment
 globals()['AppsDomain'] = AppsDomain
 globals()['AppsRegion'] = AppsRegion
-from openapi_client.model.app import App
+from digitalocean_client.model.app import App
 
 
 class TestApp(unittest.TestCase):

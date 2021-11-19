@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.repository_tag import RepositoryTag
+import digitalocean_client
+from digitalocean_client.model.repository_tag import RepositoryTag
 globals()['RepositoryTag'] = RepositoryTag
-from openapi_client.model.repository import Repository
+from digitalocean_client.model.repository import Repository
 
 
 class TestRepository(unittest.TestCase):

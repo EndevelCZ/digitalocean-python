@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_domain_phase import AppsDomainPhase
+import digitalocean_client
+from digitalocean_client.model.apps_domain_phase import AppsDomainPhase
 
 
 class TestAppsDomainPhase(unittest.TestCase):

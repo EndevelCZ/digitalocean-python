@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.distribution import Distribution
-from openapi_client.model.regions_array import RegionsArray
-from openapi_client.model.tags_array import TagsArray
+import digitalocean_client
+from digitalocean_client.model.distribution import Distribution
+from digitalocean_client.model.regions_array import RegionsArray
+from digitalocean_client.model.tags_array import TagsArray
 globals()['Distribution'] = Distribution
 globals()['RegionsArray'] = RegionsArray
 globals()['TagsArray'] = TagsArray
-from openapi_client.model.image import Image
+from digitalocean_client.model.image import Image
 
 
 class TestImage(unittest.TestCase):

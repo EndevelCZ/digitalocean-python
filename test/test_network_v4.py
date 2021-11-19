@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.network_v4 import NetworkV4
+import digitalocean_client
+from digitalocean_client.model.network_v4 import NetworkV4
 
 
 class TestNetworkV4(unittest.TestCase):

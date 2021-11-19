@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.network_v4 import NetworkV4
-from openapi_client.model.network_v6 import NetworkV6
+import digitalocean_client
+from digitalocean_client.model.network_v4 import NetworkV4
+from digitalocean_client.model.network_v6 import NetworkV6
 globals()['NetworkV4'] = NetworkV4
 globals()['NetworkV6'] = NetworkV6
-from openapi_client.model.droplet_networks import DropletNetworks
+from digitalocean_client.model.droplet_networks import DropletNetworks
 
 
 class TestDropletNetworks(unittest.TestCase):

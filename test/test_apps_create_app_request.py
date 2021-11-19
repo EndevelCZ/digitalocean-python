@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_spec import AppSpec
+import digitalocean_client
+from digitalocean_client.model.app_spec import AppSpec
 globals()['AppSpec'] = AppSpec
-from openapi_client.model.apps_create_app_request import AppsCreateAppRequest
+from digitalocean_client.model.apps_create_app_request import AppsCreateAppRequest
 
 
 class TestAppsCreateAppRequest(unittest.TestCase):

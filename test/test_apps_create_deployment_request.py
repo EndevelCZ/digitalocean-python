@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_create_deployment_request import AppsCreateDeploymentRequest
+import digitalocean_client
+from digitalocean_client.model.apps_create_deployment_request import AppsCreateDeploymentRequest
 
 
 class TestAppsCreateDeploymentRequest(unittest.TestCase):

@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.image_action_base import ImageActionBase
-from openapi_client.model.image_action_transfer_all_of import ImageActionTransferAllOf
-from openapi_client.model.region_slug import RegionSlug
+import digitalocean_client
+from digitalocean_client.model.image_action_base import ImageActionBase
+from digitalocean_client.model.image_action_transfer_all_of import ImageActionTransferAllOf
+from digitalocean_client.model.region_slug import RegionSlug
 globals()['ImageActionBase'] = ImageActionBase
 globals()['ImageActionTransferAllOf'] = ImageActionTransferAllOf
 globals()['RegionSlug'] = RegionSlug
-from openapi_client.model.image_action_transfer import ImageActionTransfer
+from digitalocean_client.model.image_action_transfer import ImageActionTransfer
 
 
 class TestImageActionTransfer(unittest.TestCase):

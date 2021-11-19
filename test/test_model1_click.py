@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.model1_click import Model1Click
+import digitalocean_client
+from digitalocean_client.model.model1_click import Model1Click
 
 
 class TestModel1Click(unittest.TestCase):

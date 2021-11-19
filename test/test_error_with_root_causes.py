@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.error_with_root_causes import ErrorWithRootCauses
+import digitalocean_client
+from digitalocean_client.model.error_with_root_causes import ErrorWithRootCauses
 
 
 class TestErrorWithRootCauses(unittest.TestCase):

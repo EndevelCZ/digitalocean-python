@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.vpc_default import VpcDefault
+import digitalocean_client
+from digitalocean_client.model.vpc_default import VpcDefault
 
 
 class TestVpcDefault(unittest.TestCase):

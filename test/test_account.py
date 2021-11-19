@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.account import Account
+import digitalocean_client
+from digitalocean_client.model.account import Account
 
 
 class TestAccount(unittest.TestCase):

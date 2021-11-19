@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.maintenance_policy import MaintenancePolicy
+import digitalocean_client
+from digitalocean_client.model.maintenance_policy import MaintenancePolicy
 
 
 class TestMaintenancePolicy(unittest.TestCase):

@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.region import Region
+import digitalocean_client
+from digitalocean_client.model.region import Region
 globals()['Region'] = Region
-from openapi_client.model.action import Action
+from digitalocean_client.model.action import Action
 
 
 class TestAction(unittest.TestCase):

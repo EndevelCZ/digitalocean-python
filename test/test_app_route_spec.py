@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_route_spec import AppRouteSpec
+import digitalocean_client
+from digitalocean_client.model.app_route_spec import AppRouteSpec
 
 
 class TestAppRouteSpec(unittest.TestCase):

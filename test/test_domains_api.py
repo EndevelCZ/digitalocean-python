@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.domains_api import DomainsApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.domains_api import DomainsApi  # noqa: E501
 
 
 class TestDomainsApi(unittest.TestCase):

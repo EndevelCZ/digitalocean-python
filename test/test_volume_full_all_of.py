@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.volume_full_all_of import VolumeFullAllOf
+import digitalocean_client
+from digitalocean_client.model.volume_full_all_of import VolumeFullAllOf
 
 
 class TestVolumeFullAllOf(unittest.TestCase):

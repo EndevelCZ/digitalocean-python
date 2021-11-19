@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.validate_registry import ValidateRegistry
+import digitalocean_client
+from digitalocean_client.model.validate_registry import ValidateRegistry
 
 
 class TestValidateRegistry(unittest.TestCase):

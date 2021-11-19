@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.image_actions_api import ImageActionsApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.image_actions_api import ImageActionsApi  # noqa: E501
 
 
 class TestImageActionsApi(unittest.TestCase):

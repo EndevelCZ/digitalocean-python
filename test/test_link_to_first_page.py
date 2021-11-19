@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.link_to_first_page import LinkToFirstPage
+import digitalocean_client
+from digitalocean_client.model.link_to_first_page import LinkToFirstPage
 
 
 class TestLinkToFirstPage(unittest.TestCase):

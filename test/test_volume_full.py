@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.tags_array import TagsArray
-from openapi_client.model.volume_base import VolumeBase
-from openapi_client.model.volume_full_all_of import VolumeFullAllOf
+import digitalocean_client
+from digitalocean_client.model.tags_array import TagsArray
+from digitalocean_client.model.volume_base import VolumeBase
+from digitalocean_client.model.volume_full_all_of import VolumeFullAllOf
 globals()['TagsArray'] = TagsArray
 globals()['VolumeBase'] = VolumeBase
 globals()['VolumeFullAllOf'] = VolumeFullAllOf
-from openapi_client.model.volume_full import VolumeFull
+from digitalocean_client.model.volume_full import VolumeFull
 
 
 class TestVolumeFull(unittest.TestCase):

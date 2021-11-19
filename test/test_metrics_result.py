@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.metrics_result import MetricsResult
+import digitalocean_client
+from digitalocean_client.model.metrics_result import MetricsResult
 
 
 class TestMetricsResult(unittest.TestCase):

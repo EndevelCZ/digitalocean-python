@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_action_rebuild_all_of import DropletActionRebuildAllOf
+import digitalocean_client
+from digitalocean_client.model.droplet_action_rebuild_all_of import DropletActionRebuildAllOf
 
 
 class TestDropletActionRebuildAllOf(unittest.TestCase):

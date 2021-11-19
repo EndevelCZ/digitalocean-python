@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.resource import Resource
+import digitalocean_client
+from digitalocean_client.model.resource import Resource
 globals()['Resource'] = Resource
-from openapi_client.model.inline_response2006 import InlineResponse2006
+from digitalocean_client.model.inline_response2006 import InlineResponse2006
 
 
 class TestInlineResponse2006(unittest.TestCase):

@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.resource_links import ResourceLinks
-from openapi_client.model.urn import Urn
+import digitalocean_client
+from digitalocean_client.model.resource_links import ResourceLinks
+from digitalocean_client.model.urn import Urn
 globals()['ResourceLinks'] = ResourceLinks
 globals()['Urn'] = Urn
-from openapi_client.model.resource import Resource
+from digitalocean_client.model.resource import Resource
 
 
 class TestResource(unittest.TestCase):

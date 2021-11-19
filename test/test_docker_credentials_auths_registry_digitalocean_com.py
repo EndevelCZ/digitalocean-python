@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.docker_credentials_auths_registry_digitalocean_com import DockerCredentialsAuthsRegistryDigitaloceanCom
+import digitalocean_client
+from digitalocean_client.model.docker_credentials_auths_registry_digitalocean_com import DockerCredentialsAuthsRegistryDigitaloceanCom
 
 
 class TestDockerCredentialsAuthsRegistryDigitaloceanCom(unittest.TestCase):

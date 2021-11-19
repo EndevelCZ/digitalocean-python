@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_deployment_phase import AppsDeploymentPhase
+import digitalocean_client
+from digitalocean_client.model.apps_deployment_phase import AppsDeploymentPhase
 
 
 class TestAppsDeploymentPhase(unittest.TestCase):

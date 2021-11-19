@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.cluster_status import ClusterStatus
+import digitalocean_client
+from digitalocean_client.model.cluster_status import ClusterStatus
 
 
 class TestClusterStatus(unittest.TestCase):

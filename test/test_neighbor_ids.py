@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.neighbor_ids import NeighborIds
+import digitalocean_client
+from digitalocean_client.model.neighbor_ids import NeighborIds
 
 
 class TestNeighborIds(unittest.TestCase):

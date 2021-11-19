@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_image_source_spec import AppsImageSourceSpec
+import digitalocean_client
+from digitalocean_client.model.apps_image_source_spec import AppsImageSourceSpec
 
 
 class TestAppsImageSourceSpec(unittest.TestCase):

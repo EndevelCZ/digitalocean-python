@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.floating_ips_api import FloatingIPsApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.floating_ips_api import FloatingIPsApi  # noqa: E501
 
 
 class TestFloatingIPsApi(unittest.TestCase):

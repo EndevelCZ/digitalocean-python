@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.new_volume_ext4 import NewVolumeExt4
-from openapi_client.model.new_volume_xfs import NewVolumeXfs
+import digitalocean_client
+from digitalocean_client.model.new_volume_ext4 import NewVolumeExt4
+from digitalocean_client.model.new_volume_xfs import NewVolumeXfs
 globals()['NewVolumeExt4'] = NewVolumeExt4
 globals()['NewVolumeXfs'] = NewVolumeXfs
-from openapi_client.model.volume_write_file_system_type import VolumeWriteFileSystemType
+from digitalocean_client.model.volume_write_file_system_type import VolumeWriteFileSystemType
 
 
 class TestVolumeWriteFileSystemType(unittest.TestCase):

@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.certificate_create_base import CertificateCreateBase
-from openapi_client.model.certificate_request_lets_encrypt_all_of import CertificateRequestLetsEncryptAllOf
+import digitalocean_client
+from digitalocean_client.model.certificate_create_base import CertificateCreateBase
+from digitalocean_client.model.certificate_request_lets_encrypt_all_of import CertificateRequestLetsEncryptAllOf
 globals()['CertificateCreateBase'] = CertificateCreateBase
 globals()['CertificateRequestLetsEncryptAllOf'] = CertificateRequestLetsEncryptAllOf
-from openapi_client.model.certificate_request_lets_encrypt import CertificateRequestLetsEncrypt
+from digitalocean_client.model.certificate_request_lets_encrypt import CertificateRequestLetsEncrypt
 
 
 class TestCertificateRequestLetsEncrypt(unittest.TestCase):

@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.load_balancers_api import LoadBalancersApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.load_balancers_api import LoadBalancersApi  # noqa: E501
 
 
 class TestLoadBalancersApi(unittest.TestCase):

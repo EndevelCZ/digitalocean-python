@@ -12,20 +12,20 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_networks import DropletNetworks
-from openapi_client.model.droplet_next_backup_window import DropletNextBackupWindow
-from openapi_client.model.image import Image
-from openapi_client.model.kernel import Kernel
-from openapi_client.model.region import Region
-from openapi_client.model.size import Size
+import digitalocean_client
+from digitalocean_client.model.droplet_networks import DropletNetworks
+from digitalocean_client.model.droplet_next_backup_window import DropletNextBackupWindow
+from digitalocean_client.model.image import Image
+from digitalocean_client.model.kernel import Kernel
+from digitalocean_client.model.region import Region
+from digitalocean_client.model.size import Size
 globals()['DropletNetworks'] = DropletNetworks
 globals()['DropletNextBackupWindow'] = DropletNextBackupWindow
 globals()['Image'] = Image
 globals()['Kernel'] = Kernel
 globals()['Region'] = Region
 globals()['Size'] = Size
-from openapi_client.model.droplet import Droplet
+from digitalocean_client.model.droplet import Droplet
 
 
 class TestDroplet(unittest.TestCase):

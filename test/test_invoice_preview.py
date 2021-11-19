@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.invoice_preview import InvoicePreview
+import digitalocean_client
+from digitalocean_client.model.invoice_preview import InvoicePreview
 
 
 class TestInvoicePreview(unittest.TestCase):

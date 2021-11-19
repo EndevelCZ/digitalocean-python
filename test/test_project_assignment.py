@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.urn import Urn
+import digitalocean_client
+from digitalocean_client.model.urn import Urn
 globals()['Urn'] = Urn
-from openapi_client.model.project_assignment import ProjectAssignment
+from digitalocean_client.model.project_assignment import ProjectAssignment
 
 
 class TestProjectAssignment(unittest.TestCase):

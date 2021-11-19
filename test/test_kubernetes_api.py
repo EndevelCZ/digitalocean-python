@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.kubernetes_api import KubernetesApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.kubernetes_api import KubernetesApi  # noqa: E501
 
 
 class TestKubernetesApi(unittest.TestCase):

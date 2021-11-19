@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.alert_policy import AlertPolicy
+import digitalocean_client
+from digitalocean_client.model.alert_policy import AlertPolicy
 globals()['AlertPolicy'] = AlertPolicy
-from openapi_client.model.list_alert_policy import ListAlertPolicy
+from digitalocean_client.model.list_alert_policy import ListAlertPolicy
 
 
 class TestListAlertPolicy(unittest.TestCase):

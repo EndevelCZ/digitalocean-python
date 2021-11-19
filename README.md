@@ -1,4 +1,4 @@
-# openapi-client
+# Digital ocean openapi-client
 # Introduction
 
 The DigitalOcean API allows you to manage Droplets and resources within the
@@ -442,7 +442,7 @@ configuration = openapi_client.Configuration(
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = 1_click_applications_api.1ClickApplicationsApi(api_client)
+    api_instance = 1_click_applications_api.ClickApplicationsApi(api_client)
     model1_click_create = Model1ClickCreate(
         addon_slugs=["kube-state-metrics","loki"],
         cluster_uuid="50a994b6-c303-438f-9495-7e896cfe6b08",
@@ -453,7 +453,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         api_response = api_instance.install_kubernetes(model1_click_create)
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling 1ClickApplicationsApi->install_kubernetes: %s\n" % e)
+        print("Exception when calling ClickApplicationsApi->install_kubernetes: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -462,8 +462,8 @@ All URIs are relative to *https://api.digitalocean.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*1ClickApplicationsApi* | [**install_kubernetes**](docs/1ClickApplicationsApi.md#install_kubernetes) | **POST** /v2/1-clicks/kubernetes | Install Kubernetes 1-Click Applications
-*1ClickApplicationsApi* | [**list**](docs/1ClickApplicationsApi.md#list) | **GET** /v2/1-clicks | List 1-Click Applications
+*ClickApplicationsApi* | [**install_kubernetes**](docs/ClickApplicationsApi.md#install_kubernetes) | **POST** /v2/1-clicks/kubernetes | Install Kubernetes 1-Click Applications
+*ClickApplicationsApi* | [**list**](docs/ClickApplicationsApi.md#list) | **GET** /v2/1-clicks | List 1-Click Applications
 *AccountApi* | [**get_user_information**](docs/AccountApi.md#get_user_information) | **GET** /v2/account | Get User Information
 *ActionsApi* | [**get_action**](docs/ActionsApi.md#get_action) | **GET** /v2/actions/{action_id} | Retrieve an Existing Action
 *ActionsApi* | [**list_all_actions**](docs/ActionsApi.md#list_all_actions) | **GET** /v2/actions | List All Actions

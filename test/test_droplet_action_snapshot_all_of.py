@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_action_snapshot_all_of import DropletActionSnapshotAllOf
+import digitalocean_client
+from digitalocean_client.model.droplet_action_snapshot_all_of import DropletActionSnapshotAllOf
 
 
 class TestDropletActionSnapshotAllOf(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.billing_history import BillingHistory
+import digitalocean_client
+from digitalocean_client.model.billing_history import BillingHistory
 
 
 class TestBillingHistory(unittest.TestCase):

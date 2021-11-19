@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.distribution import Distribution
+import digitalocean_client
+from digitalocean_client.model.distribution import Distribution
 
 
 class TestDistribution(unittest.TestCase):

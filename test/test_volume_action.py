@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.action import Action
-from openapi_client.model.region import Region
-from openapi_client.model.volume_action_all_of import VolumeActionAllOf
+import digitalocean_client
+from digitalocean_client.model.action import Action
+from digitalocean_client.model.region import Region
+from digitalocean_client.model.volume_action_all_of import VolumeActionAllOf
 globals()['Action'] = Action
 globals()['Region'] = Region
 globals()['VolumeActionAllOf'] = VolumeActionAllOf
-from openapi_client.model.volume_action import VolumeAction
+from digitalocean_client.model.volume_action import VolumeAction
 
 
 class TestVolumeAction(unittest.TestCase):

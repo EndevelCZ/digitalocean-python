@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.vpc_updatable import VpcUpdatable
+import digitalocean_client
+from digitalocean_client.model.vpc_updatable import VpcUpdatable
 
 
 class TestVpcUpdatable(unittest.TestCase):

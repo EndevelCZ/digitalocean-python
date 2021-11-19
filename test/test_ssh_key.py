@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.ssh_key import SshKey
+import digitalocean_client
+from digitalocean_client.model.ssh_key import SshKey
 
 
 class TestSshKey(unittest.TestCase):

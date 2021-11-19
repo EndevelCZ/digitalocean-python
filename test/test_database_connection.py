@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.database_connection import DatabaseConnection
+import digitalocean_client
+from digitalocean_client.model.database_connection import DatabaseConnection
 
 
 class TestDatabaseConnection(unittest.TestCase):

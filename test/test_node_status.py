@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.node_status import NodeStatus
+import digitalocean_client
+from digitalocean_client.model.node_status import NodeStatus
 
 
 class TestNodeStatus(unittest.TestCase):

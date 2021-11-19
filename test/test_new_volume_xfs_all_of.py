@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.region_slug import RegionSlug
+import digitalocean_client
+from digitalocean_client.model.region_slug import RegionSlug
 globals()['RegionSlug'] = RegionSlug
-from openapi_client.model.new_volume_xfs_all_of import NewVolumeXfsAllOf
+from digitalocean_client.model.new_volume_xfs_all_of import NewVolumeXfsAllOf
 
 
 class TestNewVolumeXfsAllOf(unittest.TestCase):

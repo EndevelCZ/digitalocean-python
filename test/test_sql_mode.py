@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.sql_mode import SqlMode
+import digitalocean_client
+from digitalocean_client.model.sql_mode import SqlMode
 
 
 class TestSqlMode(unittest.TestCase):

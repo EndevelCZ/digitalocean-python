@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.destroyed_associated_resource import DestroyedAssociatedResource
+import digitalocean_client
+from digitalocean_client.model.destroyed_associated_resource import DestroyedAssociatedResource
 globals()['DestroyedAssociatedResource'] = DestroyedAssociatedResource
-from openapi_client.model.associated_resource_status_resources import AssociatedResourceStatusResources
+from digitalocean_client.model.associated_resource_status_resources import AssociatedResourceStatusResources
 
 
 class TestAssociatedResourceStatusResources(unittest.TestCase):

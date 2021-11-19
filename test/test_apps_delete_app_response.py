@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_delete_app_response import AppsDeleteAppResponse
+import digitalocean_client
+from digitalocean_client.model.apps_delete_app_response import AppsDeleteAppResponse
 
 
 class TestAppsDeleteAppResponse(unittest.TestCase):

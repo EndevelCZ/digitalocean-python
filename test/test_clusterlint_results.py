@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.clusterlint_results_diagnostics import ClusterlintResultsDiagnostics
+import digitalocean_client
+from digitalocean_client.model.clusterlint_results_diagnostics import ClusterlintResultsDiagnostics
 globals()['ClusterlintResultsDiagnostics'] = ClusterlintResultsDiagnostics
-from openapi_client.model.clusterlint_results import ClusterlintResults
+from digitalocean_client.model.clusterlint_results import ClusterlintResults
 
 
 class TestClusterlintResults(unittest.TestCase):

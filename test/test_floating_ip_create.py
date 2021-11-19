@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.assign_to_droplet import AssignToDroplet
-from openapi_client.model.reserve_to_region import ReserveToRegion
+import digitalocean_client
+from digitalocean_client.model.assign_to_droplet import AssignToDroplet
+from digitalocean_client.model.reserve_to_region import ReserveToRegion
 globals()['AssignToDroplet'] = AssignToDroplet
 globals()['ReserveToRegion'] = ReserveToRegion
-from openapi_client.model.floating_ip_create import FloatingIpCreate
+from digitalocean_client.model.floating_ip_create import FloatingIpCreate
 
 
 class TestFloatingIpCreate(unittest.TestCase):

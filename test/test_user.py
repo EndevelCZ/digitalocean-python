@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.user_kubernetes_cluster_user import UserKubernetesClusterUser
+import digitalocean_client
+from digitalocean_client.model.user_kubernetes_cluster_user import UserKubernetesClusterUser
 globals()['UserKubernetesClusterUser'] = UserKubernetesClusterUser
-from openapi_client.model.user import User
+from digitalocean_client.model.user import User
 
 
 class TestUser(unittest.TestCase):

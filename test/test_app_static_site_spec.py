@@ -12,16 +12,16 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_component_base import AppComponentBase
-from openapi_client.model.app_route_spec import AppRouteSpec
-from openapi_client.model.app_static_site_spec_all_of import AppStaticSiteSpecAllOf
-from openapi_client.model.app_variable_definition import AppVariableDefinition
-from openapi_client.model.apps_cors_policy import AppsCorsPolicy
-from openapi_client.model.apps_git_source_spec import AppsGitSourceSpec
-from openapi_client.model.apps_github_source_spec import AppsGithubSourceSpec
-from openapi_client.model.apps_gitlab_source_spec import AppsGitlabSourceSpec
-from openapi_client.model.apps_image_source_spec import AppsImageSourceSpec
+import digitalocean_client
+from digitalocean_client.model.app_component_base import AppComponentBase
+from digitalocean_client.model.app_route_spec import AppRouteSpec
+from digitalocean_client.model.app_static_site_spec_all_of import AppStaticSiteSpecAllOf
+from digitalocean_client.model.app_variable_definition import AppVariableDefinition
+from digitalocean_client.model.apps_cors_policy import AppsCorsPolicy
+from digitalocean_client.model.apps_git_source_spec import AppsGitSourceSpec
+from digitalocean_client.model.apps_github_source_spec import AppsGithubSourceSpec
+from digitalocean_client.model.apps_gitlab_source_spec import AppsGitlabSourceSpec
+from digitalocean_client.model.apps_image_source_spec import AppsImageSourceSpec
 globals()['AppComponentBase'] = AppComponentBase
 globals()['AppRouteSpec'] = AppRouteSpec
 globals()['AppStaticSiteSpecAllOf'] = AppStaticSiteSpecAllOf
@@ -31,7 +31,7 @@ globals()['AppsGitSourceSpec'] = AppsGitSourceSpec
 globals()['AppsGithubSourceSpec'] = AppsGithubSourceSpec
 globals()['AppsGitlabSourceSpec'] = AppsGitlabSourceSpec
 globals()['AppsImageSourceSpec'] = AppsImageSourceSpec
-from openapi_client.model.app_static_site_spec import AppStaticSiteSpec
+from digitalocean_client.model.app_static_site_spec import AppStaticSiteSpec
 
 
 class TestAppStaticSiteSpec(unittest.TestCase):

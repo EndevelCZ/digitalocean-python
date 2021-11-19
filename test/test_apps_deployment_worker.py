@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_deployment_worker import AppsDeploymentWorker
+import digitalocean_client
+from digitalocean_client.model.apps_deployment_worker import AppsDeploymentWorker
 
 
 class TestAppsDeploymentWorker(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.size import Size
+import digitalocean_client
+from digitalocean_client.model.size import Size
 
 
 class TestSize(unittest.TestCase):

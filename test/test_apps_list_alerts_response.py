@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_alert import AppAlert
+import digitalocean_client
+from digitalocean_client.model.app_alert import AppAlert
 globals()['AppAlert'] = AppAlert
-from openapi_client.model.apps_list_alerts_response import AppsListAlertsResponse
+from digitalocean_client.model.apps_list_alerts_response import AppsListAlertsResponse
 
 
 class TestAppsListAlertsResponse(unittest.TestCase):

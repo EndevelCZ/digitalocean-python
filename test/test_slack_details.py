@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.slack_details import SlackDetails
+import digitalocean_client
+from digitalocean_client.model.slack_details import SlackDetails
 
 
 class TestSlackDetails(unittest.TestCase):

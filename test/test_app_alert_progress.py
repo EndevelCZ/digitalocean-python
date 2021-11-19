@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_alert_progress_step import AppAlertProgressStep
+import digitalocean_client
+from digitalocean_client.model.app_alert_progress_step import AppAlertProgressStep
 globals()['AppAlertProgressStep'] = AppAlertProgressStep
-from openapi_client.model.app_alert_progress import AppAlertProgress
+from digitalocean_client.model.app_alert_progress import AppAlertProgress
 
 
 class TestAppAlertProgress(unittest.TestCase):

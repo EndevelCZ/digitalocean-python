@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.mysql_settings import MysqlSettings
+import digitalocean_client
+from digitalocean_client.model.mysql_settings import MysqlSettings
 globals()['MysqlSettings'] = MysqlSettings
-from openapi_client.model.inline_object3 import InlineObject3
+from digitalocean_client.model.inline_object3 import InlineObject3
 
 
 class TestInlineObject3(unittest.TestCase):

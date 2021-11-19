@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.page_links import PageLinks
+import digitalocean_client
+from digitalocean_client.model.page_links import PageLinks
 globals()['PageLinks'] = PageLinks
-from openapi_client.model.pagination import Pagination
+from digitalocean_client.model.pagination import Pagination
 
 
 class TestPagination(unittest.TestCase):

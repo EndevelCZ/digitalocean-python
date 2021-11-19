@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.kubernetes_version import KubernetesVersion
+import digitalocean_client
+from digitalocean_client.model.kubernetes_version import KubernetesVersion
 
 
 class TestKubernetesVersion(unittest.TestCase):

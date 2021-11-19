@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.cluster_status import ClusterStatus
-from openapi_client.model.kubernetes_node_pool import KubernetesNodePool
-from openapi_client.model.maintenance_policy import MaintenancePolicy
+import digitalocean_client
+from digitalocean_client.model.cluster_status import ClusterStatus
+from digitalocean_client.model.kubernetes_node_pool import KubernetesNodePool
+from digitalocean_client.model.maintenance_policy import MaintenancePolicy
 globals()['ClusterStatus'] = ClusterStatus
 globals()['KubernetesNodePool'] = KubernetesNodePool
 globals()['MaintenancePolicy'] = MaintenancePolicy
-from openapi_client.model.cluster import Cluster
+from digitalocean_client.model.cluster import Cluster
 
 
 class TestCluster(unittest.TestCase):

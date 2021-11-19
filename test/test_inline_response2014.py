@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.database import Database
+import digitalocean_client
+from digitalocean_client.model.database import Database
 globals()['Database'] = Database
-from openapi_client.model.inline_response2014 import InlineResponse2014
+from digitalocean_client.model.inline_response2014 import InlineResponse2014
 
 
 class TestInlineResponse2014(unittest.TestCase):

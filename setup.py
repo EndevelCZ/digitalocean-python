@@ -11,7 +11,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "openapi-client"
+NAME = "digitalocean-client"
 VERSION = "1.0.0"
 # To install the library, run the following
 #
@@ -30,7 +30,7 @@ setup(
     version=VERSION,
     description="DigitalOcean API",
     author="DigitalOcean API Team",
-    author_email="api-engineering@digitalocean.com",
+    author_email="info@endevel.cz",
     url="",
     keywords=["OpenAPI", "OpenAPI-Generator", "DigitalOcean API"],
     python_requires=">=3.6",

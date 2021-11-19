@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.tags_array import TagsArray
+import digitalocean_client
+from digitalocean_client.model.tags_array import TagsArray
 globals()['TagsArray'] = TagsArray
-from openapi_client.model.volume_action_post_attach_all_of import VolumeActionPostAttachAllOf
+from digitalocean_client.model.volume_action_post_attach_all_of import VolumeActionPostAttachAllOf
 
 
 class TestVolumeActionPostAttachAllOf(unittest.TestCase):

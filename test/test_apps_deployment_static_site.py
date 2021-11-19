@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_deployment_static_site import AppsDeploymentStaticSite
+import digitalocean_client
+from digitalocean_client.model.apps_deployment_static_site import AppsDeploymentStaticSite
 
 
 class TestAppsDeploymentStaticSite(unittest.TestCase):

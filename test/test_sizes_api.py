@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.sizes_api import SizesApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.sizes_api import SizesApi  # noqa: E501
 
 
 class TestSizesApi(unittest.TestCase):

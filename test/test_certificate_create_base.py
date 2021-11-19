@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.certificate_create_base import CertificateCreateBase
+import digitalocean_client
+from digitalocean_client.model.certificate_create_base import CertificateCreateBase
 
 
 class TestCertificateCreateBase(unittest.TestCase):

@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.regions_api import RegionsApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.regions_api import RegionsApi  # noqa: E501
 
 
 class TestRegionsApi(unittest.TestCase):

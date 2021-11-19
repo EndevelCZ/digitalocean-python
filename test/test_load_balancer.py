@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.forwarding_rule import ForwardingRule
-from openapi_client.model.health_check import HealthCheck
-from openapi_client.model.load_balancer_all_of import LoadBalancerAllOf
-from openapi_client.model.load_balancer_all_of1 import LoadBalancerAllOf1
-from openapi_client.model.load_balancer_all_of2 import LoadBalancerAllOf2
-from openapi_client.model.load_balancer_base import LoadBalancerBase
-from openapi_client.model.sticky_sessions import StickySessions
+import digitalocean_client
+from digitalocean_client.model.forwarding_rule import ForwardingRule
+from digitalocean_client.model.health_check import HealthCheck
+from digitalocean_client.model.load_balancer_all_of import LoadBalancerAllOf
+from digitalocean_client.model.load_balancer_all_of1 import LoadBalancerAllOf1
+from digitalocean_client.model.load_balancer_all_of2 import LoadBalancerAllOf2
+from digitalocean_client.model.load_balancer_base import LoadBalancerBase
+from digitalocean_client.model.sticky_sessions import StickySessions
 globals()['ForwardingRule'] = ForwardingRule
 globals()['HealthCheck'] = HealthCheck
 globals()['LoadBalancerAllOf'] = LoadBalancerAllOf
@@ -27,7 +27,7 @@ globals()['LoadBalancerAllOf1'] = LoadBalancerAllOf1
 globals()['LoadBalancerAllOf2'] = LoadBalancerAllOf2
 globals()['LoadBalancerBase'] = LoadBalancerBase
 globals()['StickySessions'] = StickySessions
-from openapi_client.model.load_balancer import LoadBalancer
+from digitalocean_client.model.load_balancer import LoadBalancer
 
 
 class TestLoadBalancer(unittest.TestCase):

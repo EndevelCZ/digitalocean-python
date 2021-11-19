@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.resource_links import ResourceLinks
+import digitalocean_client
+from digitalocean_client.model.resource_links import ResourceLinks
 
 
 class TestResourceLinks(unittest.TestCase):

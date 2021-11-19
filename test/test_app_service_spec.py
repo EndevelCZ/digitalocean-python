@@ -12,18 +12,18 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_component_base import AppComponentBase
-from openapi_client.model.app_component_instance_base import AppComponentInstanceBase
-from openapi_client.model.app_route_spec import AppRouteSpec
-from openapi_client.model.app_service_spec_all_of import AppServiceSpecAllOf
-from openapi_client.model.app_service_spec_health_check import AppServiceSpecHealthCheck
-from openapi_client.model.app_variable_definition import AppVariableDefinition
-from openapi_client.model.apps_cors_policy import AppsCorsPolicy
-from openapi_client.model.apps_git_source_spec import AppsGitSourceSpec
-from openapi_client.model.apps_github_source_spec import AppsGithubSourceSpec
-from openapi_client.model.apps_gitlab_source_spec import AppsGitlabSourceSpec
-from openapi_client.model.apps_image_source_spec import AppsImageSourceSpec
+import digitalocean_client
+from digitalocean_client.model.app_component_base import AppComponentBase
+from digitalocean_client.model.app_component_instance_base import AppComponentInstanceBase
+from digitalocean_client.model.app_route_spec import AppRouteSpec
+from digitalocean_client.model.app_service_spec_all_of import AppServiceSpecAllOf
+from digitalocean_client.model.app_service_spec_health_check import AppServiceSpecHealthCheck
+from digitalocean_client.model.app_variable_definition import AppVariableDefinition
+from digitalocean_client.model.apps_cors_policy import AppsCorsPolicy
+from digitalocean_client.model.apps_git_source_spec import AppsGitSourceSpec
+from digitalocean_client.model.apps_github_source_spec import AppsGithubSourceSpec
+from digitalocean_client.model.apps_gitlab_source_spec import AppsGitlabSourceSpec
+from digitalocean_client.model.apps_image_source_spec import AppsImageSourceSpec
 globals()['AppComponentBase'] = AppComponentBase
 globals()['AppComponentInstanceBase'] = AppComponentInstanceBase
 globals()['AppRouteSpec'] = AppRouteSpec
@@ -35,7 +35,7 @@ globals()['AppsGitSourceSpec'] = AppsGitSourceSpec
 globals()['AppsGithubSourceSpec'] = AppsGithubSourceSpec
 globals()['AppsGitlabSourceSpec'] = AppsGitlabSourceSpec
 globals()['AppsImageSourceSpec'] = AppsImageSourceSpec
-from openapi_client.model.app_service_spec import AppServiceSpec
+from digitalocean_client.model.app_service_spec import AppServiceSpec
 
 
 class TestAppServiceSpec(unittest.TestCase):

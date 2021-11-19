@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_alert_spec_window import AppAlertSpecWindow
+import digitalocean_client
+from digitalocean_client.model.app_alert_spec_window import AppAlertSpecWindow
 
 
 class TestAppAlertSpecWindow(unittest.TestCase):

@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.floating_ip_action_assign import FloatingIpActionAssign
-from openapi_client.model.floating_ip_action_type import FloatingIpActionType
-from openapi_client.model.floating_ip_action_unassign import FloatingIpActionUnassign
+import digitalocean_client
+from digitalocean_client.model.floating_ip_action_assign import FloatingIpActionAssign
+from digitalocean_client.model.floating_ip_action_type import FloatingIpActionType
+from digitalocean_client.model.floating_ip_action_unassign import FloatingIpActionUnassign
 globals()['FloatingIpActionAssign'] = FloatingIpActionAssign
 globals()['FloatingIpActionType'] = FloatingIpActionType
 globals()['FloatingIpActionUnassign'] = FloatingIpActionUnassign
-from openapi_client.model.floating_ip_action_unassign import FloatingIpActionUnassign
+from digitalocean_client.model.floating_ip_action_unassign import FloatingIpActionUnassign
 
 
 class TestFloatingIpActionUnassign(unittest.TestCase):

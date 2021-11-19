@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.domain_record import DomainRecord
+import digitalocean_client
+from digitalocean_client.model.domain_record import DomainRecord
 globals()['DomainRecord'] = DomainRecord
-from openapi_client.model.domain_record_a import DomainRecordA
+from digitalocean_client.model.domain_record_a import DomainRecordA
 
 
 class TestDomainRecordA(unittest.TestCase):

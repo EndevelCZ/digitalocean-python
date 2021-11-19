@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.projects_api import ProjectsApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.projects_api import ProjectsApi  # noqa: E501
 
 
 class TestProjectsApi(unittest.TestCase):

@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.cdn_endpoints_api import CDNEndpointsApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.cdn_endpoints_api import CDNEndpointsApi  # noqa: E501
 
 
 class TestCDNEndpointsApi(unittest.TestCase):

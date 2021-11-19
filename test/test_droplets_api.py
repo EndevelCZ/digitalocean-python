@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.droplets_api import DropletsApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.droplets_api import DropletsApi  # noqa: E501
 
 
 class TestDropletsApi(unittest.TestCase):

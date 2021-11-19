@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_deployment_progress_step_reason import AppsDeploymentProgressStepReason
+import digitalocean_client
+from digitalocean_client.model.apps_deployment_progress_step_reason import AppsDeploymentProgressStepReason
 
 
 class TestAppsDeploymentProgressStepReason(unittest.TestCase):

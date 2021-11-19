@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.purge_cache import PurgeCache
+import digitalocean_client
+from digitalocean_client.model.purge_cache import PurgeCache
 
 
 class TestPurgeCache(unittest.TestCase):

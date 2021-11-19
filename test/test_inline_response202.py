@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.floating_ip import FloatingIp
-from openapi_client.model.inline_response202_links import InlineResponse202Links
+import digitalocean_client
+from digitalocean_client.model.floating_ip import FloatingIp
+from digitalocean_client.model.inline_response202_links import InlineResponse202Links
 globals()['FloatingIp'] = FloatingIp
 globals()['InlineResponse202Links'] = InlineResponse202Links
-from openapi_client.model.inline_response202 import InlineResponse202
+from digitalocean_client.model.inline_response202 import InlineResponse202
 
 
 class TestInlineResponse202(unittest.TestCase):

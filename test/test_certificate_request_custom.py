@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.certificate_create_base import CertificateCreateBase
-from openapi_client.model.certificate_request_custom_all_of import CertificateRequestCustomAllOf
+import digitalocean_client
+from digitalocean_client.model.certificate_create_base import CertificateCreateBase
+from digitalocean_client.model.certificate_request_custom_all_of import CertificateRequestCustomAllOf
 globals()['CertificateCreateBase'] = CertificateCreateBase
 globals()['CertificateRequestCustomAllOf'] = CertificateRequestCustomAllOf
-from openapi_client.model.certificate_request_custom import CertificateRequestCustom
+from digitalocean_client.model.certificate_request_custom import CertificateRequestCustom
 
 
 class TestCertificateRequestCustom(unittest.TestCase):

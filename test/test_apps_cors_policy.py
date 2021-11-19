@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_string_match import AppsStringMatch
+import digitalocean_client
+from digitalocean_client.model.apps_string_match import AppsStringMatch
 globals()['AppsStringMatch'] = AppsStringMatch
-from openapi_client.model.apps_cors_policy import AppsCorsPolicy
+from digitalocean_client.model.apps_cors_policy import AppsCorsPolicy
 
 
 class TestAppsCorsPolicy(unittest.TestCase):

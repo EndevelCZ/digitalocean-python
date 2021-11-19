@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.online_migration import OnlineMigration
+import digitalocean_client
+from digitalocean_client.model.online_migration import OnlineMigration
 
 
 class TestOnlineMigration(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_get_logs_response import AppsGetLogsResponse
+import digitalocean_client
+from digitalocean_client.model.apps_get_logs_response import AppsGetLogsResponse
 
 
 class TestAppsGetLogsResponse(unittest.TestCase):

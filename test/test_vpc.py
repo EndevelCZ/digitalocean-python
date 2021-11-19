@@ -12,18 +12,18 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.urn import Urn
-from openapi_client.model.vpc_base import VpcBase
-from openapi_client.model.vpc_create import VpcCreate
-from openapi_client.model.vpc_default import VpcDefault
-from openapi_client.model.vpc_updatable import VpcUpdatable
+import digitalocean_client
+from digitalocean_client.model.urn import Urn
+from digitalocean_client.model.vpc_base import VpcBase
+from digitalocean_client.model.vpc_create import VpcCreate
+from digitalocean_client.model.vpc_default import VpcDefault
+from digitalocean_client.model.vpc_updatable import VpcUpdatable
 globals()['Urn'] = Urn
 globals()['VpcBase'] = VpcBase
 globals()['VpcCreate'] = VpcCreate
 globals()['VpcDefault'] = VpcDefault
 globals()['VpcUpdatable'] = VpcUpdatable
-from openapi_client.model.vpc import Vpc
+from digitalocean_client.model.vpc import Vpc
 
 
 class TestVpc(unittest.TestCase):

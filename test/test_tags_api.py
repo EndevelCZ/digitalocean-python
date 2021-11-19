@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.tags_api import TagsApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.tags_api import TagsApi  # noqa: E501
 
 
 class TestTagsApi(unittest.TestCase):

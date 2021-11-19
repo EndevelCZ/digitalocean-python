@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.firewalls_api import FirewallsApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.firewalls_api import FirewallsApi  # noqa: E501
 
 
 class TestFirewallsApi(unittest.TestCase):

@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_deployment import AppsDeployment
+import digitalocean_client
+from digitalocean_client.model.apps_deployment import AppsDeployment
 globals()['AppsDeployment'] = AppsDeployment
-from openapi_client.model.apps_deployment_response import AppsDeploymentResponse
+from digitalocean_client.model.apps_deployment_response import AppsDeploymentResponse
 
 
 class TestAppsDeploymentResponse(unittest.TestCase):

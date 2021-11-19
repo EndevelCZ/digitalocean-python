@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.inline_object1 import InlineObject1
+import digitalocean_client
+from digitalocean_client.model.inline_object1 import InlineObject1
 
 
 class TestInlineObject1(unittest.TestCase):

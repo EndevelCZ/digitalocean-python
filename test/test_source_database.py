@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.source_database import SourceDatabase
+import digitalocean_client
+from digitalocean_client.model.source_database import SourceDatabase
 
 
 class TestSourceDatabase(unittest.TestCase):

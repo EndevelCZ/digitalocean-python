@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.firewall_rule import FirewallRule
+import digitalocean_client
+from digitalocean_client.model.firewall_rule import FirewallRule
 globals()['FirewallRule'] = FirewallRule
-from openapi_client.model.inline_object2 import InlineObject2
+from digitalocean_client.model.inline_object2 import InlineObject2
 
 
 class TestInlineObject2(unittest.TestCase):

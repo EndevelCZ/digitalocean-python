@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.snapshot_all_of import SnapshotAllOf
-from openapi_client.model.snapshot_all_of1 import SnapshotAllOf1
-from openapi_client.model.snapshot_base import SnapshotBase
+import digitalocean_client
+from digitalocean_client.model.snapshot_all_of import SnapshotAllOf
+from digitalocean_client.model.snapshot_all_of1 import SnapshotAllOf1
+from digitalocean_client.model.snapshot_base import SnapshotBase
 globals()['SnapshotAllOf'] = SnapshotAllOf
 globals()['SnapshotAllOf1'] = SnapshotAllOf1
 globals()['SnapshotBase'] = SnapshotBase
-from openapi_client.model.snapshot import Snapshot
+from digitalocean_client.model.snapshot import Snapshot
 
 
 class TestSnapshot(unittest.TestCase):

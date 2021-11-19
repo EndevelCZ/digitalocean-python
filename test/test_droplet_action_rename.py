@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_action_rename_all_of import DropletActionRenameAllOf
-from openapi_client.model.droplet_action_type import DropletActionType
+import digitalocean_client
+from digitalocean_client.model.droplet_action_rename_all_of import DropletActionRenameAllOf
+from digitalocean_client.model.droplet_action_type import DropletActionType
 globals()['DropletActionRenameAllOf'] = DropletActionRenameAllOf
 globals()['DropletActionType'] = DropletActionType
-from openapi_client.model.droplet_action_rename import DropletActionRename
+from digitalocean_client.model.droplet_action_rename import DropletActionRename
 
 
 class TestDropletActionRename(unittest.TestCase):

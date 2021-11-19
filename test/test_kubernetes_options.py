@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.kubernetes_options import KubernetesOptions
+import digitalocean_client
+from digitalocean_client.model.kubernetes_options import KubernetesOptions
 
 
 class TestKubernetesOptions(unittest.TestCase):

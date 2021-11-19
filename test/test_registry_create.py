@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.registry_create import RegistryCreate
+import digitalocean_client
+from digitalocean_client.model.registry_create import RegistryCreate
 
 
 class TestRegistryCreate(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.snapshot_all_of1 import SnapshotAllOf1
+import digitalocean_client
+from digitalocean_client.model.snapshot_all_of1 import SnapshotAllOf1
 
 
 class TestSnapshotAllOf1(unittest.TestCase):

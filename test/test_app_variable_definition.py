@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_variable_definition import AppVariableDefinition
+import digitalocean_client
+from digitalocean_client.model.app_variable_definition import AppVariableDefinition
 
 
 class TestAppVariableDefinition(unittest.TestCase):

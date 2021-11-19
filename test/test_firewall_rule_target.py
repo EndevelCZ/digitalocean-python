@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.firewall_rule_target import FirewallRuleTarget
+import digitalocean_client
+from digitalocean_client.model.firewall_rule_target import FirewallRuleTarget
 
 
 class TestFirewallRuleTarget(unittest.TestCase):

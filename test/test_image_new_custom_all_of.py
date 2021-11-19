@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.region_slug import RegionSlug
-from openapi_client.model.tags_array import TagsArray
+import digitalocean_client
+from digitalocean_client.model.region_slug import RegionSlug
+from digitalocean_client.model.tags_array import TagsArray
 globals()['RegionSlug'] = RegionSlug
 globals()['TagsArray'] = TagsArray
-from openapi_client.model.image_new_custom_all_of import ImageNewCustomAllOf
+from digitalocean_client.model.image_new_custom_all_of import ImageNewCustomAllOf
 
 
 class TestImageNewCustomAllOf(unittest.TestCase):

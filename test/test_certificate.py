@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.certificate import Certificate
+import digitalocean_client
+from digitalocean_client.model.certificate import Certificate
 
 
 class TestCertificate(unittest.TestCase):

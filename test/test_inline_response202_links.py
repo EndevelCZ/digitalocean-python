@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.action_link import ActionLink
+import digitalocean_client
+from digitalocean_client.model.action_link import ActionLink
 globals()['ActionLink'] = ActionLink
-from openapi_client.model.inline_response202_links import InlineResponse202Links
+from digitalocean_client.model.inline_response202_links import InlineResponse202Links
 
 
 class TestInlineResponse202Links(unittest.TestCase):

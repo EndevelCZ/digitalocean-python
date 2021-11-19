@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_tier import AppsTier
+import digitalocean_client
+from digitalocean_client.model.apps_tier import AppsTier
 globals()['AppsTier'] = AppsTier
-from openapi_client.model.apps_get_tier_response import AppsGetTierResponse
+from digitalocean_client.model.apps_get_tier_response import AppsGetTierResponse
 
 
 class TestAppsGetTierResponse(unittest.TestCase):

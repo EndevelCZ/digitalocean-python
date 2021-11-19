@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.kubernetes_size import KubernetesSize
+import digitalocean_client
+from digitalocean_client.model.kubernetes_size import KubernetesSize
 
 
 class TestKubernetesSize(unittest.TestCase):

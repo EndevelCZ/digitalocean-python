@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.load_balancer_all_of2 import LoadBalancerAllOf2
+import digitalocean_client
+from digitalocean_client.model.load_balancer_all_of2 import LoadBalancerAllOf2
 
 
 class TestLoadBalancerAllOf2(unittest.TestCase):

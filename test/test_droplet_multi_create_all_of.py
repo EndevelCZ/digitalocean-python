@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_multi_create_all_of import DropletMultiCreateAllOf
+import digitalocean_client
+from digitalocean_client.model.droplet_multi_create_all_of import DropletMultiCreateAllOf
 
 
 class TestDropletMultiCreateAllOf(unittest.TestCase):

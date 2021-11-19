@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_action_snapshot_all_of import DropletActionSnapshotAllOf
-from openapi_client.model.droplet_action_type import DropletActionType
+import digitalocean_client
+from digitalocean_client.model.droplet_action_snapshot_all_of import DropletActionSnapshotAllOf
+from digitalocean_client.model.droplet_action_type import DropletActionType
 globals()['DropletActionSnapshotAllOf'] = DropletActionSnapshotAllOf
 globals()['DropletActionType'] = DropletActionType
-from openapi_client.model.droplet_action_snapshot import DropletActionSnapshot
+from digitalocean_client.model.droplet_action_snapshot import DropletActionSnapshot
 
 
 class TestDropletActionSnapshot(unittest.TestCase):

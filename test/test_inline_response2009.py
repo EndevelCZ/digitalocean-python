@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.inline_response2009_options import InlineResponse2009Options
+import digitalocean_client
+from digitalocean_client.model.inline_response2009_options import InlineResponse2009Options
 globals()['InlineResponse2009Options'] = InlineResponse2009Options
-from openapi_client.model.inline_response2009 import InlineResponse2009
+from digitalocean_client.model.inline_response2009 import InlineResponse2009
 
 
 class TestInlineResponse2009(unittest.TestCase):

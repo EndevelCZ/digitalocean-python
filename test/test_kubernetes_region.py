@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.kubernetes_region import KubernetesRegion
+import digitalocean_client
+from digitalocean_client.model.kubernetes_region import KubernetesRegion
 
 
 class TestKubernetesRegion(unittest.TestCase):

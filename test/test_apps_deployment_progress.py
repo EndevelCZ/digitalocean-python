@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_deployment_progress_step import AppsDeploymentProgressStep
+import digitalocean_client
+from digitalocean_client.model.apps_deployment_progress_step import AppsDeploymentProgressStep
 globals()['AppsDeploymentProgressStep'] = AppsDeploymentProgressStep
-from openapi_client.model.apps_deployment_progress import AppsDeploymentProgress
+from digitalocean_client.model.apps_deployment_progress import AppsDeploymentProgress
 
 
 class TestAppsDeploymentProgress(unittest.TestCase):

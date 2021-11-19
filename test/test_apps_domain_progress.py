@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_domain_progress import AppsDomainProgress
+import digitalocean_client
+from digitalocean_client.model.apps_domain_progress import AppsDomainProgress
 
 
 class TestAppsDomainProgress(unittest.TestCase):

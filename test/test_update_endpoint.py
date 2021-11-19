@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.update_endpoint import UpdateEndpoint
+import digitalocean_client
+from digitalocean_client.model.update_endpoint import UpdateEndpoint
 
 
 class TestUpdateEndpoint(unittest.TestCase):

@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.garbage_collection import GarbageCollection
+import digitalocean_client
+from digitalocean_client.model.garbage_collection import GarbageCollection
 globals()['GarbageCollection'] = GarbageCollection
-from openapi_client.model.inline_response2007 import InlineResponse2007
+from digitalocean_client.model.inline_response2007 import InlineResponse2007
 
 
 class TestInlineResponse2007(unittest.TestCase):

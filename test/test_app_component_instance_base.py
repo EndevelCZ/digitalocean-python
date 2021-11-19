@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_component_instance_base import AppComponentInstanceBase
+import digitalocean_client
+from digitalocean_client.model.app_component_instance_base import AppComponentInstanceBase
 
 
 class TestAppComponentInstanceBase(unittest.TestCase):

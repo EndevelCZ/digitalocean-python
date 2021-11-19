@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_domain_spec import AppDomainSpec
-from openapi_client.model.apps_domain_phase import AppsDomainPhase
-from openapi_client.model.apps_domain_progress import AppsDomainProgress
+import digitalocean_client
+from digitalocean_client.model.app_domain_spec import AppDomainSpec
+from digitalocean_client.model.apps_domain_phase import AppsDomainPhase
+from digitalocean_client.model.apps_domain_progress import AppsDomainProgress
 globals()['AppDomainSpec'] = AppDomainSpec
 globals()['AppsDomainPhase'] = AppsDomainPhase
 globals()['AppsDomainProgress'] = AppsDomainProgress
-from openapi_client.model.apps_domain import AppsDomain
+from digitalocean_client.model.apps_domain import AppsDomain
 
 
 class TestAppsDomain(unittest.TestCase):

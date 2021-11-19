@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_action_change_kernel_all_of import DropletActionChangeKernelAllOf
-from openapi_client.model.droplet_action_type import DropletActionType
+import digitalocean_client
+from digitalocean_client.model.droplet_action_change_kernel_all_of import DropletActionChangeKernelAllOf
+from digitalocean_client.model.droplet_action_type import DropletActionType
 globals()['DropletActionChangeKernelAllOf'] = DropletActionChangeKernelAllOf
 globals()['DropletActionType'] = DropletActionType
-from openapi_client.model.droplet_action_change_kernel import DropletActionChangeKernel
+from digitalocean_client.model.droplet_action_change_kernel import DropletActionChangeKernel
 
 
 class TestDropletActionChangeKernel(unittest.TestCase):

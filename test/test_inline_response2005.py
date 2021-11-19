@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.kubernetes_version import KubernetesVersion
+import digitalocean_client
+from digitalocean_client.model.kubernetes_version import KubernetesVersion
 globals()['KubernetesVersion'] = KubernetesVersion
-from openapi_client.model.inline_response2005 import InlineResponse2005
+from digitalocean_client.model.inline_response2005 import InlineResponse2005
 
 
 class TestInlineResponse2005(unittest.TestCase):

@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.project_all_of import ProjectAllOf
-from openapi_client.model.project_base import ProjectBase
+import digitalocean_client
+from digitalocean_client.model.project_all_of import ProjectAllOf
+from digitalocean_client.model.project_base import ProjectBase
 globals()['ProjectAllOf'] = ProjectAllOf
 globals()['ProjectBase'] = ProjectBase
-from openapi_client.model.project import Project
+from digitalocean_client.model.project import Project
 
 
 class TestProject(unittest.TestCase):

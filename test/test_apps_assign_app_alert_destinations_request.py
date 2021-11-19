@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_alert_slack_webhook import AppAlertSlackWebhook
+import digitalocean_client
+from digitalocean_client.model.app_alert_slack_webhook import AppAlertSlackWebhook
 globals()['AppAlertSlackWebhook'] = AppAlertSlackWebhook
-from openapi_client.model.apps_assign_app_alert_destinations_request import AppsAssignAppAlertDestinationsRequest
+from digitalocean_client.model.apps_assign_app_alert_destinations_request import AppsAssignAppAlertDestinationsRequest
 
 
 class TestAppsAssignAppAlertDestinationsRequest(unittest.TestCase):

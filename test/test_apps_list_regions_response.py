@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_region import AppsRegion
+import digitalocean_client
+from digitalocean_client.model.apps_region import AppsRegion
 globals()['AppsRegion'] = AppsRegion
-from openapi_client.model.apps_list_regions_response import AppsListRegionsResponse
+from digitalocean_client.model.apps_list_regions_response import AppsListRegionsResponse
 
 
 class TestAppsListRegionsResponse(unittest.TestCase):

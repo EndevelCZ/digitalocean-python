@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.health_check import HealthCheck
+import digitalocean_client
+from digitalocean_client.model.health_check import HealthCheck
 
 
 class TestHealthCheck(unittest.TestCase):

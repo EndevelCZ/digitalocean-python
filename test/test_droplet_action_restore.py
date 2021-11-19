@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_action_restore_all_of import DropletActionRestoreAllOf
-from openapi_client.model.droplet_action_type import DropletActionType
+import digitalocean_client
+from digitalocean_client.model.droplet_action_restore_all_of import DropletActionRestoreAllOf
+from digitalocean_client.model.droplet_action_type import DropletActionType
 globals()['DropletActionRestoreAllOf'] = DropletActionRestoreAllOf
 globals()['DropletActionType'] = DropletActionType
-from openapi_client.model.droplet_action_restore import DropletActionRestore
+from digitalocean_client.model.droplet_action_restore import DropletActionRestore
 
 
 class TestDropletActionRestore(unittest.TestCase):

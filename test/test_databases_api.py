@@ -11,8 +11,8 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.api.databases_api import DatabasesApi  # noqa: E501
+import digitalocean_client
+from digitalocean_client.api.databases_api import DatabasesApi  # noqa: E501
 
 
 class TestDatabasesApi(unittest.TestCase):

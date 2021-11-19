@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.network_v6 import NetworkV6
+import digitalocean_client
+from digitalocean_client.model.network_v6 import NetworkV6
 
 
 class TestNetworkV6(unittest.TestCase):

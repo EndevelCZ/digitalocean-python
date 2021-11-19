@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.region_slug import RegionSlug
+import digitalocean_client
+from digitalocean_client.model.region_slug import RegionSlug
 globals()['RegionSlug'] = RegionSlug
-from openapi_client.model.regions_array import RegionsArray
+from digitalocean_client.model.regions_array import RegionsArray
 
 
 class TestRegionsArray(unittest.TestCase):

@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.metrics_result import MetricsResult
+import digitalocean_client
+from digitalocean_client.model.metrics_result import MetricsResult
 globals()['MetricsResult'] = MetricsResult
-from openapi_client.model.metrics_data import MetricsData
+from digitalocean_client.model.metrics_data import MetricsData
 
 
 class TestMetricsData(unittest.TestCase):

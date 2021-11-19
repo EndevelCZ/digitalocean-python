@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.inline_response200 import InlineResponse200
+import digitalocean_client
+from digitalocean_client.model.inline_response200 import InlineResponse200
 
 
 class TestInlineResponse200(unittest.TestCase):

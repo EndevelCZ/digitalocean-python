@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_instance_size import AppsInstanceSize
+import digitalocean_client
+from digitalocean_client.model.apps_instance_size import AppsInstanceSize
 globals()['AppsInstanceSize'] = AppsInstanceSize
-from openapi_client.model.apps_get_instance_size_response import AppsGetInstanceSizeResponse
+from digitalocean_client.model.apps_get_instance_size_response import AppsGetInstanceSizeResponse
 
 
 class TestAppsGetInstanceSizeResponse(unittest.TestCase):

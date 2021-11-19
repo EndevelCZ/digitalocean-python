@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.region_slug import RegionSlug
+import digitalocean_client
+from digitalocean_client.model.region_slug import RegionSlug
 
 
 class TestRegionSlug(unittest.TestCase):

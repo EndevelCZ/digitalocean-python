@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.firewall_all_of_pending_changes import FirewallAllOfPendingChanges
+import digitalocean_client
+from digitalocean_client.model.firewall_all_of_pending_changes import FirewallAllOfPendingChanges
 
 
 class TestFirewallAllOfPendingChanges(unittest.TestCase):

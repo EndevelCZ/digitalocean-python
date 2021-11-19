@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.connection_pool import ConnectionPool
+import digitalocean_client
+from digitalocean_client.model.connection_pool import ConnectionPool
 globals()['ConnectionPool'] = ConnectionPool
-from openapi_client.model.connection_pools import ConnectionPools
+from digitalocean_client.model.connection_pools import ConnectionPools
 
 
 class TestConnectionPools(unittest.TestCase):

@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.clusterlint_request import ClusterlintRequest
+import digitalocean_client
+from digitalocean_client.model.clusterlint_request import ClusterlintRequest
 
 
 class TestClusterlintRequest(unittest.TestCase):

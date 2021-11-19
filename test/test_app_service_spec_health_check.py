@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_service_spec_health_check import AppServiceSpecHealthCheck
+import digitalocean_client
+from digitalocean_client.model.app_service_spec_health_check import AppServiceSpecHealthCheck
 
 
 class TestAppServiceSpecHealthCheck(unittest.TestCase):

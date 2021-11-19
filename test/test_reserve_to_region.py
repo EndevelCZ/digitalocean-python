@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.reserve_to_region import ReserveToRegion
+import digitalocean_client
+from digitalocean_client.model.reserve_to_region import ReserveToRegion
 
 
 class TestReserveToRegion(unittest.TestCase):

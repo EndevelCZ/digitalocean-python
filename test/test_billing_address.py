@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.billing_address import BillingAddress
+import digitalocean_client
+from digitalocean_client.model.billing_address import BillingAddress
 
 
 class TestBillingAddress(unittest.TestCase):

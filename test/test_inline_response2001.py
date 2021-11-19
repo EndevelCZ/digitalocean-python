@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.ca import Ca
+import digitalocean_client
+from digitalocean_client.model.ca import Ca
 globals()['Ca'] = Ca
-from openapi_client.model.inline_response2001 import InlineResponse2001
+from digitalocean_client.model.inline_response2001 import InlineResponse2001
 
 
 class TestInlineResponse2001(unittest.TestCase):

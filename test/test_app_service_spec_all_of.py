@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_route_spec import AppRouteSpec
-from openapi_client.model.app_service_spec_health_check import AppServiceSpecHealthCheck
-from openapi_client.model.apps_cors_policy import AppsCorsPolicy
+import digitalocean_client
+from digitalocean_client.model.app_route_spec import AppRouteSpec
+from digitalocean_client.model.app_service_spec_health_check import AppServiceSpecHealthCheck
+from digitalocean_client.model.apps_cors_policy import AppsCorsPolicy
 globals()['AppRouteSpec'] = AppRouteSpec
 globals()['AppServiceSpecHealthCheck'] = AppServiceSpecHealthCheck
 globals()['AppsCorsPolicy'] = AppsCorsPolicy
-from openapi_client.model.app_service_spec_all_of import AppServiceSpecAllOf
+from digitalocean_client.model.app_service_spec_all_of import AppServiceSpecAllOf
 
 
 class TestAppServiceSpecAllOf(unittest.TestCase):

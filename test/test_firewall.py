@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.firewall_all_of import FirewallAllOf
-from openapi_client.model.firewall_all_of_pending_changes import FirewallAllOfPendingChanges
-from openapi_client.model.firewall_rules import FirewallRules
+import digitalocean_client
+from digitalocean_client.model.firewall_all_of import FirewallAllOf
+from digitalocean_client.model.firewall_all_of_pending_changes import FirewallAllOfPendingChanges
+from digitalocean_client.model.firewall_rules import FirewallRules
 globals()['FirewallAllOf'] = FirewallAllOf
 globals()['FirewallAllOfPendingChanges'] = FirewallAllOfPendingChanges
 globals()['FirewallRules'] = FirewallRules
-from openapi_client.model.firewall import Firewall
+from digitalocean_client.model.firewall import Firewall
 
 
 class TestFirewall(unittest.TestCase):

@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.database_cluster import DatabaseCluster
+import digitalocean_client
+from digitalocean_client.model.database_cluster import DatabaseCluster
 globals()['DatabaseCluster'] = DatabaseCluster
-from openapi_client.model.inline_response2011 import InlineResponse2011
+from digitalocean_client.model.inline_response2011 import InlineResponse2011
 
 
 class TestInlineResponse2011(unittest.TestCase):

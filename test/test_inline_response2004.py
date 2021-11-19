@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.image import Image
+import digitalocean_client
+from digitalocean_client.model.image import Image
 globals()['Image'] = Image
-from openapi_client.model.inline_response2004 import InlineResponse2004
+from digitalocean_client.model.inline_response2004 import InlineResponse2004
 
 
 class TestInlineResponse2004(unittest.TestCase):

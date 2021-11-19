@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.kernel import Kernel
+import digitalocean_client
+from digitalocean_client.model.kernel import Kernel
 
 
 class TestKernel(unittest.TestCase):

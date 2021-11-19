@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_create import DropletCreate
+import digitalocean_client
+from digitalocean_client.model.droplet_create import DropletCreate
 
 
 class TestDropletCreate(unittest.TestCase):

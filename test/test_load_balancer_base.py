@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.forwarding_rule import ForwardingRule
-from openapi_client.model.health_check import HealthCheck
-from openapi_client.model.sticky_sessions import StickySessions
+import digitalocean_client
+from digitalocean_client.model.forwarding_rule import ForwardingRule
+from digitalocean_client.model.health_check import HealthCheck
+from digitalocean_client.model.sticky_sessions import StickySessions
 globals()['ForwardingRule'] = ForwardingRule
 globals()['HealthCheck'] = HealthCheck
 globals()['StickySessions'] = StickySessions
-from openapi_client.model.load_balancer_base import LoadBalancerBase
+from digitalocean_client.model.load_balancer_base import LoadBalancerBase
 
 
 class TestLoadBalancerBase(unittest.TestCase):

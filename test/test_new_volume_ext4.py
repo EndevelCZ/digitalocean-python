@@ -12,15 +12,15 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.new_volume_ext4 import NewVolumeExt4
-from openapi_client.model.new_volume_ext4_all_of import NewVolumeExt4AllOf
-from openapi_client.model.new_volume_xfs import NewVolumeXfs
-from openapi_client.model.region_slug import RegionSlug
-from openapi_client.model.tags_array import TagsArray
-from openapi_client.model.volume_base import VolumeBase
-from openapi_client.model.volume_snapshot_id import VolumeSnapshotId
-from openapi_client.model.volume_write_file_system_type import VolumeWriteFileSystemType
+import digitalocean_client
+from digitalocean_client.model.new_volume_ext4 import NewVolumeExt4
+from digitalocean_client.model.new_volume_ext4_all_of import NewVolumeExt4AllOf
+from digitalocean_client.model.new_volume_xfs import NewVolumeXfs
+from digitalocean_client.model.region_slug import RegionSlug
+from digitalocean_client.model.tags_array import TagsArray
+from digitalocean_client.model.volume_base import VolumeBase
+from digitalocean_client.model.volume_snapshot_id import VolumeSnapshotId
+from digitalocean_client.model.volume_write_file_system_type import VolumeWriteFileSystemType
 globals()['NewVolumeExt4'] = NewVolumeExt4
 globals()['NewVolumeExt4AllOf'] = NewVolumeExt4AllOf
 globals()['NewVolumeXfs'] = NewVolumeXfs
@@ -29,7 +29,7 @@ globals()['TagsArray'] = TagsArray
 globals()['VolumeBase'] = VolumeBase
 globals()['VolumeSnapshotId'] = VolumeSnapshotId
 globals()['VolumeWriteFileSystemType'] = VolumeWriteFileSystemType
-from openapi_client.model.new_volume_ext4 import NewVolumeExt4
+from digitalocean_client.model.new_volume_ext4 import NewVolumeExt4
 
 
 class TestNewVolumeExt4(unittest.TestCase):

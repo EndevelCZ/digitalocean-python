@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_alert_spec_rule import AppAlertSpecRule
+import digitalocean_client
+from digitalocean_client.model.app_alert_spec_rule import AppAlertSpecRule
 
 
 class TestAppAlertSpecRule(unittest.TestCase):

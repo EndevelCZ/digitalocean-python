@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.kubernetes_node_pool_base import KubernetesNodePoolBase
-from openapi_client.model.kubernetes_node_pool_taint import KubernetesNodePoolTaint
-from openapi_client.model.node import Node
+import digitalocean_client
+from digitalocean_client.model.kubernetes_node_pool_base import KubernetesNodePoolBase
+from digitalocean_client.model.kubernetes_node_pool_taint import KubernetesNodePoolTaint
+from digitalocean_client.model.node import Node
 globals()['KubernetesNodePoolBase'] = KubernetesNodePoolBase
 globals()['KubernetesNodePoolTaint'] = KubernetesNodePoolTaint
 globals()['Node'] = Node
-from openapi_client.model.kubernetes_node_pool_update import KubernetesNodePoolUpdate
+from digitalocean_client.model.kubernetes_node_pool_update import KubernetesNodePoolUpdate
 
 
 class TestKubernetesNodePoolUpdate(unittest.TestCase):

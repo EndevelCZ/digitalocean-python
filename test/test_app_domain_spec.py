@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_domain_spec import AppDomainSpec
+import digitalocean_client
+from digitalocean_client.model.app_domain_spec import AppDomainSpec
 
 
 class TestAppDomainSpec(unittest.TestCase):

@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.region_slug import RegionSlug
-from openapi_client.model.volume_action_post_base import VolumeActionPostBase
-from openapi_client.model.volume_action_post_resize_all_of import VolumeActionPostResizeAllOf
+import digitalocean_client
+from digitalocean_client.model.region_slug import RegionSlug
+from digitalocean_client.model.volume_action_post_base import VolumeActionPostBase
+from digitalocean_client.model.volume_action_post_resize_all_of import VolumeActionPostResizeAllOf
 globals()['RegionSlug'] = RegionSlug
 globals()['VolumeActionPostBase'] = VolumeActionPostBase
 globals()['VolumeActionPostResizeAllOf'] = VolumeActionPostResizeAllOf
-from openapi_client.model.volume_action_post_resize import VolumeActionPostResize
+from digitalocean_client.model.volume_action_post_resize import VolumeActionPostResize
 
 
 class TestVolumeActionPostResize(unittest.TestCase):

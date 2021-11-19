@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.mysql_settings import MysqlSettings
+import digitalocean_client
+from digitalocean_client.model.mysql_settings import MysqlSettings
 
 
 class TestMysqlSettings(unittest.TestCase):

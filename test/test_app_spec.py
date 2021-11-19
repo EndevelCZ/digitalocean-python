@@ -12,20 +12,20 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_database_spec import AppDatabaseSpec
-from openapi_client.model.app_domain_spec import AppDomainSpec
-from openapi_client.model.app_job_spec import AppJobSpec
-from openapi_client.model.app_service_spec import AppServiceSpec
-from openapi_client.model.app_static_site_spec import AppStaticSiteSpec
-from openapi_client.model.app_worker_spec import AppWorkerSpec
+import digitalocean_client
+from digitalocean_client.model.app_database_spec import AppDatabaseSpec
+from digitalocean_client.model.app_domain_spec import AppDomainSpec
+from digitalocean_client.model.app_job_spec import AppJobSpec
+from digitalocean_client.model.app_service_spec import AppServiceSpec
+from digitalocean_client.model.app_static_site_spec import AppStaticSiteSpec
+from digitalocean_client.model.app_worker_spec import AppWorkerSpec
 globals()['AppDatabaseSpec'] = AppDatabaseSpec
 globals()['AppDomainSpec'] = AppDomainSpec
 globals()['AppJobSpec'] = AppJobSpec
 globals()['AppServiceSpec'] = AppServiceSpec
 globals()['AppStaticSiteSpec'] = AppStaticSiteSpec
 globals()['AppWorkerSpec'] = AppWorkerSpec
-from openapi_client.model.app_spec import AppSpec
+from digitalocean_client.model.app_spec import AppSpec
 
 
 class TestAppSpec(unittest.TestCase):

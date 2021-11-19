@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.subscription_tier_extended import SubscriptionTierExtended
+import digitalocean_client
+from digitalocean_client.model.subscription_tier_extended import SubscriptionTierExtended
 
 
 class TestSubscriptionTierExtended(unittest.TestCase):

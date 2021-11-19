@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.vpc import Vpc
+import digitalocean_client
+from digitalocean_client.model.vpc import Vpc
 globals()['Vpc'] = Vpc
-from openapi_client.model.inline_response2016 import InlineResponse2016
+from digitalocean_client.model.inline_response2016 import InlineResponse2016
 
 
 class TestInlineResponse2016(unittest.TestCase):

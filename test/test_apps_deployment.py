@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_spec import AppSpec
-from openapi_client.model.apps_deployment_job import AppsDeploymentJob
-from openapi_client.model.apps_deployment_phase import AppsDeploymentPhase
-from openapi_client.model.apps_deployment_progress import AppsDeploymentProgress
-from openapi_client.model.apps_deployment_service import AppsDeploymentService
-from openapi_client.model.apps_deployment_static_site import AppsDeploymentStaticSite
-from openapi_client.model.apps_deployment_worker import AppsDeploymentWorker
+import digitalocean_client
+from digitalocean_client.model.app_spec import AppSpec
+from digitalocean_client.model.apps_deployment_job import AppsDeploymentJob
+from digitalocean_client.model.apps_deployment_phase import AppsDeploymentPhase
+from digitalocean_client.model.apps_deployment_progress import AppsDeploymentProgress
+from digitalocean_client.model.apps_deployment_service import AppsDeploymentService
+from digitalocean_client.model.apps_deployment_static_site import AppsDeploymentStaticSite
+from digitalocean_client.model.apps_deployment_worker import AppsDeploymentWorker
 globals()['AppSpec'] = AppSpec
 globals()['AppsDeploymentJob'] = AppsDeploymentJob
 globals()['AppsDeploymentPhase'] = AppsDeploymentPhase
@@ -27,7 +27,7 @@ globals()['AppsDeploymentProgress'] = AppsDeploymentProgress
 globals()['AppsDeploymentService'] = AppsDeploymentService
 globals()['AppsDeploymentStaticSite'] = AppsDeploymentStaticSite
 globals()['AppsDeploymentWorker'] = AppsDeploymentWorker
-from openapi_client.model.apps_deployment import AppsDeployment
+from digitalocean_client.model.apps_deployment import AppsDeployment
 
 
 class TestAppsDeployment(unittest.TestCase):

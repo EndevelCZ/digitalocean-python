@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.tag import Tag
+import digitalocean_client
+from digitalocean_client.model.tag import Tag
 globals()['Tag'] = Tag
-from openapi_client.model.inline_response20010 import InlineResponse20010
+from digitalocean_client.model.inline_response20010 import InlineResponse20010
 
 
 class TestInlineResponse20010(unittest.TestCase):

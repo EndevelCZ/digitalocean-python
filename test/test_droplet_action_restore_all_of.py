@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_action_restore_all_of import DropletActionRestoreAllOf
+import digitalocean_client
+from digitalocean_client.model.droplet_action_restore_all_of import DropletActionRestoreAllOf
 
 
 class TestDropletActionRestoreAllOf(unittest.TestCase):

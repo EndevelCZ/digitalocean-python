@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.simple_charge import SimpleCharge
+import digitalocean_client
+from digitalocean_client.model.simple_charge import SimpleCharge
 
 
 class TestSimpleCharge(unittest.TestCase):

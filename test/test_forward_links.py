@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.link_to_last_page import LinkToLastPage
-from openapi_client.model.link_to_next_page import LinkToNextPage
+import digitalocean_client
+from digitalocean_client.model.link_to_last_page import LinkToLastPage
+from digitalocean_client.model.link_to_next_page import LinkToNextPage
 globals()['LinkToLastPage'] = LinkToLastPage
 globals()['LinkToNextPage'] = LinkToNextPage
-from openapi_client.model.forward_links import ForwardLinks
+from digitalocean_client.model.forward_links import ForwardLinks
 
 
 class TestForwardLinks(unittest.TestCase):

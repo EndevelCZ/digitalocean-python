@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.docker_credentials_auths import DockerCredentialsAuths
+import digitalocean_client
+from digitalocean_client.model.docker_credentials_auths import DockerCredentialsAuths
 globals()['DockerCredentialsAuths'] = DockerCredentialsAuths
-from openapi_client.model.docker_credentials import DockerCredentials
+from digitalocean_client.model.docker_credentials import DockerCredentials
 
 
 class TestDockerCredentials(unittest.TestCase):

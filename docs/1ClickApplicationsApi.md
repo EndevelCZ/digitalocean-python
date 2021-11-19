@@ -1,11 +1,11 @@
-# openapi_client.1ClickApplicationsApi
+# openapi_client.ClickApplicationsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**install_kubernetes**](1ClickApplicationsApi.md#install_kubernetes) | **POST** /v2/1-clicks/kubernetes | Install Kubernetes 1-Click Applications
-[**list**](1ClickApplicationsApi.md#list) | **GET** /v2/1-clicks | List 1-Click Applications
+[**install_kubernetes**](ClickApplicationsApi.md#install_kubernetes) | **POST** /v2/1-clicks/kubernetes | Install Kubernetes 1-Click Applications
+[**list**](ClickApplicationsApi.md#list) | **GET** /v2/1-clicks | List 1-Click Applications
 
 
 # **install_kubernetes**
@@ -46,7 +46,7 @@ configuration = openapi_client.Configuration(
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = 1_click_applications_api.1ClickApplicationsApi(api_client)
+    api_instance = 1_click_applications_api.ClickApplicationsApi(api_client)
     model1_click_create = Model1ClickCreate(
         addon_slugs=["kube-state-metrics","loki"],
         cluster_uuid="50a994b6-c303-438f-9495-7e896cfe6b08",
@@ -58,7 +58,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         api_response = api_instance.install_kubernetes(model1_click_create)
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling 1ClickApplicationsApi->install_kubernetes: %s\n" % e)
+        print("Exception when calling ClickApplicationsApi->install_kubernetes: %s\n" % e)
 ```
 
 
@@ -130,7 +130,7 @@ configuration = openapi_client.Configuration(
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = 1_click_applications_api.1ClickApplicationsApi(api_client)
+    api_instance = 1_click_applications_api.ClickApplicationsApi(api_client)
     type = "kubernetes" # str | Restrict results to a certain type of 1-Click. (optional)
 
     # example passing only required values which don't have defaults set
@@ -140,7 +140,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         api_response = api_instance.list(type=type)
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling 1ClickApplicationsApi->list: %s\n" % e)
+        print("Exception when calling ClickApplicationsApi->list: %s\n" % e)
 ```
 
 

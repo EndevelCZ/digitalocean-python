@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.meta_meta import MetaMeta
+import digitalocean_client
+from digitalocean_client.model.meta_meta import MetaMeta
 
 
 class TestMetaMeta(unittest.TestCase):

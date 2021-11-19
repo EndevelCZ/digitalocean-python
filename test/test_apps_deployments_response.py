@@ -12,20 +12,20 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_deployment import AppsDeployment
-from openapi_client.model.apps_deployments_response_all_of import AppsDeploymentsResponseAllOf
-from openapi_client.model.meta import Meta
-from openapi_client.model.meta_meta import MetaMeta
-from openapi_client.model.page_links import PageLinks
-from openapi_client.model.pagination import Pagination
+import digitalocean_client
+from digitalocean_client.model.apps_deployment import AppsDeployment
+from digitalocean_client.model.apps_deployments_response_all_of import AppsDeploymentsResponseAllOf
+from digitalocean_client.model.meta import Meta
+from digitalocean_client.model.meta_meta import MetaMeta
+from digitalocean_client.model.page_links import PageLinks
+from digitalocean_client.model.pagination import Pagination
 globals()['AppsDeployment'] = AppsDeployment
 globals()['AppsDeploymentsResponseAllOf'] = AppsDeploymentsResponseAllOf
 globals()['Meta'] = Meta
 globals()['MetaMeta'] = MetaMeta
 globals()['PageLinks'] = PageLinks
 globals()['Pagination'] = Pagination
-from openapi_client.model.apps_deployments_response import AppsDeploymentsResponse
+from digitalocean_client.model.apps_deployments_response import AppsDeploymentsResponse
 
 
 class TestAppsDeploymentsResponse(unittest.TestCase):

@@ -12,16 +12,16 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.region_slug import RegionSlug
-from openapi_client.model.tags_array import TagsArray
-from openapi_client.model.volume_action_post_attach_all_of import VolumeActionPostAttachAllOf
-from openapi_client.model.volume_action_post_base import VolumeActionPostBase
+import digitalocean_client
+from digitalocean_client.model.region_slug import RegionSlug
+from digitalocean_client.model.tags_array import TagsArray
+from digitalocean_client.model.volume_action_post_attach_all_of import VolumeActionPostAttachAllOf
+from digitalocean_client.model.volume_action_post_base import VolumeActionPostBase
 globals()['RegionSlug'] = RegionSlug
 globals()['TagsArray'] = TagsArray
 globals()['VolumeActionPostAttachAllOf'] = VolumeActionPostAttachAllOf
 globals()['VolumeActionPostBase'] = VolumeActionPostBase
-from openapi_client.model.volume_action_post_attach import VolumeActionPostAttach
+from digitalocean_client.model.volume_action_post_attach import VolumeActionPostAttach
 
 
 class TestVolumeActionPostAttach(unittest.TestCase):

@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.product_charge_item import ProductChargeItem
+import digitalocean_client
+from digitalocean_client.model.product_charge_item import ProductChargeItem
 globals()['ProductChargeItem'] = ProductChargeItem
-from openapi_client.model.product_usage_charges import ProductUsageCharges
+from digitalocean_client.model.product_usage_charges import ProductUsageCharges
 
 
 class TestProductUsageCharges(unittest.TestCase):

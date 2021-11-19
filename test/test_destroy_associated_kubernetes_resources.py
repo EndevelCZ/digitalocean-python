@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.destroy_associated_kubernetes_resources import DestroyAssociatedKubernetesResources
+import digitalocean_client
+from digitalocean_client.model.destroy_associated_kubernetes_resources import DestroyAssociatedKubernetesResources
 
 
 class TestDestroyAssociatedKubernetesResources(unittest.TestCase):

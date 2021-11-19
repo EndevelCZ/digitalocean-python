@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.apps_github_source_spec import AppsGithubSourceSpec
+import digitalocean_client
+from digitalocean_client.model.apps_github_source_spec import AppsGithubSourceSpec
 
 
 class TestAppsGithubSourceSpec(unittest.TestCase):

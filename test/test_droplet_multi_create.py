@@ -12,12 +12,12 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_create import DropletCreate
-from openapi_client.model.droplet_multi_create_all_of import DropletMultiCreateAllOf
+import digitalocean_client
+from digitalocean_client.model.droplet_create import DropletCreate
+from digitalocean_client.model.droplet_multi_create_all_of import DropletMultiCreateAllOf
 globals()['DropletCreate'] = DropletCreate
 globals()['DropletMultiCreateAllOf'] = DropletMultiCreateAllOf
-from openapi_client.model.droplet_multi_create import DropletMultiCreate
+from digitalocean_client.model.droplet_multi_create import DropletMultiCreate
 
 
 class TestDropletMultiCreate(unittest.TestCase):

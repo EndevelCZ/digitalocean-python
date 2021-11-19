@@ -12,16 +12,16 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.app_alert_phase import AppAlertPhase
-from openapi_client.model.app_alert_progress import AppAlertProgress
-from openapi_client.model.app_alert_slack_webhook import AppAlertSlackWebhook
-from openapi_client.model.app_alert_spec import AppAlertSpec
+import digitalocean_client
+from digitalocean_client.model.app_alert_phase import AppAlertPhase
+from digitalocean_client.model.app_alert_progress import AppAlertProgress
+from digitalocean_client.model.app_alert_slack_webhook import AppAlertSlackWebhook
+from digitalocean_client.model.app_alert_spec import AppAlertSpec
 globals()['AppAlertPhase'] = AppAlertPhase
 globals()['AppAlertProgress'] = AppAlertProgress
 globals()['AppAlertSlackWebhook'] = AppAlertSlackWebhook
 globals()['AppAlertSpec'] = AppAlertSpec
-from openapi_client.model.app_alert import AppAlert
+from digitalocean_client.model.app_alert import AppAlert
 
 
 class TestAppAlert(unittest.TestCase):

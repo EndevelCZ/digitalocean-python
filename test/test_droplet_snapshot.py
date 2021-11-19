@@ -12,14 +12,14 @@
 import sys
 import unittest
 
-import openapi_client
-from openapi_client.model.droplet_snapshot_all_of import DropletSnapshotAllOf
-from openapi_client.model.droplet_snapshot_all_of1 import DropletSnapshotAllOf1
-from openapi_client.model.snapshot_base import SnapshotBase
+import digitalocean_client
+from digitalocean_client.model.droplet_snapshot_all_of import DropletSnapshotAllOf
+from digitalocean_client.model.droplet_snapshot_all_of1 import DropletSnapshotAllOf1
+from digitalocean_client.model.snapshot_base import SnapshotBase
 globals()['DropletSnapshotAllOf'] = DropletSnapshotAllOf
 globals()['DropletSnapshotAllOf1'] = DropletSnapshotAllOf1
 globals()['SnapshotBase'] = SnapshotBase
-from openapi_client.model.droplet_snapshot import DropletSnapshot
+from digitalocean_client.model.droplet_snapshot import DropletSnapshot
 
 
 class TestDropletSnapshot(unittest.TestCase):
