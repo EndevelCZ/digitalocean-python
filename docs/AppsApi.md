@@ -1,4 +1,4 @@
-# openapi_client.AppsApi
+# digitalocean_client.AppsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -38,15 +38,15 @@ Updates the emails and slack webhook destinations for app alerts. Emails must be
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.error import Error
-from openapi_client.model.apps_assign_app_alert_destinations_request import AppsAssignAppAlertDestinationsRequest
-from openapi_client.model.apps_alert_response import AppsAlertResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_assign_app_alert_destinations_request import AppsAssignAppAlertDestinationsRequest
+from digitalocean_client.model.apps_alert_response import AppsAlertResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -56,12 +56,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The app ID
@@ -81,7 +81,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update destinations for alerts
         api_response = api_instance.assign_alert_destinations(app_id, alert_id, apps_assign_app_alert_destinations_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->assign_alert_destinations: %s\n" % e)
 ```
 
@@ -134,15 +134,15 @@ Create a new app by submitting an app specification. For documentation on app sp
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.app_response import AppResponse
-from openapi_client.model.error import Error
-from openapi_client.model.apps_create_app_request import AppsCreateAppRequest
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.app_response import AppResponse
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_create_app_request import AppsCreateAppRequest
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -152,12 +152,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     apps_create_app_request = AppsCreateAppRequest(
@@ -203,7 +203,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New App
         api_response = api_instance.create_app(apps_create_app_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->create_app: %s\n" % e)
 ```
 
@@ -253,15 +253,15 @@ Creating an app deployment will pull the latest changes from your repository and
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.apps_create_deployment_request import AppsCreateDeploymentRequest
-from openapi_client.model.error import Error
-from openapi_client.model.apps_deployment_response import AppsDeploymentResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.apps_create_deployment_request import AppsCreateDeploymentRequest
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_deployment_response import AppsDeploymentResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -271,12 +271,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The app ID
@@ -289,7 +289,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create an App Deployment
         api_response = api_instance.create_deployment(app_id, apps_create_deployment_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->create_deployment: %s\n" % e)
 ```
 
@@ -341,14 +341,14 @@ Delete an existing app. Once deleted, all active deployments will be permanently
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.error import Error
-from openapi_client.model.apps_delete_app_response import AppsDeleteAppResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_delete_app_response import AppsDeleteAppResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -358,12 +358,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The ID of the app
@@ -373,7 +373,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Delete an App
         api_response = api_instance.delete_app(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->delete_app: %s\n" % e)
 ```
 
@@ -424,14 +424,14 @@ Retrieve details about an existing app by either its ID or name. To retrieve an 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.app_response import AppResponse
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.app_response import AppResponse
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -441,12 +441,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The ID of the app
@@ -457,7 +457,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing App
         api_response = api_instance.get_app(id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->get_app: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -466,7 +466,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing App
         api_response = api_instance.get_app(id, name=name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->get_app: %s\n" % e)
 ```
 
@@ -518,14 +518,14 @@ Retrieve information about an app deployment.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.error import Error
-from openapi_client.model.apps_deployment_response import AppsDeploymentResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_deployment_response import AppsDeploymentResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -535,12 +535,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The app ID
@@ -551,7 +551,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an App Deployment
         api_response = api_instance.get_deployment(app_id, deployment_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->get_deployment: %s\n" % e)
 ```
 
@@ -603,14 +603,14 @@ Retrieve information about a specific instance size for `service`, `worker`, and
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.error import Error
-from openapi_client.model.apps_get_instance_size_response import AppsGetInstanceSizeResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_get_instance_size_response import AppsGetInstanceSizeResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -620,12 +620,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     slug = "basic-xxs" # str | The slug of the instance size
@@ -635,7 +635,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Instance Size
         api_response = api_instance.get_instance_size(slug)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->get_instance_size: %s\n" % e)
 ```
 
@@ -686,14 +686,14 @@ Retrieve the logs of a past, in-progress, or active deployment. If a component n
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.apps_get_logs_response import AppsGetLogsResponse
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.apps_get_logs_response import AppsGetLogsResponse
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -703,12 +703,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The app ID
@@ -722,7 +722,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve Deployment Logs
         api_response = api_instance.get_logs(app_id, deployment_id, component_name, )
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->get_logs: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -731,7 +731,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve Deployment Logs
         api_response = api_instance.get_logs(app_id, deployment_id, component_name, follow=follow, pod_connection_timeout=pod_connection_timeout)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->get_logs: %s\n" % e)
 ```
 
@@ -787,14 +787,14 @@ Retrieve the logs of a past, in-progress, or active deployment. If a component n
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.apps_get_logs_response import AppsGetLogsResponse
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.apps_get_logs_response import AppsGetLogsResponse
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -804,12 +804,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The app ID
@@ -822,7 +822,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve Aggregate Deployment Logs
         api_response = api_instance.get_logs_aggregate(app_id, deployment_id, )
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->get_logs_aggregate: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -831,7 +831,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve Aggregate Deployment Logs
         api_response = api_instance.get_logs_aggregate(app_id, deployment_id, follow=follow, pod_connection_timeout=pod_connection_timeout)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->get_logs_aggregate: %s\n" % e)
 ```
 
@@ -886,14 +886,14 @@ Retrieve information about a specific app tier.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.apps_get_tier_response import AppsGetTierResponse
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.apps_get_tier_response import AppsGetTierResponse
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -903,12 +903,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     slug = "basic" # str | The slug of the tier
@@ -918,7 +918,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an App Tier
         api_response = api_instance.get_tier(slug)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->get_tier: %s\n" % e)
 ```
 
@@ -969,14 +969,14 @@ List alerts associated to the app and any components. This includes configuratio
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.error import Error
-from openapi_client.model.apps_list_alerts_response import AppsListAlertsResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_list_alerts_response import AppsListAlertsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -986,12 +986,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The app ID
@@ -1001,7 +1001,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List all app alerts
         api_response = api_instance.list_alerts(app_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->list_alerts: %s\n" % e)
 ```
 
@@ -1052,14 +1052,14 @@ List all apps on your account. Information about the current active deployment a
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.error import Error
-from openapi_client.model.apps_response import AppsResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_response import AppsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1069,12 +1069,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     page = 1 # int | Which 'page' of paginated results to return. (optional) if omitted the server will use the default value of 1
@@ -1086,7 +1086,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Apps
         api_response = api_instance.list_apps(page=page, per_page=per_page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->list_apps: %s\n" % e)
 ```
 
@@ -1137,14 +1137,14 @@ List all deployments of an app.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.apps_deployments_response import AppsDeploymentsResponse
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.apps_deployments_response import AppsDeploymentsResponse
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1154,12 +1154,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The app ID
@@ -1171,7 +1171,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List App Deployments
         api_response = api_instance.list_deployments(app_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->list_deployments: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1180,7 +1180,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List App Deployments
         api_response = api_instance.list_deployments(app_id, page=page, per_page=per_page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->list_deployments: %s\n" % e)
 ```
 
@@ -1233,14 +1233,14 @@ List all instance sizes for `service`, `worker`, and `job` components.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.error import Error
-from openapi_client.model.apps_list_instance_sizes_response import AppsListInstanceSizesResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_list_instance_sizes_response import AppsListInstanceSizesResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1250,12 +1250,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
 
@@ -1264,7 +1264,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Instance Sizes
         api_response = api_instance.list_instance_sizes()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->list_instance_sizes: %s\n" % e)
 ```
 
@@ -1311,14 +1311,14 @@ List all regions supported by App Platform.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.error import Error
-from openapi_client.model.apps_list_regions_response import AppsListRegionsResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_list_regions_response import AppsListRegionsResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1328,12 +1328,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
 
@@ -1342,7 +1342,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List App Regions
         api_response = api_instance.list_regions()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->list_regions: %s\n" % e)
 ```
 
@@ -1389,14 +1389,14 @@ List all app tiers.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.apps_list_tiers_response import AppsListTiersResponse
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.apps_list_tiers_response import AppsListTiersResponse
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1406,12 +1406,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
 
@@ -1420,7 +1420,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List App Tiers
         api_response = api_instance.list_tiers()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->list_tiers: %s\n" % e)
 ```
 
@@ -1467,14 +1467,14 @@ Immediately cancel an in-progress deployment.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.error import Error
-from openapi_client.model.apps_deployment_response import AppsDeploymentResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.apps_deployment_response import AppsDeploymentResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1484,12 +1484,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The app ID
@@ -1500,7 +1500,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Cancel a Deployment
         api_response = api_instance.post_cancel_deployment(app_id, deployment_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->post_cancel_deployment: %s\n" % e)
 ```
 
@@ -1552,15 +1552,15 @@ Update an existing app by submitting a new app specification. For documentation 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.apps_update_app_request import AppsUpdateAppRequest
-from openapi_client.model.app_response import AppResponse
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.apps_update_app_request import AppsUpdateAppRequest
+from digitalocean_client.model.app_response import AppResponse
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1570,12 +1570,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     id = "4f6c71e2-1e90-4762-9fee-6cc4a0a9f2cf" # str | The ID of the app
@@ -1622,7 +1622,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update an App
         api_response = api_instance.update_app(id, apps_update_app_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->update_app: %s\n" % e)
 ```
 
@@ -1674,15 +1674,15 @@ To propose and validate a spec for a new or existing app, send a PUT request to 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import apps_api
-from openapi_client.model.app_propose import AppPropose
-from openapi_client.model.error import Error
-from openapi_client.model.app_propose_response import AppProposeResponse
+import digitalocean_client
+from digitalocean_client.api import apps_api
+from digitalocean_client.model.app_propose import AppPropose
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.app_propose_response import AppProposeResponse
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1692,12 +1692,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = apps_api.AppsApi(api_client)
     app_propose = AppPropose(
@@ -1744,7 +1744,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Propose an App Spec
         api_response = api_instance.validate_app_spec(app_propose)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AppsApi->validate_app_spec: %s\n" % e)
 ```
 

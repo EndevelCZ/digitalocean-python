@@ -1,4 +1,4 @@
-# openapi_client.TagsApi
+# digitalocean_client.TagsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -25,15 +25,15 @@ To create a tag you can send a POST request to `/v2/tags` with a `name` attribut
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import tags_api
-from openapi_client.model.tag import Tag
-from openapi_client.model.error import Error
-from openapi_client.model.error_with_root_causes import ErrorWithRootCauses
+import digitalocean_client
+from digitalocean_client.api import tags_api
+from digitalocean_client.model.tag import Tag
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.error_with_root_causes import ErrorWithRootCauses
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -43,12 +43,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = tags_api.TagsApi(api_client)
     tag = Tag(
@@ -60,7 +60,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Tag
         api_response = api_instance.create_new_tag(tag)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling TagsApi->create_new_tag: %s\n" % e)
 ```
 
@@ -111,13 +111,13 @@ A tag can be deleted by sending a `DELETE` request to `/v2/tags/$TAG_NAME`. Dele
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import tags_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import tags_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -127,12 +127,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = tags_api.TagsApi(api_client)
     tag_id = "awesome" # str | The name of the tag. Tags may contain letters, numbers, colons, dashes, and underscores. There is a limit of 255 characters per tag.
@@ -141,7 +141,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Tag
         api_instance.delete_tag(tag_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling TagsApi->delete_tag: %s\n" % e)
 ```
 
@@ -192,14 +192,14 @@ To retrieve an individual tag, you can send a `GET` request to `/v2/tags/$TAG_NA
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import tags_api
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response20010 import InlineResponse20010
+import digitalocean_client
+from digitalocean_client.api import tags_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response20010 import InlineResponse20010
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -209,12 +209,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = tags_api.TagsApi(api_client)
     tag_id = "awesome" # str | The name of the tag. Tags may contain letters, numbers, colons, dashes, and underscores. There is a limit of 255 characters per tag.
@@ -224,7 +224,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve a Tag
         api_response = api_instance.get_tag(tag_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling TagsApi->get_tag: %s\n" % e)
 ```
 
@@ -275,13 +275,13 @@ To list all of your tags, you can send a GET request to `/v2/tags`.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import tags_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import tags_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -291,12 +291,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = tags_api.TagsApi(api_client)
 
@@ -305,7 +305,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Tags
         api_response = api_instance.list_all_tags()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling TagsApi->list_all_tags: %s\n" % e)
 ```
 
@@ -352,14 +352,14 @@ Resources can be tagged by sending a POST request to `/v2/tags/$TAG_NAME/resourc
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import tags_api
-from openapi_client.model.tag_resource import TagResource
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import tags_api
+from digitalocean_client.model.tag_resource import TagResource
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -369,12 +369,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = tags_api.TagsApi(api_client)
     tag_id = "awesome" # str | The name of the tag. Tags may contain letters, numbers, colons, dashes, and underscores. There is a limit of 255 characters per tag.
@@ -386,7 +386,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Tag a Resource
         api_instance.tag_resource(tag_id, tag_resource)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling TagsApi->tag_resource: %s\n" % e)
 ```
 
@@ -438,14 +438,14 @@ Resources can be tagged by sending a DELETE request to `/v2/tags/$TAG_NAME/resou
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import tags_api
-from openapi_client.model.tag_resource import TagResource
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import tags_api
+from digitalocean_client.model.tag_resource import TagResource
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -455,12 +455,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = tags_api.TagsApi(api_client)
     tag_id = "awesome" # str | The name of the tag. Tags may contain letters, numbers, colons, dashes, and underscores. There is a limit of 255 characters per tag.
@@ -472,7 +472,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Untag a Resource
         api_instance.untag_resource(tag_id, tag_resource)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling TagsApi->untag_resource: %s\n" % e)
 ```
 

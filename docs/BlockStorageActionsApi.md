@@ -1,4 +1,4 @@
-# openapi_client.BlockStorageActionsApi
+# digitalocean_client.BlockStorageActionsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -23,13 +23,13 @@ To retrieve the status of a volume action, send a GET request to `/v2/volumes/$V
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_actions_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_actions_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -39,12 +39,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_actions_api.BlockStorageActionsApi(api_client)
     volume_id = "7724db7c-e098-11e5-b522-000f53304e51" # str | The ID of the block storage volume.
@@ -57,7 +57,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Volume Action
         api_response = api_instance.get_volume_action(volume_id, action_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageActionsApi->get_volume_action: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -66,7 +66,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Volume Action
         api_response = api_instance.get_volume_action(volume_id, action_id, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageActionsApi->get_volume_action: %s\n" % e)
 ```
 
@@ -120,13 +120,13 @@ To retrieve all actions that have been executed on a volume, send a GET request 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_actions_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_actions_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -136,12 +136,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_actions_api.BlockStorageActionsApi(api_client)
     volume_id = "7724db7c-e098-11e5-b522-000f53304e51" # str | The ID of the block storage volume.
@@ -153,7 +153,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Actions for a Volume
         api_response = api_instance.list_all_volume_actions(volume_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageActionsApi->list_all_volume_actions: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -162,7 +162,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Actions for a Volume
         api_response = api_instance.list_all_volume_actions(volume_id, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageActionsApi->list_all_volume_actions: %s\n" % e)
 ```
 
@@ -215,14 +215,14 @@ To initiate an action on a block storage volume by Id, send a POST request to `~
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_actions_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_actions_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -232,12 +232,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_actions_api.BlockStorageActionsApi(api_client)
     volume_id = "7724db7c-e098-11e5-b522-000f53304e51" # str | The ID of the block storage volume.
@@ -250,7 +250,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Initiate A Block Storage Action By Volume Id
         api_response = api_instance.post_volume_action_by_id(volume_id, unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageActionsApi->post_volume_action_by_id: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -259,7 +259,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Initiate A Block Storage Action By Volume Id
         api_response = api_instance.post_volume_action_by_id(volume_id, unknown_base_type, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageActionsApi->post_volume_action_by_id: %s\n" % e)
 ```
 
@@ -313,14 +313,14 @@ To initiate an action on a block storage volume by Id, send a POST request to `~
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_actions_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_actions_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -330,12 +330,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_actions_api.BlockStorageActionsApi(api_client)
     unknown_base_type = None # UNKNOWN_BASE_TYPE | 
@@ -347,7 +347,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Initiate A Block Storage Action By Volume Name
         api_response = api_instance.post_volume_action_by_name(unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageActionsApi->post_volume_action_by_name: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -356,7 +356,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Initiate A Block Storage Action By Volume Name
         api_response = api_instance.post_volume_action_by_name(unknown_base_type, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageActionsApi->post_volume_action_by_name: %s\n" % e)
 ```
 

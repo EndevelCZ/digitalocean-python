@@ -1,4 +1,4 @@
-# openapi_client.ProjectResourcesApi
+# digitalocean_client.ProjectResourcesApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -23,15 +23,15 @@ To assign resources to your default project, send a POST request to `/v2/project
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import project_resources_api
-from openapi_client.model.error import Error
-from openapi_client.model.project_assignment import ProjectAssignment
-from openapi_client.model.inline_response2006 import InlineResponse2006
+import digitalocean_client
+from digitalocean_client.api import project_resources_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.project_assignment import ProjectAssignment
+from digitalocean_client.model.inline_response2006 import InlineResponse2006
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -41,12 +41,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = project_resources_api.ProjectResourcesApi(api_client)
     project_assignment = ProjectAssignment(
@@ -60,7 +60,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Assign Resources to Default Project
         api_response = api_instance.assign_default_project_resources(project_assignment)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectResourcesApi->assign_default_project_resources: %s\n" % e)
 ```
 
@@ -111,15 +111,15 @@ To assign resources to a project, send a POST request to `/v2/projects/$PROJECT_
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import project_resources_api
-from openapi_client.model.error import Error
-from openapi_client.model.project_assignment import ProjectAssignment
-from openapi_client.model.inline_response2006 import InlineResponse2006
+import digitalocean_client
+from digitalocean_client.api import project_resources_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.project_assignment import ProjectAssignment
+from digitalocean_client.model.inline_response2006 import InlineResponse2006
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -129,12 +129,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = project_resources_api.ProjectResourcesApi(api_client)
     project_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a project.
@@ -149,7 +149,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Assign Resources to a Project
         api_response = api_instance.assign_project_resources(project_id, project_assignment)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectResourcesApi->assign_project_resources: %s\n" % e)
 ```
 
@@ -201,13 +201,13 @@ To list all your resources in your default project, send a GET request to `/v2/p
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import project_resources_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import project_resources_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -217,12 +217,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = project_resources_api.ProjectResourcesApi(api_client)
 
@@ -231,7 +231,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Default Project Resources
         api_response = api_instance.list_default_project_resources()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectResourcesApi->list_default_project_resources: %s\n" % e)
 ```
 
@@ -279,13 +279,13 @@ To list all your resources in a project, send a GET request to `/v2/projects/$PR
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import project_resources_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import project_resources_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -295,12 +295,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = project_resources_api.ProjectResourcesApi(api_client)
     project_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a project.
@@ -310,7 +310,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Project Resources
         api_response = api_instance.list_project_resources(project_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectResourcesApi->list_project_resources: %s\n" % e)
 ```
 

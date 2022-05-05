@@ -1,4 +1,4 @@
-# openapi_client.VPCsApi
+# digitalocean_client.VPCsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -26,15 +26,15 @@ To create a VPC, send a POST request to `/v2/vpcs` specifying the attributes in 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import vpcs_api
-from openapi_client.model.inline_response2016 import InlineResponse2016
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import vpcs_api
+from digitalocean_client.model.inline_response2016 import InlineResponse2016
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -44,12 +44,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = vpcs_api.VPCsApi(api_client)
     unknown_base_type = {} # UNKNOWN_BASE_TYPE | 
@@ -59,7 +59,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New VPC
         api_response = api_instance.create_vpc(unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling VPCsApi->create_vpc: %s\n" % e)
 ```
 
@@ -109,13 +109,13 @@ To delete a VPC, send a DELETE request to `/v2/vpcs/$VPC_ID`. A 204 status code 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import vpcs_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import vpcs_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -125,12 +125,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = vpcs_api.VPCsApi(api_client)
     vpc_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a VPC.
@@ -139,7 +139,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a VPC
         api_instance.delete_vpc(vpc_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling VPCsApi->delete_vpc: %s\n" % e)
 ```
 
@@ -190,14 +190,14 @@ To show information about an existing VPC, send a GET request to `/v2/vpcs/$VPC_
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import vpcs_api
-from openapi_client.model.inline_response2016 import InlineResponse2016
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import vpcs_api
+from digitalocean_client.model.inline_response2016 import InlineResponse2016
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -207,12 +207,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = vpcs_api.VPCsApi(api_client)
     vpc_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a VPC.
@@ -222,7 +222,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing VPC
         api_response = api_instance.get_vpc(vpc_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling VPCsApi->get_vpc: %s\n" % e)
 ```
 
@@ -273,13 +273,13 @@ To list all of the resources that are members of a VPC, send a GET request to `/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import vpcs_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import vpcs_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -289,12 +289,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = vpcs_api.VPCsApi(api_client)
     vpc_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a VPC.
@@ -307,7 +307,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List the Member Resources of a VPC
         api_response = api_instance.list_vpc_members(vpc_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling VPCsApi->list_vpc_members: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -316,7 +316,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List the Member Resources of a VPC
         api_response = api_instance.list_vpc_members(vpc_id, resource_type=resource_type, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling VPCsApi->list_vpc_members: %s\n" % e)
 ```
 
@@ -370,13 +370,13 @@ To list all of the VPCs on your account, send a GET request to `/v2/vpcs`.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import vpcs_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import vpcs_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -386,12 +386,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = vpcs_api.VPCsApi(api_client)
     per_page = 2 # int | Number of items returned per page (optional) if omitted the server will use the default value of 20
@@ -403,7 +403,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All VPCs
         api_response = api_instance.list_vpcs(per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling VPCsApi->list_vpcs: %s\n" % e)
 ```
 
@@ -455,15 +455,15 @@ To update a subset of information about a VPC, send a PATCH request to `/v2/vpcs
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import vpcs_api
-from openapi_client.model.inline_response2016 import InlineResponse2016
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import vpcs_api
+from digitalocean_client.model.inline_response2016 import InlineResponse2016
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -473,12 +473,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = vpcs_api.VPCsApi(api_client)
     vpc_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a VPC.
@@ -489,7 +489,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Partially Update a VPC
         api_response = api_instance.patch_vpc(vpc_id, unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling VPCsApi->patch_vpc: %s\n" % e)
 ```
 
@@ -541,15 +541,15 @@ To update information about a VPC, send a PUT request to `/v2/vpcs/$VPC_ID`.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import vpcs_api
-from openapi_client.model.inline_response2016 import InlineResponse2016
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import vpcs_api
+from digitalocean_client.model.inline_response2016 import InlineResponse2016
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -559,12 +559,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = vpcs_api.VPCsApi(api_client)
     vpc_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a VPC.
@@ -575,7 +575,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a VPC
         api_response = api_instance.update_vpc(vpc_id, unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling VPCsApi->update_vpc: %s\n" % e)
 ```
 

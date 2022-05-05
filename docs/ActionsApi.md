@@ -1,4 +1,4 @@
-# openapi_client.ActionsApi
+# digitalocean_client.ActionsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -21,13 +21,13 @@ To retrieve a specific action object, send a GET request to `/v2/actions/$ACTION
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import actions_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import actions_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -37,12 +37,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = actions_api.ActionsApi(api_client)
     action_id = 36804636 # int | A unique numeric ID that can be used to identify and reference an action.
@@ -52,7 +52,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Action
         api_response = api_instance.get_action(action_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ActionsApi->get_action: %s\n" % e)
 ```
 
@@ -103,13 +103,13 @@ This will be the entire list of actions taken on your account, so it will be qui
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import actions_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import actions_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -119,12 +119,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = actions_api.ActionsApi(api_client)
     per_page = 2 # int | Number of items returned per page (optional) if omitted the server will use the default value of 20
@@ -136,7 +136,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Actions
         api_response = api_instance.list_all_actions(per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ActionsApi->list_all_actions: %s\n" % e)
 ```
 

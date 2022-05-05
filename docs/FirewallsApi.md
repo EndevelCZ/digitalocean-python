@@ -1,4 +1,4 @@
-# openapi_client.FirewallsApi
+# digitalocean_client.FirewallsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -30,14 +30,14 @@ To assign a Droplet to a firewall, send a POST request to `/v2/firewalls/$FIREWA
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -47,12 +47,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     firewall_id = "bb4b2611-3d72-467b-8602-280330ecd65c" # str | A unique ID that can be used to identify and reference a firewall.
@@ -62,7 +62,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Add Droplets to a Firewall
         api_instance.add_firewall_droplets(firewall_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->add_firewall_droplets: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -70,7 +70,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Add Droplets to a Firewall
         api_instance.add_firewall_droplets(firewall_id, unknown_base_type=unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->add_firewall_droplets: %s\n" % e)
 ```
 
@@ -123,14 +123,14 @@ To add additional access rules to a firewall, send a POST request to `/v2/firewa
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -140,12 +140,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     firewall_id = "bb4b2611-3d72-467b-8602-280330ecd65c" # str | A unique ID that can be used to identify and reference a firewall.
@@ -155,7 +155,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Add Rules to a Firewall
         api_instance.add_firewall_rules(firewall_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->add_firewall_rules: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -163,7 +163,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Add Rules to a Firewall
         api_instance.add_firewall_rules(firewall_id, unknown_base_type=unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->add_firewall_rules: %s\n" % e)
 ```
 
@@ -216,14 +216,14 @@ To assign a tag representing a group of Droplets to a firewall, send a POST requ
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -233,12 +233,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     firewall_id = "bb4b2611-3d72-467b-8602-280330ecd65c" # str | A unique ID that can be used to identify and reference a firewall.
@@ -248,7 +248,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Add Tags to a Firewall
         api_instance.add_firewall_tags(firewall_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->add_firewall_tags: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -256,7 +256,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Add Tags to a Firewall
         api_instance.add_firewall_tags(firewall_id, unknown_base_type=unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->add_firewall_tags: %s\n" % e)
 ```
 
@@ -309,14 +309,14 @@ To create a new firewall, send a POST request to `/v2/firewalls`. The request mu
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -326,12 +326,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     unknown_base_type = None # UNKNOWN_BASE_TYPE |  (optional)
@@ -342,7 +342,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Firewall
         api_response = api_instance.create_firewall(unknown_base_type=unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->create_firewall: %s\n" % e)
 ```
 
@@ -393,13 +393,13 @@ To delete a firewall send a DELETE request to `/v2/firewalls/$FIREWALL_ID`.  No 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -409,12 +409,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     firewall_id = "bb4b2611-3d72-467b-8602-280330ecd65c" # str | A unique ID that can be used to identify and reference a firewall.
@@ -423,7 +423,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Firewall
         api_instance.delete_firewall(firewall_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->delete_firewall: %s\n" % e)
 ```
 
@@ -474,14 +474,14 @@ To remove a Droplet from a firewall, send a DELETE request to `/v2/firewalls/$FI
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -491,12 +491,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     firewall_id = "bb4b2611-3d72-467b-8602-280330ecd65c" # str | A unique ID that can be used to identify and reference a firewall.
@@ -506,7 +506,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Remove Droplets from a Firewall
         api_instance.delete_firewall_droplets(firewall_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->delete_firewall_droplets: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -514,7 +514,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Remove Droplets from a Firewall
         api_instance.delete_firewall_droplets(firewall_id, unknown_base_type=unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->delete_firewall_droplets: %s\n" % e)
 ```
 
@@ -567,14 +567,14 @@ To remove access rules from a firewall, send a DELETE request to `/v2/firewalls/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -584,12 +584,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     firewall_id = "bb4b2611-3d72-467b-8602-280330ecd65c" # str | A unique ID that can be used to identify and reference a firewall.
@@ -599,7 +599,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Remove Rules from a Firewall
         api_instance.delete_firewall_rules(firewall_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->delete_firewall_rules: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -607,7 +607,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Remove Rules from a Firewall
         api_instance.delete_firewall_rules(firewall_id, unknown_base_type=unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->delete_firewall_rules: %s\n" % e)
 ```
 
@@ -660,14 +660,14 @@ To remove a tag representing a group of Droplets from a firewall, send a DELETE 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -677,12 +677,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     firewall_id = "bb4b2611-3d72-467b-8602-280330ecd65c" # str | A unique ID that can be used to identify and reference a firewall.
@@ -692,7 +692,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Remove Tags from a Firewall
         api_instance.delete_firewall_tags(firewall_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->delete_firewall_tags: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -700,7 +700,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Remove Tags from a Firewall
         api_instance.delete_firewall_tags(firewall_id, unknown_base_type=unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->delete_firewall_tags: %s\n" % e)
 ```
 
@@ -753,13 +753,13 @@ To show information about an existing firewall, send a GET request to `/v2/firew
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -769,12 +769,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     firewall_id = "bb4b2611-3d72-467b-8602-280330ecd65c" # str | A unique ID that can be used to identify and reference a firewall.
@@ -784,7 +784,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Firewall
         api_response = api_instance.get_firewall(firewall_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->get_firewall: %s\n" % e)
 ```
 
@@ -835,13 +835,13 @@ To list all of the firewalls available on your account, send a GET request to `/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -851,12 +851,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     per_page = 2 # int | Number of items returned per page (optional) if omitted the server will use the default value of 20
@@ -868,7 +868,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Firewalls
         api_response = api_instance.list_firewalls(per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->list_firewalls: %s\n" % e)
 ```
 
@@ -919,14 +919,14 @@ To update the configuration of an existing firewall, send a PUT request to `/v2/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import firewalls_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import firewalls_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -936,12 +936,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = firewalls_api.FirewallsApi(api_client)
     firewall_id = "bb4b2611-3d72-467b-8602-280330ecd65c" # str | A unique ID that can be used to identify and reference a firewall.
@@ -952,7 +952,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a Firewall
         api_response = api_instance.update_firewall(firewall_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->update_firewall: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -961,7 +961,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a Firewall
         api_response = api_instance.update_firewall(firewall_id, unknown_base_type=unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FirewallsApi->update_firewall: %s\n" % e)
 ```
 

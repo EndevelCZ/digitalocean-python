@@ -1,4 +1,4 @@
-# openapi_client.KubernetesApi
+# digitalocean_client.KubernetesApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -44,14 +44,14 @@ To add an additional node pool to a Kubernetes clusters, send a POST request to 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
-from openapi_client.model.kubernetes_node_pool import KubernetesNodePool
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.kubernetes_node_pool import KubernetesNodePool
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -61,12 +61,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -77,7 +77,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Add a Node Pool to a Kubernetes Cluster
         api_response = api_instance.add_kubernetes_node_pool(cluster_id, kubernetes_node_pool)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->add_kubernetes_node_pool: %s\n" % e)
 ```
 
@@ -129,14 +129,14 @@ To integrate the container registry with Kubernetes clusters, send a POST reques
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.cluster_registries import ClusterRegistries
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.cluster_registries import ClusterRegistries
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -146,12 +146,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_registries = ClusterRegistries(
@@ -163,7 +163,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Add Container Registry to Kubernetes Clusters
         api_instance.add_registry(cluster_registries=cluster_registries)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->add_registry: %s\n" % e)
 ```
 
@@ -213,14 +213,14 @@ To create a new Kubernetes cluster, send a POST request to `/v2/kubernetes/clust
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
-from openapi_client.model.cluster import Cluster
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.cluster import Cluster
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -230,12 +230,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster = Cluster(
@@ -261,7 +261,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Kubernetes Cluster
         api_response = api_instance.create_kubernetes_cluster(cluster)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->create_kubernetes_cluster: %s\n" % e)
 ```
 
@@ -311,13 +311,13 @@ To delete a Kubernetes cluster and all services deployed to it, send a DELETE re
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -327,12 +327,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -341,7 +341,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Kubernetes Cluster
         api_instance.delete_kubernetes_cluster(cluster_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->delete_kubernetes_cluster: %s\n" % e)
 ```
 
@@ -392,13 +392,13 @@ To delete a single node in a pool, send a DELETE request to `/v2/kubernetes/clus
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -408,12 +408,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -426,7 +426,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Node in a Kubernetes Cluster
         api_instance.delete_kubernetes_node(cluster_id, node_pool_id, node_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->delete_kubernetes_node: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -434,7 +434,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Node in a Kubernetes Cluster
         api_instance.delete_kubernetes_node(cluster_id, node_pool_id, node_id, skip_drain=skip_drain, replace=replace)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->delete_kubernetes_node: %s\n" % e)
 ```
 
@@ -489,13 +489,13 @@ To delete a node pool, send a DELETE request to `/v2/kubernetes/clusters/$K8S_CL
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -505,12 +505,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -520,7 +520,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Node Pool in a Kubernetes Cluster
         api_instance.delete_kubernetes_node_pool(cluster_id, node_pool_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->delete_kubernetes_node_pool: %s\n" % e)
 ```
 
@@ -572,13 +572,13 @@ To delete a Kubernetes cluster with all of its associated resources, send a DELE
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -588,12 +588,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -602,7 +602,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Cluster and All of its Associated Resources (Dangerous)
         api_instance.destroy_kubernetes_associated_resources_dangerous(cluster_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->destroy_kubernetes_associated_resources_dangerous: %s\n" % e)
 ```
 
@@ -653,14 +653,14 @@ To delete a Kubernetes cluster along with a subset of its associated resources, 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
-from openapi_client.model.destroy_associated_kubernetes_resources import DestroyAssociatedKubernetesResources
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.destroy_associated_kubernetes_resources import DestroyAssociatedKubernetesResources
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -670,12 +670,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -689,7 +689,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Selectively Delete a Cluster and its Associated Resources
         api_instance.destroy_kubernetes_associated_resources_selective(cluster_id, destroy_associated_kubernetes_resources)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->destroy_kubernetes_associated_resources_selective: %s\n" % e)
 ```
 
@@ -741,14 +741,14 @@ To determine whether a cluster can be upgraded, and the versions to which it can
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.inline_response2005 import InlineResponse2005
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.inline_response2005 import InlineResponse2005
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -758,12 +758,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -773,7 +773,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve Available Upgrades for an Existing Kubernetes Cluster
         api_response = api_instance.get_available_upgrades(cluster_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->get_available_upgrades: %s\n" % e)
 ```
 
@@ -824,14 +824,14 @@ To show information the user associated with a Kubernetes cluster, send a GET re
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.user import User
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.user import User
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -841,12 +841,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -856,7 +856,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve User Information for a Kubernetes Cluster
         api_response = api_instance.get_cluster_user(cluster_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->get_cluster_user: %s\n" % e)
 ```
 
@@ -907,14 +907,14 @@ To request clusterlint diagnostics for your cluster, send a GET request to `/v2/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.clusterlint_results import ClusterlintResults
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.clusterlint_results import ClusterlintResults
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -924,12 +924,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -940,7 +940,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Fetch Clusterlint Diagnostics for a Kubernetes Cluster
         api_response = api_instance.get_clusterlint_results(cluster_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->get_clusterlint_results: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -949,7 +949,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Fetch Clusterlint Diagnostics for a Kubernetes Cluster
         api_response = api_instance.get_clusterlint_results(cluster_id, run_id=run_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->get_clusterlint_results: %s\n" % e)
 ```
 
@@ -1001,14 +1001,14 @@ This endpoint returns a JSON object . It can be used to programmatically constru
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
-from openapi_client.model.credentials import Credentials
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.credentials import Credentials
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1018,12 +1018,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -1034,7 +1034,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve Credentials for a Kubernetes Cluster
         api_response = api_instance.get_credentials(cluster_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->get_credentials: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1043,7 +1043,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve Credentials for a Kubernetes Cluster
         api_response = api_instance.get_credentials(cluster_id, expiry_seconds=expiry_seconds)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->get_credentials: %s\n" % e)
 ```
 
@@ -1095,13 +1095,13 @@ This endpoint returns a kubeconfig file in YAML format. It can be used to connec
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1111,12 +1111,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -1127,7 +1127,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve the kubeconfig for a Kubernetes Cluster
         api_response = api_instance.get_kubeconfig(cluster_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->get_kubeconfig: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1136,7 +1136,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve the kubeconfig for a Kubernetes Cluster
         api_response = api_instance.get_kubeconfig(cluster_id, expiry_seconds=expiry_seconds)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->get_kubeconfig: %s\n" % e)
 ```
 
@@ -1188,13 +1188,13 @@ To show information about an existing Kubernetes cluster, send a GET request to 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1204,12 +1204,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -1219,7 +1219,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Kubernetes Cluster
         api_response = api_instance.get_kubernetes_cluster(cluster_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->get_kubernetes_cluster: %s\n" % e)
 ```
 
@@ -1270,13 +1270,13 @@ To show information about a specific node pool in a Kubernetes cluster, send a G
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1286,12 +1286,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -1302,7 +1302,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve a Node Pool for a Kubernetes Cluster
         api_response = api_instance.get_node_pool(cluster_id, node_pool_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->get_node_pool: %s\n" % e)
 ```
 
@@ -1354,13 +1354,13 @@ To list all of the Kubernetes clusters on your account, send a GET request to `/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1370,12 +1370,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     per_page = 2 # int | Number of items returned per page (optional) if omitted the server will use the default value of 20
@@ -1387,7 +1387,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Kubernetes Clusters
         api_response = api_instance.list_all_kubernetes_clusters(per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->list_all_kubernetes_clusters: %s\n" % e)
 ```
 
@@ -1438,14 +1438,14 @@ To list the associated billable resources that can be destroyed along with a clu
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
-from openapi_client.model.associated_kubernetes_resources import AssociatedKubernetesResources
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.associated_kubernetes_resources import AssociatedKubernetesResources
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1455,12 +1455,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -1470,7 +1470,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Associated Resources for Cluster Deletion
         api_response = api_instance.list_kubernetes_associated_resources(cluster_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->list_kubernetes_associated_resources: %s\n" % e)
 ```
 
@@ -1521,14 +1521,14 @@ To list the versions of Kubernetes available for use, the regions that support K
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.kubernetes_options import KubernetesOptions
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.kubernetes_options import KubernetesOptions
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1538,12 +1538,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
 
@@ -1552,7 +1552,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Available Regions, Node Sizes, and Versions of Kubernetes
         api_response = api_instance.list_kubernetes_options()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->list_kubernetes_options: %s\n" % e)
 ```
 
@@ -1600,13 +1600,13 @@ To list all of the node pools in a Kubernetes clusters, send a GET request to `/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1616,12 +1616,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -1631,7 +1631,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Node Pools in a Kubernetes Clusters
         api_response = api_instance.list_node_pools(cluster_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->list_node_pools: %s\n" % e)
 ```
 
@@ -1682,14 +1682,14 @@ The endpoint has been deprecated. Please use the DELETE `/v2/kubernetes/clusters
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1699,12 +1699,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -1715,7 +1715,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Recycle a Kubernetes Node Pool
         api_instance.recycle_kubernetes_node_pool(cluster_id, node_pool_id, unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->recycle_kubernetes_node_pool: %s\n" % e)
 ```
 
@@ -1768,14 +1768,14 @@ To remove the container registry from Kubernetes clusters, send a DELETE request
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.cluster_registries import ClusterRegistries
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.cluster_registries import ClusterRegistries
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1785,12 +1785,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_registries = ClusterRegistries(
@@ -1802,7 +1802,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Remove Container Registry from Kubernetes Clusters
         api_instance.remove_registry(cluster_registries=cluster_registries)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->remove_registry: %s\n" % e)
 ```
 
@@ -1852,14 +1852,14 @@ Clusterlint helps operators conform to Kubernetes best practices around resource
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.clusterlint_request import ClusterlintRequest
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.clusterlint_request import ClusterlintRequest
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1869,12 +1869,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -1890,7 +1890,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Run Clusterlint Checks on a Kubernetes Cluster
         api_response = api_instance.run_clusterlint(cluster_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->run_clusterlint: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1899,7 +1899,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Run Clusterlint Checks on a Kubernetes Cluster
         api_response = api_instance.run_clusterlint(cluster_id, clusterlint_request=clusterlint_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->run_clusterlint: %s\n" % e)
 ```
 
@@ -1951,14 +1951,14 @@ To update a Kubernetes cluster, send a PUT request to `/v2/kubernetes/clusters/$
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.error import Error
-from openapi_client.model.cluster_update import ClusterUpdate
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.cluster_update import ClusterUpdate
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1968,12 +1968,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -1993,7 +1993,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a Kubernetes Cluster
         api_response = api_instance.update_kubernetes_cluster(cluster_id, cluster_update)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->update_kubernetes_cluster: %s\n" % e)
 ```
 
@@ -2045,14 +2045,14 @@ To update the name of a node pool, edit the tags applied to it, or adjust its nu
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.kubernetes_node_pool_update import KubernetesNodePoolUpdate
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.kubernetes_node_pool_update import KubernetesNodePoolUpdate
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2062,12 +2062,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -2079,7 +2079,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a Node Pool in a Kubernetes Cluster
         api_response = api_instance.update_kubernetes_node_pool(cluster_id, node_pool_id, kubernetes_node_pool_update)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->update_kubernetes_node_pool: %s\n" % e)
 ```
 
@@ -2132,14 +2132,14 @@ To immediately upgrade a Kubernetes cluster to a newer patch release of Kubernet
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import kubernetes_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import kubernetes_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2149,12 +2149,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = kubernetes_api.KubernetesApi(api_client)
     cluster_id = "bd5f5959-5e1e-4205-a714-a914373942af" # str | A unique ID that can be used to reference a Kubernetes cluster.
@@ -2164,7 +2164,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Upgrade a Kubernetes Cluster
         api_instance.upgrade_kubernetes_cluster(cluster_id, unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling KubernetesApi->upgrade_kubernetes_cluster: %s\n" % e)
 ```
 

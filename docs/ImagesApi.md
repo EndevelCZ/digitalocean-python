@@ -1,4 +1,4 @@
-# openapi_client.ImagesApi
+# digitalocean_client.ImagesApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -24,14 +24,14 @@ To create a new custom image, send a POST request to /v2/images. The body must c
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import images_api
-from openapi_client.model.image_new_custom import ImageNewCustom
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import images_api
+from digitalocean_client.model.image_new_custom import ImageNewCustom
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -41,12 +41,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = images_api.ImagesApi(api_client)
     image_new_custom = ImageNewCustom() # ImageNewCustom | 
@@ -56,7 +56,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a Custom Image
         api_response = api_instance.create_custom_image(image_new_custom)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ImagesApi->create_custom_image: %s\n" % e)
 ```
 
@@ -106,13 +106,13 @@ To delete a snapshot or custom image, send a `DELETE` request to `/v2/images/$IM
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import images_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import images_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -122,12 +122,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = images_api.ImagesApi(api_client)
     image_id = 62137902 # int | A unique number that can be used to identify and reference a specific image.
@@ -136,7 +136,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete an Image
         api_instance.delete_image(image_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ImagesApi->delete_image: %s\n" % e)
 ```
 
@@ -187,14 +187,14 @@ To retrieve information about an image, send a `GET` request to `/v2/images/$IDE
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import images_api
-from openapi_client.model.inline_response2004 import InlineResponse2004
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import images_api
+from digitalocean_client.model.inline_response2004 import InlineResponse2004
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -204,12 +204,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = images_api.ImagesApi(api_client)
     image_id = None # bool, date, datetime, dict, float, int, list, str, none_type | A unique number (id) or string (slug) used to identify and reference a specific image.  **Public** images can be identified by image `id` or `slug`.  **Private** images *must* be identified by image `id`. 
@@ -219,7 +219,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Image
         api_response = api_instance.get_image(image_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ImagesApi->get_image: %s\n" % e)
 ```
 
@@ -270,13 +270,13 @@ To list all of the images available on your account, send a GET request to /v2/i
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import images_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import images_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -286,12 +286,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = images_api.ImagesApi(api_client)
     type = "distribution" # str | Filters results based on image type which can be either `application` or `distribution`. (optional)
@@ -306,7 +306,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Images
         api_response = api_instance.get_images_list(type=type, private=private, tag_name=tag_name, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ImagesApi->get_images_list: %s\n" % e)
 ```
 
@@ -360,15 +360,15 @@ To update an image, send a `PUT` request to `/v2/images/$IMAGE_ID`. Set the `nam
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import images_api
-from openapi_client.model.inline_response2004 import InlineResponse2004
-from openapi_client.model.error import Error
-from openapi_client.model.image_update import ImageUpdate
+import digitalocean_client
+from digitalocean_client.api import images_api
+from digitalocean_client.model.inline_response2004 import InlineResponse2004
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.image_update import ImageUpdate
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -378,12 +378,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = images_api.ImagesApi(api_client)
     image_id = 62137902 # int | A unique number that can be used to identify and reference a specific image.
@@ -398,7 +398,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update an Image
         api_response = api_instance.update_image(image_id, image_update)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ImagesApi->update_image: %s\n" % e)
 ```
 

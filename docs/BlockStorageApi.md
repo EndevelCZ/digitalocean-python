@@ -1,4 +1,4 @@
-# openapi_client.BlockStorageApi
+# digitalocean_client.BlockStorageApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -28,14 +28,14 @@ To create a new volume, send a POST request to `/v2/volumes`. Optionally, a `fil
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -45,12 +45,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_api.BlockStorageApi(api_client)
     unknown_base_type = None # UNKNOWN_BASE_TYPE | 
@@ -60,7 +60,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Block Storage Volume
         api_response = api_instance.create_new_volume(unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageApi->create_new_volume: %s\n" % e)
 ```
 
@@ -112,14 +112,14 @@ To create a snapshot from a volume, sent a POST request to `/v2/volumes/$VOLUME_
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -129,12 +129,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_api.BlockStorageApi(api_client)
     volume_id = "7724db7c-e098-11e5-b522-000f53304e51" # str | The ID of the block storage volume.
@@ -145,7 +145,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create Snapshot from a Volume
         api_response = api_instance.create_volume_snapshot(volume_id, unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageApi->create_volume_snapshot: %s\n" % e)
 ```
 
@@ -198,13 +198,13 @@ To delete a block storage volume, destroying all data and removing it from your 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -214,12 +214,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_api.BlockStorageApi(api_client)
     volume_id = "7724db7c-e098-11e5-b522-000f53304e51" # str | The ID of the block storage volume.
@@ -228,7 +228,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Block Storage Volume
         api_instance.delete_volume(volume_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageApi->delete_volume: %s\n" % e)
 ```
 
@@ -279,14 +279,14 @@ Block storage volumes may also be deleted by name by sending a DELETE request wi
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_api
-from openapi_client.model.error import Error
-from openapi_client.model.region_slug import RegionSlug
+import digitalocean_client
+from digitalocean_client.api import block_storage_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.region_slug import RegionSlug
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -296,12 +296,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_api.BlockStorageApi(api_client)
     name = "example" # str | The block storage volume's name. (optional)
@@ -312,7 +312,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Block Storage Volume by Name
         api_instance.delete_volume_by_name(name=name, region=region)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageApi->delete_volume_by_name: %s\n" % e)
 ```
 
@@ -364,13 +364,13 @@ To delete a volume snapshot, send a DELETE request to `/v2/snapshots/$SNAPSHOT_I
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -380,12 +380,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_api.BlockStorageApi(api_client)
     snapshot_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Either the ID of an existing snapshot. This will be an integer for a Droplet snapshot or a string for a volume snapshot.
@@ -394,7 +394,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Volume Snapshot
         api_instance.delete_volume_snapshot_by_id(snapshot_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageApi->delete_volume_snapshot_by_id: %s\n" % e)
 ```
 
@@ -445,13 +445,13 @@ To show information about a block storage volume, send a GET request to `/v2/vol
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -461,12 +461,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_api.BlockStorageApi(api_client)
     volume_id = "7724db7c-e098-11e5-b522-000f53304e51" # str | The ID of the block storage volume.
@@ -476,7 +476,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Block Storage Volume
         api_response = api_instance.get_volume(volume_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageApi->get_volume: %s\n" % e)
 ```
 
@@ -527,13 +527,13 @@ To retrieve the details of a snapshot that has been created from a volume, send 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -543,12 +543,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_api.BlockStorageApi(api_client)
     snapshot_id = None # bool, date, datetime, dict, float, int, list, str, none_type | Either the ID of an existing snapshot. This will be an integer for a Droplet snapshot or a string for a volume snapshot.
@@ -558,7 +558,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retreive an Existing Volume Snapshot
         api_response = api_instance.get_volume_snapshot_by_id(snapshot_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageApi->get_volume_snapshot_by_id: %s\n" % e)
 ```
 
@@ -609,14 +609,14 @@ To list all of the block storage volumes available on your account, send a GET r
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_api
-from openapi_client.model.error import Error
-from openapi_client.model.region_slug import RegionSlug
+import digitalocean_client
+from digitalocean_client.api import block_storage_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.region_slug import RegionSlug
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -626,12 +626,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_api.BlockStorageApi(api_client)
     name = "example" # str | The block storage volume's name. (optional)
@@ -645,7 +645,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Block Storage Volumes
         api_response = api_instance.list_all_volumes(name=name, region=region, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageApi->list_all_volumes: %s\n" % e)
 ```
 
@@ -698,13 +698,13 @@ To retrieve the snapshots that have been created from a volume, send a GET reque
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import block_storage_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import block_storage_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -714,12 +714,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = block_storage_api.BlockStorageApi(api_client)
     volume_id = "7724db7c-e098-11e5-b522-000f53304e51" # str | The ID of the block storage volume.
@@ -731,7 +731,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Snapshots for a Volume
         api_response = api_instance.list_volume_snapshots(volume_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageApi->list_volume_snapshots: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -740,7 +740,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Snapshots for a Volume
         api_response = api_instance.list_volume_snapshots(volume_id, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BlockStorageApi->list_volume_snapshots: %s\n" % e)
 ```
 

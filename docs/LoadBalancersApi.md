@@ -1,4 +1,4 @@
-# openapi_client.LoadBalancersApi
+# digitalocean_client.LoadBalancersApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -28,14 +28,14 @@ To assign a Droplet to a load balancer instance, send a POST request to `/v2/loa
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import load_balancers_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import load_balancers_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -45,12 +45,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = load_balancers_api.LoadBalancersApi(api_client)
     lb_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a load balancer.
@@ -60,7 +60,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Add Droplets to a Load Balancer
         api_instance.add_load_balancer_droplets(lb_id, unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling LoadBalancersApi->add_load_balancer_droplets: %s\n" % e)
 ```
 
@@ -112,14 +112,14 @@ To add an additional forwarding rule to a load balancer instance, send a POST re
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import load_balancers_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import load_balancers_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -129,12 +129,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = load_balancers_api.LoadBalancersApi(api_client)
     lb_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a load balancer.
@@ -144,7 +144,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Add Forwarding Rules to a Load Balancer
         api_instance.add_load_balancer_forwarding_rules(lb_id, unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling LoadBalancersApi->add_load_balancer_forwarding_rules: %s\n" % e)
 ```
 
@@ -196,14 +196,14 @@ To create a new load balancer instance, send a POST request to `/v2/load_balance
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import load_balancers_api
-from openapi_client.model.error import Error
-from openapi_client.model.load_balancer_create import LoadBalancerCreate
+import digitalocean_client
+from digitalocean_client.api import load_balancers_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.load_balancer_create import LoadBalancerCreate
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -213,12 +213,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = load_balancers_api.LoadBalancersApi(api_client)
     load_balancer_create = LoadBalancerCreate(None) # LoadBalancerCreate | 
@@ -228,7 +228,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Load Balancer
         api_response = api_instance.create_load_balancer(load_balancer_create)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling LoadBalancersApi->create_load_balancer: %s\n" % e)
 ```
 
@@ -278,13 +278,13 @@ To delete a load balancer instance, disassociating any Droplets assigned to it a
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import load_balancers_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import load_balancers_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -294,12 +294,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = load_balancers_api.LoadBalancersApi(api_client)
     lb_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a load balancer.
@@ -308,7 +308,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Load Balancer
         api_instance.delete_load_balancer(lb_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling LoadBalancersApi->delete_load_balancer: %s\n" % e)
 ```
 
@@ -359,13 +359,13 @@ To show information about a load balancer instance, send a GET request to `/v2/l
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import load_balancers_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import load_balancers_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -375,12 +375,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = load_balancers_api.LoadBalancersApi(api_client)
     lb_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a load balancer.
@@ -390,7 +390,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Load Balancer
         api_response = api_instance.get_load_balancer(lb_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling LoadBalancersApi->get_load_balancer: %s\n" % e)
 ```
 
@@ -441,13 +441,13 @@ To list all of the load balancer instances on your account, send a GET request t
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import load_balancers_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import load_balancers_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -457,12 +457,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = load_balancers_api.LoadBalancersApi(api_client)
     per_page = 2 # int | Number of items returned per page (optional) if omitted the server will use the default value of 20
@@ -474,7 +474,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Load Balancers
         api_response = api_instance.list_all_load_balancers(per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling LoadBalancersApi->list_all_load_balancers: %s\n" % e)
 ```
 
@@ -525,14 +525,14 @@ To remove a Droplet from a load balancer instance, send a DELETE request to `/v2
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import load_balancers_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import load_balancers_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -542,12 +542,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = load_balancers_api.LoadBalancersApi(api_client)
     lb_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a load balancer.
@@ -557,7 +557,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Remove Droplets from a Load Balancer
         api_instance.remove_load_balancer_droplets(lb_id, unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling LoadBalancersApi->remove_load_balancer_droplets: %s\n" % e)
 ```
 
@@ -609,14 +609,14 @@ To remove forwarding rules from a load balancer instance, send a DELETE request 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import load_balancers_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import load_balancers_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -626,12 +626,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = load_balancers_api.LoadBalancersApi(api_client)
     lb_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a load balancer.
@@ -641,7 +641,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Remove Forwarding Rules from a Load Balancer
         api_instance.remove_load_balancer_forwarding_rules(lb_id, unknown_base_type)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling LoadBalancersApi->remove_load_balancer_forwarding_rules: %s\n" % e)
 ```
 
@@ -693,14 +693,14 @@ To update a load balancer's settings, send a PUT request to `/v2/load_balancers/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import load_balancers_api
-from openapi_client.model.error import Error
-from openapi_client.model.load_balancer_create import LoadBalancerCreate
+import digitalocean_client
+from digitalocean_client.api import load_balancers_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.load_balancer_create import LoadBalancerCreate
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -710,12 +710,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = load_balancers_api.LoadBalancersApi(api_client)
     lb_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a load balancer.
@@ -726,7 +726,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a Load Balancer
         api_response = api_instance.update_load_balancer(lb_id, load_balancer_create)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling LoadBalancersApi->update_load_balancer: %s\n" % e)
 ```
 

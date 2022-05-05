@@ -1,4 +1,4 @@
-# openapi_client.FloatingIPActionsApi
+# digitalocean_client.FloatingIPActionsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -22,13 +22,13 @@ To retrieve the status of a floating IP action, send a GET request to `/v2/float
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import floating_ip_actions_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import floating_ip_actions_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -38,12 +38,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = floating_ip_actions_api.FloatingIPActionsApi(api_client)
     floating_ip = "45.55.96.47" # str | A floating IP address.
@@ -54,7 +54,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Floating IP Action
         api_response = api_instance.get_floating_ip_action(floating_ip, action_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FloatingIPActionsApi->get_floating_ip_action: %s\n" % e)
 ```
 
@@ -106,13 +106,13 @@ To retrieve all actions that have been executed on a floating IP, send a GET req
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import floating_ip_actions_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import floating_ip_actions_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -122,12 +122,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = floating_ip_actions_api.FloatingIPActionsApi(api_client)
     floating_ip = "45.55.96.47" # str | A floating IP address.
@@ -137,7 +137,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Actions for a Floating IP
         api_response = api_instance.list_floating_ip_actions(floating_ip)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FloatingIPActionsApi->list_floating_ip_actions: %s\n" % e)
 ```
 
@@ -188,14 +188,14 @@ To initiate an action on a floating IP send a POST request to `/v2/floating_ips/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import floating_ip_actions_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import floating_ip_actions_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -205,12 +205,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = floating_ip_actions_api.FloatingIPActionsApi(api_client)
     floating_ip = "45.55.96.47" # str | A floating IP address.
@@ -221,7 +221,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Initiate a Floating IP Action
         api_response = api_instance.post_floating_ip_action(floating_ip)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FloatingIPActionsApi->post_floating_ip_action: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -230,7 +230,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Initiate a Floating IP Action
         api_response = api_instance.post_floating_ip_action(floating_ip, unknown_base_type=unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FloatingIPActionsApi->post_floating_ip_action: %s\n" % e)
 ```
 

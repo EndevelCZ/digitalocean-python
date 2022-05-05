@@ -1,4 +1,4 @@
-# openapi_client.AccountApi
+# digitalocean_client.AccountApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -20,13 +20,13 @@ To show information about the current user account, send a GET request to `/v2/a
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import account_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import account_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -36,12 +36,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = account_api.AccountApi(api_client)
 
@@ -50,7 +50,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get User Information
         api_response = api_instance.get_user_information()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling AccountApi->get_user_information: %s\n" % e)
 ```
 

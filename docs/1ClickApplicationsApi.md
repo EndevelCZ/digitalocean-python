@@ -1,4 +1,4 @@
-# openapi_client.ClickApplicationsApi
+# digitalocean_client.ClickApplicationsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -21,15 +21,15 @@ To install a Kubernetes 1-Click application on a cluster, send a POST request to
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import 1_click_applications_api
-from openapi_client.model.model1_click_create import Model1ClickCreate
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response200 import InlineResponse200
+import digitalocean_client
+from digitalocean_client.api import 1_click_applications_api
+from digitalocean_client.model.model1_click_create import Model1ClickCreate
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response200 import InlineResponse200
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -39,12 +39,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = 1_click_applications_api.ClickApplicationsApi(api_client)
     model1_click_create = Model1ClickCreate(
@@ -57,7 +57,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Install Kubernetes 1-Click Applications
         api_response = api_instance.install_kubernetes(model1_click_create)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ClickApplicationsApi->install_kubernetes: %s\n" % e)
 ```
 
@@ -107,13 +107,13 @@ To list all available 1-Click applications, send a GET request to `/v2/1-clicks`
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import 1_click_applications_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import 1_click_applications_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -123,12 +123,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = 1_click_applications_api.ClickApplicationsApi(api_client)
     type = "kubernetes" # str | Restrict results to a certain type of 1-Click. (optional)
@@ -139,7 +139,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List 1-Click Applications
         api_response = api_instance.list(type=type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ClickApplicationsApi->list: %s\n" % e)
 ```
 

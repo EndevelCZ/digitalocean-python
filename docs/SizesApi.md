@@ -1,4 +1,4 @@
-# openapi_client.SizesApi
+# digitalocean_client.SizesApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -20,13 +20,13 @@ To list all of available Droplet sizes, send a GET request to `/v2/sizes`. The r
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import sizes_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import sizes_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -36,12 +36,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sizes_api.SizesApi(api_client)
     per_page = 2 # int | Number of items returned per page (optional) if omitted the server will use the default value of 20
@@ -53,7 +53,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Droplet Sizes
         api_response = api_instance.list_all_sizes(per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling SizesApi->list_all_sizes: %s\n" % e)
 ```
 

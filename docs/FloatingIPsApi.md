@@ -1,4 +1,4 @@
-# openapi_client.FloatingIPsApi
+# digitalocean_client.FloatingIPsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -23,15 +23,15 @@ On creation, a floating IP must be either assigned to a Droplet or reserved to a
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import floating_ips_api
-from openapi_client.model.error import Error
-from openapi_client.model.floating_ip_create import FloatingIpCreate
-from openapi_client.model.inline_response202 import InlineResponse202
+import digitalocean_client
+from digitalocean_client.api import floating_ips_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.floating_ip_create import FloatingIpCreate
+from digitalocean_client.model.inline_response202 import InlineResponse202
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -41,12 +41,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = floating_ips_api.FloatingIPsApi(api_client)
     floating_ip_create = FloatingIpCreate(None) # FloatingIpCreate | 
@@ -56,7 +56,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Floating IP
         api_response = api_instance.create_floating_ip(floating_ip_create)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FloatingIPsApi->create_floating_ip: %s\n" % e)
 ```
 
@@ -106,13 +106,13 @@ To delete a floating IP and remove it from your account, send a DELETE request t
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import floating_ips_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import floating_ips_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -122,12 +122,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = floating_ips_api.FloatingIPsApi(api_client)
     floating_ip = "45.55.96.47" # str | A floating IP address.
@@ -136,7 +136,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Floating IPs
         api_instance.delete_floating_ip(floating_ip)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FloatingIPsApi->delete_floating_ip: %s\n" % e)
 ```
 
@@ -187,14 +187,14 @@ To show information about a floating IP, send a GET request to `/v2/floating_ips
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import floating_ips_api
-from openapi_client.model.inline_response2003 import InlineResponse2003
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import floating_ips_api
+from digitalocean_client.model.inline_response2003 import InlineResponse2003
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -204,12 +204,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = floating_ips_api.FloatingIPsApi(api_client)
     floating_ip = "45.55.96.47" # str | A floating IP address.
@@ -219,7 +219,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Floating IP
         api_response = api_instance.get_floating_ip(floating_ip)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FloatingIPsApi->get_floating_ip: %s\n" % e)
 ```
 
@@ -270,13 +270,13 @@ To list all of the floating IPs available on your account, send a GET request to
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import floating_ips_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import floating_ips_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -286,12 +286,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = floating_ips_api.FloatingIPsApi(api_client)
 
@@ -300,7 +300,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Floating IPs
         api_response = api_instance.list_floating_ips()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling FloatingIPsApi->list_floating_ips: %s\n" % e)
 ```
 
