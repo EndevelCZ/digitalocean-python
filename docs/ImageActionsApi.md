@@ -1,4 +1,4 @@
-# openapi_client.ImageActionsApi
+# digitalocean_client.ImageActionsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -22,14 +22,14 @@ To retrieve the status of an image action, send a GET request to `/v2/images/$IM
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import image_actions_api
-from openapi_client.model.action import Action
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import image_actions_api
+from digitalocean_client.model.action import Action
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -39,12 +39,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = image_actions_api.ImageActionsApi(api_client)
     image_id = 62137902 # int | A unique number that can be used to identify and reference a specific image.
@@ -55,7 +55,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Action
         api_response = api_instance.get_image_action(image_id, action_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ImageActionsApi->get_image_action: %s\n" % e)
 ```
 
@@ -107,13 +107,13 @@ To retrieve all actions that have been executed on an image, send a GET request 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import image_actions_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import image_actions_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -123,12 +123,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = image_actions_api.ImageActionsApi(api_client)
     image_id = 62137902 # int | A unique number that can be used to identify and reference a specific image.
@@ -138,7 +138,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Actions for an Image
         api_response = api_instance.list_image_actions(image_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ImageActionsApi->list_image_actions: %s\n" % e)
 ```
 
@@ -189,15 +189,15 @@ The following actions are available on an Image.  ## Convert an Image to a Snaps
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import image_actions_api
-from openapi_client.model.action import Action
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import image_actions_api
+from digitalocean_client.model.action import Action
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -207,12 +207,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = image_actions_api.ImageActionsApi(api_client)
     image_id = 62137902 # int | A unique number that can be used to identify and reference a specific image.
@@ -223,7 +223,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Initiate an Image Action
         api_response = api_instance.post_image_action(image_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ImageActionsApi->post_image_action: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -232,7 +232,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Initiate an Image Action
         api_response = api_instance.post_image_action(image_id, unknown_base_type=unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ImageActionsApi->post_image_action: %s\n" % e)
 ```
 

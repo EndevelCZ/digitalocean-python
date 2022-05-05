@@ -1,4 +1,4 @@
-# openapi_client.DomainRecordsApi
+# digitalocean_client.DomainRecordsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -25,14 +25,14 @@ To create a new record to a domain, send a POST request to `/v2/domains/$DOMAIN_
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import domain_records_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import domain_records_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -42,12 +42,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = domain_records_api.DomainRecordsApi(api_client)
     domain_name = "example.com" # str | The name of the domain itself.
@@ -58,7 +58,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Domain Record
         api_response = api_instance.create_domain_record(domain_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainRecordsApi->create_domain_record: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -67,7 +67,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Domain Record
         api_response = api_instance.create_domain_record(domain_name, unknown_base_type=unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainRecordsApi->create_domain_record: %s\n" % e)
 ```
 
@@ -119,13 +119,13 @@ To delete a record for a domain, send a DELETE request to `/v2/domains/$DOMAIN_N
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import domain_records_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import domain_records_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -135,12 +135,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = domain_records_api.DomainRecordsApi(api_client)
     domain_name = "example.com" # str | The name of the domain itself.
@@ -150,7 +150,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Domain Record
         api_instance.delete_domain_record(domain_name, domain_record_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainRecordsApi->delete_domain_record: %s\n" % e)
 ```
 
@@ -202,13 +202,13 @@ To retrieve a specific domain record, send a GET request to `/v2/domains/$DOMAIN
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import domain_records_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import domain_records_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -218,12 +218,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = domain_records_api.DomainRecordsApi(api_client)
     domain_name = "example.com" # str | The name of the domain itself.
@@ -234,7 +234,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Domain Record
         api_response = api_instance.get_domain_record(domain_name, domain_record_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainRecordsApi->get_domain_record: %s\n" % e)
 ```
 
@@ -286,13 +286,13 @@ To get a listing of all records configured for a domain, send a GET request to `
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import domain_records_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import domain_records_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -302,12 +302,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = domain_records_api.DomainRecordsApi(api_client)
     domain_name = "example.com" # str | The name of the domain itself.
@@ -319,7 +319,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Domain Records
         api_response = api_instance.list_all_domain_records(domain_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainRecordsApi->list_all_domain_records: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -328,7 +328,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Domain Records
         api_response = api_instance.list_all_domain_records(domain_name, name=name, type=type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainRecordsApi->list_all_domain_records: %s\n" % e)
 ```
 
@@ -381,14 +381,14 @@ To update an existing record, send a PATCH request to `/v2/domains/$DOMAIN_NAME/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import domain_records_api
-from openapi_client.model.error import Error
-from openapi_client.model.domain_record import DomainRecord
+import digitalocean_client
+from digitalocean_client.api import domain_records_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.domain_record import DomainRecord
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -398,12 +398,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = domain_records_api.DomainRecordsApi(api_client)
     domain_name = "example.com" # str | The name of the domain itself.
@@ -425,7 +425,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a Domain Record
         api_response = api_instance.patch_update_domain_record(domain_name, domain_record_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainRecordsApi->patch_update_domain_record: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -434,7 +434,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a Domain Record
         api_response = api_instance.patch_update_domain_record(domain_name, domain_record_id, domain_record=domain_record)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainRecordsApi->patch_update_domain_record: %s\n" % e)
 ```
 
@@ -487,14 +487,14 @@ To update an existing record, send a PUT request to `/v2/domains/$DOMAIN_NAME/re
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import domain_records_api
-from openapi_client.model.error import Error
-from openapi_client.model.domain_record import DomainRecord
+import digitalocean_client
+from digitalocean_client.api import domain_records_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.domain_record import DomainRecord
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -504,12 +504,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = domain_records_api.DomainRecordsApi(api_client)
     domain_name = "example.com" # str | The name of the domain itself.
@@ -531,7 +531,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a Domain Record
         api_response = api_instance.update_domain_record(domain_name, domain_record_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainRecordsApi->update_domain_record: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -540,7 +540,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a Domain Record
         api_response = api_instance.update_domain_record(domain_name, domain_record_id, domain_record=domain_record)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainRecordsApi->update_domain_record: %s\n" % e)
 ```
 

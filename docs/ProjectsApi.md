@@ -1,4 +1,4 @@
-# openapi_client.ProjectsApi
+# digitalocean_client.ProjectsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -28,14 +28,14 @@ To create a project, send a POST request to `/v2/projects`.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import projects_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import projects_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -45,12 +45,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = projects_api.ProjectsApi(api_client)
     unknown_base_type = None # UNKNOWN_BASE_TYPE | 
@@ -60,7 +60,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a Project
         api_response = api_instance.create_project(unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectsApi->create_project: %s\n" % e)
 ```
 
@@ -110,13 +110,13 @@ To delete a project, send a DELETE request to `/v2/projects/$PROJECT_ID`. To be 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import projects_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import projects_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -126,12 +126,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = projects_api.ProjectsApi(api_client)
     project_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a project.
@@ -140,7 +140,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete an Existing Project
         api_instance.delete_project(project_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectsApi->delete_project: %s\n" % e)
 ```
 
@@ -192,13 +192,13 @@ To get your default project, send a GET request to `/v2/projects/default`.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import projects_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import projects_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -208,12 +208,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = projects_api.ProjectsApi(api_client)
 
@@ -222,7 +222,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve the Default Project
         api_response = api_instance.get_default_project()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectsApi->get_default_project: %s\n" % e)
 ```
 
@@ -270,13 +270,13 @@ To get a project, send a GET request to `/v2/projects/$PROJECT_ID`.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import projects_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import projects_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -286,12 +286,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = projects_api.ProjectsApi(api_client)
     project_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a project.
@@ -301,7 +301,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Project
         api_response = api_instance.get_project(project_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectsApi->get_project: %s\n" % e)
 ```
 
@@ -352,13 +352,13 @@ To list all your projects, send a GET request to `/v2/projects`.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import projects_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import projects_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -368,12 +368,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = projects_api.ProjectsApi(api_client)
 
@@ -382,7 +382,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Projects
         api_response = api_instance.list_projects()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectsApi->list_projects: %s\n" % e)
 ```
 
@@ -429,14 +429,14 @@ To update only specific attributes of a project, send a PATCH request to `/v2/pr
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import projects_api
-from openapi_client.model.error import Error
-from openapi_client.model.project import Project
+import digitalocean_client
+from digitalocean_client.api import projects_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.project import Project
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -446,12 +446,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = projects_api.ProjectsApi(api_client)
     project = Project(None) # Project | 
@@ -461,7 +461,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Patch the Default Project
         api_response = api_instance.patch_default_project(project)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectsApi->patch_default_project: %s\n" % e)
 ```
 
@@ -512,14 +512,14 @@ To update only specific attributes of a project, send a PATCH request to `/v2/pr
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import projects_api
-from openapi_client.model.error import Error
-from openapi_client.model.project import Project
+import digitalocean_client
+from digitalocean_client.api import projects_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.project import Project
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -529,12 +529,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = projects_api.ProjectsApi(api_client)
     project_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a project.
@@ -545,7 +545,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Patch a Project
         api_response = api_instance.patch_project(project_id, project)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectsApi->patch_project: %s\n" % e)
 ```
 
@@ -597,14 +597,14 @@ To update a project, send a PUT request to `/v2/projects/default`. All of the fo
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import projects_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import projects_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -614,12 +614,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = projects_api.ProjectsApi(api_client)
     unknown_base_type = None # UNKNOWN_BASE_TYPE | 
@@ -629,7 +629,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update the Default Project
         api_response = api_instance.update_default_project(unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectsApi->update_default_project: %s\n" % e)
 ```
 
@@ -680,14 +680,14 @@ To update a project, send a PUT request to `/v2/projects/$PROJECT_ID`. All of th
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import projects_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import projects_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -697,12 +697,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = projects_api.ProjectsApi(api_client)
     project_id = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for a project.
@@ -713,7 +713,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a Project
         api_response = api_instance.update_project(project_id, unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ProjectsApi->update_project: %s\n" % e)
 ```
 

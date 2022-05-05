@@ -392,7 +392,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import openapi_client
+import digitalocean_client
 ```
 
 ### Setuptools
@@ -406,7 +406,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import openapi_client
+import digitalocean_client
 ```
 
 ## Getting Started
@@ -416,15 +416,15 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import openapi_client
+import digitalocean_client
 from pprint import pprint
-from openapi_client.api import 1_click_applications_api
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response200 import InlineResponse200
-from openapi_client.model.model1_click_create import Model1ClickCreate
+from digitalocean_client.api import 1_click_applications_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response200 import InlineResponse200
+from digitalocean_client.model.model1_click_create import Model1ClickCreate
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -434,13 +434,13 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = 1_click_applications_api.ClickApplicationsApi(api_client)
     model1_click_create = Model1ClickCreate(
@@ -452,7 +452,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Install Kubernetes 1-Click Applications
         api_response = api_instance.install_kubernetes(model1_click_create)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ClickApplicationsApi->install_kubernetes: %s\n" % e)
 ```
 
@@ -1044,21 +1044,21 @@ api-engineering@digitalocean.com
 
 
 ## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in openapi_client.apis and openapi_client.models may fail with a
+If the OpenAPI document is large, imports in digitalocean_client.apis and digitalocean_client.models may fail with a
 RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from openapi_client.api.default_api import DefaultApi`
-- `from openapi_client.model.pet import Pet`
+- `from digitalocean_client.api.default_api import DefaultApi`
+- `from digitalocean_client.model.pet import Pet`
 
 Solution 2:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
 sys.setrecursionlimit(1500)
-import openapi_client
-from openapi_client.apis import *
-from openapi_client.models import *
+import digitalocean_client
+from digitalocean_client.apis import *
+from digitalocean_client.models import *
 ```
 

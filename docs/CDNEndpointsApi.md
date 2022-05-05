@@ -1,4 +1,4 @@
-# openapi_client.CDNEndpointsApi
+# digitalocean_client.CDNEndpointsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -25,14 +25,14 @@ To create a new CDN endpoint, send a POST request to `/v2/cdn/endpoints`. The or
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import cdn_endpoints_api
-from openapi_client.model.error import Error
-from openapi_client.model.cdn_endpoint import CdnEndpoint
+import digitalocean_client
+from digitalocean_client.api import cdn_endpoints_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.cdn_endpoint import CdnEndpoint
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -42,12 +42,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = cdn_endpoints_api.CDNEndpointsApi(api_client)
     cdn_endpoint = CdnEndpoint(
@@ -62,7 +62,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New CDN Endpoint
         api_response = api_instance.create_cdn_endpoint(cdn_endpoint)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling CDNEndpointsApi->create_cdn_endpoint: %s\n" % e)
 ```
 
@@ -112,13 +112,13 @@ To delete a specific CDN endpoint, send a DELETE request to `/v2/cdn/endpoints/$
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import cdn_endpoints_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import cdn_endpoints_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -128,12 +128,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = cdn_endpoints_api.CDNEndpointsApi(api_client)
     cdn_id = "19f06b6a-3ace-4315-b086-499a0e521b76" # str | A unique identifier for a CDN endpoint.
@@ -142,7 +142,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a CDN Endpoint
         api_instance.delete_cdn_endpoint(cdn_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling CDNEndpointsApi->delete_cdn_endpoint: %s\n" % e)
 ```
 
@@ -193,13 +193,13 @@ To show information about an existing CDN endpoint, send a GET request to `/v2/c
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import cdn_endpoints_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import cdn_endpoints_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -209,12 +209,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = cdn_endpoints_api.CDNEndpointsApi(api_client)
     cdn_id = "19f06b6a-3ace-4315-b086-499a0e521b76" # str | A unique identifier for a CDN endpoint.
@@ -224,7 +224,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing CDN Endpoint
         api_response = api_instance.get_cdn_endpoint(cdn_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling CDNEndpointsApi->get_cdn_endpoint: %s\n" % e)
 ```
 
@@ -275,13 +275,13 @@ To list all of the CDN endpoints available on your account, send a GET request t
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import cdn_endpoints_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import cdn_endpoints_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -291,12 +291,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = cdn_endpoints_api.CDNEndpointsApi(api_client)
     per_page = 2 # int | Number of items returned per page (optional) if omitted the server will use the default value of 20
@@ -308,7 +308,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All CDN Endpoints
         api_response = api_instance.list_cdn_endpoints(per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling CDNEndpointsApi->list_cdn_endpoints: %s\n" % e)
 ```
 
@@ -359,14 +359,14 @@ To purge cached content from a CDN endpoint, send a DELETE request to `/v2/cdn/e
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import cdn_endpoints_api
-from openapi_client.model.purge_cache import PurgeCache
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import cdn_endpoints_api
+from digitalocean_client.model.purge_cache import PurgeCache
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -376,12 +376,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = cdn_endpoints_api.CDNEndpointsApi(api_client)
     cdn_id = "19f06b6a-3ace-4315-b086-499a0e521b76" # str | A unique identifier for a CDN endpoint.
@@ -393,7 +393,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Purge the Cache for an Existing CDN Endpoint
         api_instance.purge_cdn_cache(cdn_id, purge_cache)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling CDNEndpointsApi->purge_cdn_cache: %s\n" % e)
 ```
 
@@ -445,14 +445,14 @@ To update the TTL, certificate ID, or the FQDN of the custom subdomain for an ex
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import cdn_endpoints_api
-from openapi_client.model.update_endpoint import UpdateEndpoint
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import cdn_endpoints_api
+from digitalocean_client.model.update_endpoint import UpdateEndpoint
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -462,12 +462,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = cdn_endpoints_api.CDNEndpointsApi(api_client)
     cdn_id = "19f06b6a-3ace-4315-b086-499a0e521b76" # str | A unique identifier for a CDN endpoint.
@@ -482,7 +482,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update a CDN Endpoint
         api_response = api_instance.update_cdn_endpoint(cdn_id, update_endpoint)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling CDNEndpointsApi->update_cdn_endpoint: %s\n" % e)
 ```
 

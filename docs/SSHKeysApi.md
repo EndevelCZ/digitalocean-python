@@ -1,4 +1,4 @@
-# openapi_client.SSHKeysApi
+# digitalocean_client.SSHKeysApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -24,14 +24,14 @@ To add a new SSH public key to your DigitalOcean account, send a POST request to
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import ssh_keys_api
-from openapi_client.model.ssh_key import SshKey
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import ssh_keys_api
+from digitalocean_client.model.ssh_key import SshKey
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -41,12 +41,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_keys_api.SSHKeysApi(api_client)
     ssh_key = SshKey(
@@ -59,7 +59,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New SSH Key
         api_response = api_instance.create_ssh_key(ssh_key)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling SSHKeysApi->create_ssh_key: %s\n" % e)
 ```
 
@@ -109,13 +109,13 @@ To destroy a public SSH key that you have in your account, send a DELETE request
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import ssh_keys_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import ssh_keys_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -125,12 +125,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_keys_api.SSHKeysApi(api_client)
     ssh_key_identifier = None # bool, date, datetime, dict, float, int, list, str, none_type | Either the ID or the fingerprint of an existing SSH key.
@@ -139,7 +139,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete an SSH Key
         api_instance.destroy_ssh_key(ssh_key_identifier)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling SSHKeysApi->destroy_ssh_key: %s\n" % e)
 ```
 
@@ -190,13 +190,13 @@ To get information about a key, send a GET request to `/v2/account/keys/$KEY_ID`
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import ssh_keys_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import ssh_keys_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -206,12 +206,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_keys_api.SSHKeysApi(api_client)
     ssh_key_identifier = None # bool, date, datetime, dict, float, int, list, str, none_type | Either the ID or the fingerprint of an existing SSH key.
@@ -221,7 +221,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing SSH Key
         api_response = api_instance.get_ssh_key(ssh_key_identifier)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling SSHKeysApi->get_ssh_key: %s\n" % e)
 ```
 
@@ -272,13 +272,13 @@ To list all of the keys in your account, send a GET request to `/v2/account/keys
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import ssh_keys_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import ssh_keys_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -288,12 +288,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_keys_api.SSHKeysApi(api_client)
     per_page = 2 # int | Number of items returned per page (optional) if omitted the server will use the default value of 20
@@ -305,7 +305,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All SSH Keys
         api_response = api_instance.list_all_keys(per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling SSHKeysApi->list_all_keys: %s\n" % e)
 ```
 
@@ -356,14 +356,14 @@ To update the name of an SSH key, send a PUT request to either `/v2/account/keys
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import ssh_keys_api
-from openapi_client.model.inline_object import InlineObject
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import ssh_keys_api
+from digitalocean_client.model.inline_object import InlineObject
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -373,12 +373,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ssh_keys_api.SSHKeysApi(api_client)
     ssh_key_identifier = None # bool, date, datetime, dict, float, int, list, str, none_type | Either the ID or the fingerprint of an existing SSH key.
@@ -391,7 +391,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update an SSH Key's Name
         api_response = api_instance.update_ssh_key(ssh_key_identifier, inline_object)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling SSHKeysApi->update_ssh_key: %s\n" % e)
 ```
 

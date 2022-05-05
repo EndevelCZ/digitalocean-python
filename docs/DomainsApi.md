@@ -1,4 +1,4 @@
-# openapi_client.DomainsApi
+# digitalocean_client.DomainsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -23,14 +23,14 @@ To create a new domain, send a POST request to `/v2/domains`. Set the \"name\" a
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import domains_api
-from openapi_client.model.error import Error
-from openapi_client.model.domain import Domain
+import digitalocean_client
+from digitalocean_client.api import domains_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.domain import Domain
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -40,12 +40,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = domains_api.DomainsApi(api_client)
     domain = Domain(
@@ -59,7 +59,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Domain
         api_response = api_instance.create_domain(domain=domain)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainsApi->create_domain: %s\n" % e)
 ```
 
@@ -109,13 +109,13 @@ To delete a domain, send a DELETE request to `/v2/domains/$DOMAIN_NAME`.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import domains_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import domains_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -125,12 +125,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = domains_api.DomainsApi(api_client)
     domain_name = "example.com" # str | The name of the domain itself.
@@ -139,7 +139,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Domain
         api_instance.delete_domain(domain_name)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainsApi->delete_domain: %s\n" % e)
 ```
 
@@ -190,13 +190,13 @@ To get details about a specific domain, send a GET request to `/v2/domains/$DOMA
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import domains_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import domains_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -206,12 +206,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = domains_api.DomainsApi(api_client)
     domain_name = "example.com" # str | The name of the domain itself.
@@ -221,7 +221,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Domain
         api_response = api_instance.get_domain(domain_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainsApi->get_domain: %s\n" % e)
 ```
 
@@ -272,13 +272,13 @@ To retrieve a list of all of the domains in your account, send a GET request to 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import domains_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import domains_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -288,12 +288,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = domains_api.DomainsApi(api_client)
 
@@ -302,7 +302,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Domains
         api_response = api_instance.list_all_domains()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DomainsApi->list_all_domains: %s\n" % e)
 ```
 

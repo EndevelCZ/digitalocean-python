@@ -1,4 +1,4 @@
-# openapi_client.ContainerRegistryApi
+# digitalocean_client.ContainerRegistryApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -35,14 +35,14 @@ To create your container registry, send a POST request to `/v2/registry`.  The `
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.registry_create import RegistryCreate
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.registry_create import RegistryCreate
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -52,12 +52,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     registry_create = RegistryCreate(
@@ -70,7 +70,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create Container Registry
         api_response = api_instance.create_registry(registry_create)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->create_registry: %s\n" % e)
 ```
 
@@ -120,13 +120,13 @@ To delete your container registry, destroying all container image data stored in
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -136,12 +136,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
 
@@ -149,7 +149,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete Container Registry
         api_instance.delete_registry()
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->delete_registry: %s\n" % e)
 ```
 
@@ -197,13 +197,13 @@ To delete a container repository manifest by digest, send a DELETE request to `/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -213,12 +213,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     registry_name = "example" # str | The name of a container registry.
@@ -229,7 +229,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete Container Registry Repository Manifest
         api_instance.delete_repository_manifest(registry_name, repository_name, manifest_digest)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->delete_repository_manifest: %s\n" % e)
 ```
 
@@ -282,13 +282,13 @@ To delete a container repository tag, send a DELETE request to `/v2/registry/$RE
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -298,12 +298,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     registry_name = "example" # str | The name of a container registry.
@@ -314,7 +314,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete Container Registry Repository Tag
         api_instance.delete_repository_tag(registry_name, repository_name, repository_tag)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->delete_repository_tag: %s\n" % e)
 ```
 
@@ -367,14 +367,14 @@ In order to access your container registry with the Docker client or from a Kube
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
-from openapi_client.model.docker_credentials import DockerCredentials
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.docker_credentials import DockerCredentials
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -384,12 +384,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     expiry_seconds = 3600 # int | The duration in seconds that the returned registry credentials will be valid. If not set or 0, the credentials will not expire. (optional) if omitted the server will use the default value of 0
@@ -401,7 +401,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Docker Credentials for Container Registry
         api_response = api_instance.get_docker_credentials(expiry_seconds=expiry_seconds, read_write=read_write)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->get_docker_credentials: %s\n" % e)
 ```
 
@@ -452,14 +452,14 @@ To get information about the currently-active garbage collection for a registry,
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response2007 import InlineResponse2007
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response2007 import InlineResponse2007
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -469,12 +469,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     registry_name = "example" # str | The name of a container registry.
@@ -484,7 +484,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Active Garbage Collection
         api_response = api_instance.get_garbage_collection(registry_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->get_garbage_collection: %s\n" % e)
 ```
 
@@ -535,13 +535,13 @@ To get information about your container registry, send a GET request to `/v2/reg
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -551,12 +551,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
 
@@ -565,7 +565,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Container Registry Information
         api_response = api_instance.get_registry()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->get_registry: %s\n" % e)
 ```
 
@@ -612,14 +612,14 @@ There are multiple subscription tiers available for container registry. Each tie
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response2009 import InlineResponse2009
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response2009 import InlineResponse2009
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -629,12 +629,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
 
@@ -643,7 +643,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Available Subscription Tiers
         api_response = api_instance.get_registry_options()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->get_registry_options: %s\n" % e)
 ```
 
@@ -690,14 +690,14 @@ A subscription is automatically created when you configure your container regist
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.subscription import Subscription
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.subscription import Subscription
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -707,12 +707,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
 
@@ -721,7 +721,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Subscription Information
         api_response = api_instance.get_registry_subscription()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->get_registry_subscription: %s\n" % e)
 ```
 
@@ -768,14 +768,14 @@ To get information about past garbage collections for a registry, send a GET req
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response2008 import InlineResponse2008
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response2008 import InlineResponse2008
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -785,12 +785,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     registry_name = "example" # str | The name of a container registry.
@@ -802,7 +802,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Garbage Collections
         api_response = api_instance.list_garbage_collections(registry_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->list_garbage_collections: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -811,7 +811,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Garbage Collections
         api_response = api_instance.list_garbage_collections(registry_name, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->list_garbage_collections: %s\n" % e)
 ```
 
@@ -864,13 +864,13 @@ To list all repositories in your container registry, send a GET request to `/v2/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -880,12 +880,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     registry_name = "example" # str | The name of a container registry.
@@ -897,7 +897,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Container Registry Repositories
         api_response = api_instance.list_registry_repositories(registry_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->list_registry_repositories: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -906,7 +906,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Container Registry Repositories
         api_response = api_instance.list_registry_repositories(registry_name, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->list_registry_repositories: %s\n" % e)
 ```
 
@@ -959,13 +959,13 @@ To list all tags in your container registry repository, send a GET request to `/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -975,12 +975,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     registry_name = "example" # str | The name of a container registry.
@@ -993,7 +993,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Container Registry Repository Tags
         api_response = api_instance.list_repository_tags(registry_name, repository_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->list_repository_tags: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1002,7 +1002,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Container Registry Repository Tags
         api_response = api_instance.list_repository_tags(registry_name, repository_name, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->list_repository_tags: %s\n" % e)
 ```
 
@@ -1056,15 +1056,15 @@ After creating your registry, you can switch to a different subscription tier to
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.subscription import Subscription
-from openapi_client.model.error import Error
-from openapi_client.model.inline_object4 import InlineObject4
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.subscription import Subscription
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_object4 import InlineObject4
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1074,12 +1074,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     inline_object4 = InlineObject4(
@@ -1092,7 +1092,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update Subscription Tier
         api_response = api_instance.post_registry_subscription(inline_object4=inline_object4)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->post_registry_subscription: %s\n" % e)
 ```
 
@@ -1142,14 +1142,14 @@ Garbage collection enables users to clear out unreferenced blobs (layer & manife
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response2007 import InlineResponse2007
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response2007 import InlineResponse2007
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1159,12 +1159,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     registry_name = "example" # str | The name of a container registry.
@@ -1174,7 +1174,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Start Garbage Collection
         api_response = api_instance.run_garbage_collection(registry_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->run_garbage_collection: %s\n" % e)
 ```
 
@@ -1225,15 +1225,15 @@ To cancel the currently-active garbage collection for a registry, send a PUT req
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.update_registry import UpdateRegistry
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response2007 import InlineResponse2007
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.update_registry import UpdateRegistry
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response2007 import InlineResponse2007
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1243,12 +1243,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     registry_name = "example" # str | The name of a container registry.
@@ -1262,7 +1262,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update Garbage Collection
         api_response = api_instance.update_garbage_collection(registry_name, garbage_collection_uuid, update_registry)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->update_garbage_collection: %s\n" % e)
 ```
 
@@ -1315,14 +1315,14 @@ To validate that a container registry name is available for use, send a POST req
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import container_registry_api
-from openapi_client.model.error import Error
-from openapi_client.model.validate_registry import ValidateRegistry
+import digitalocean_client
+from digitalocean_client.api import container_registry_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.validate_registry import ValidateRegistry
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1332,12 +1332,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = container_registry_api.ContainerRegistryApi(api_client)
     validate_registry = ValidateRegistry(
@@ -1348,7 +1348,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Validate a Container Registry Name
         api_instance.validate_registry_name(validate_registry)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling ContainerRegistryApi->validate_registry_name: %s\n" % e)
 ```
 

@@ -1,4 +1,4 @@
-# openapi_client.MonitoringApi
+# digitalocean_client.MonitoringApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -35,15 +35,15 @@ To create a new alert, send a POST request to `/v2/monitoring/alerts`.
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.error import Error
-from openapi_client.model.alert_policy_request import AlertPolicyRequest
-from openapi_client.model.alert_policy import AlertPolicy
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.alert_policy_request import AlertPolicyRequest
+from digitalocean_client.model.alert_policy import AlertPolicy
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -53,12 +53,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     alert_policy_request = AlertPolicyRequest(
@@ -86,7 +86,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create Alert Policy
         api_response = api_instance.create_alert_policy(alert_policy_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->create_alert_policy: %s\n" % e)
 ```
 
@@ -136,13 +136,13 @@ To delete an alert policy, send a DELETE request to `/v2/monitoring/alerts/{aler
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -152,12 +152,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     alert_uuid = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for an alert policy.
@@ -166,7 +166,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete an Alert Policy
         api_instance.delete_alert_policy(alert_uuid)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->delete_alert_policy: %s\n" % e)
 ```
 
@@ -217,14 +217,14 @@ To retrieve a given alert policy, send a GET request to `/v2/monitoring/alerts/{
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.error import Error
-from openapi_client.model.alert_policy import AlertPolicy
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.alert_policy import AlertPolicy
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -234,12 +234,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     alert_uuid = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for an alert policy.
@@ -249,7 +249,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Alert Policy
         api_response = api_instance.get_alert_policy(alert_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_alert_policy: %s\n" % e)
 ```
 
@@ -300,14 +300,14 @@ To retrieve bandwidth metrics for a given Droplet, send a GET request to `/v2/mo
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -317,12 +317,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -336,7 +336,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet Bandwidth Metrics
         api_response = api_instance.get_droplet_bandwidth_metrics(host_id, interface, direction, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_bandwidth_metrics: %s\n" % e)
 ```
 
@@ -390,14 +390,14 @@ To retrieve CPU metrics for a given droplet, send a GET request to `/v2/monitori
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -407,12 +407,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -424,7 +424,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet CPU Metrics
         api_response = api_instance.get_droplet_cpu_metrics(host_id, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_cpu_metrics: %s\n" % e)
 ```
 
@@ -476,14 +476,14 @@ To retrieve filesystem free metrics for a given droplet, send a GET request to `
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -493,12 +493,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -510,7 +510,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet Filesystem Free Metrics
         api_response = api_instance.get_droplet_filesystem_free_metrics(host_id, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_filesystem_free_metrics: %s\n" % e)
 ```
 
@@ -562,14 +562,14 @@ To retrieve filesystem size metrics for a given droplet, send a GET request to `
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -579,12 +579,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -596,7 +596,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet Filesystem Size Metrics
         api_response = api_instance.get_droplet_filesystem_size_metrics(host_id, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_filesystem_size_metrics: %s\n" % e)
 ```
 
@@ -648,14 +648,14 @@ To retrieve 15 minute load average metrics for a given droplet, send a GET reque
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -665,12 +665,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -682,7 +682,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet Load15 Metrics
         api_response = api_instance.get_droplet_load15_metrics(host_id, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_load15_metrics: %s\n" % e)
 ```
 
@@ -734,14 +734,14 @@ To retrieve 1 minute load average metrics for a given droplet, send a GET reques
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -751,12 +751,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -768,7 +768,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet Load1 Metrics
         api_response = api_instance.get_droplet_load1_metrics(host_id, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_load1_metrics: %s\n" % e)
 ```
 
@@ -820,14 +820,14 @@ To retrieve 5 minute load average metrics for a given droplet, send a GET reques
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -837,12 +837,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -854,7 +854,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet Load5 Metrics
         api_response = api_instance.get_droplet_load5_metrics(host_id, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_load5_metrics: %s\n" % e)
 ```
 
@@ -906,14 +906,14 @@ To retrieve available memory metrics for a given droplet, send a GET request to 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -923,12 +923,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -940,7 +940,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet Available Memory Metrics
         api_response = api_instance.get_droplet_memory_available_metrics(host_id, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_memory_available_metrics: %s\n" % e)
 ```
 
@@ -992,14 +992,14 @@ To retrieve cached memory metrics for a given droplet, send a GET request to `/v
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1009,12 +1009,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -1026,7 +1026,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet Cached Memory Metrics
         api_response = api_instance.get_droplet_memory_cached_metrics(host_id, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_memory_cached_metrics: %s\n" % e)
 ```
 
@@ -1078,14 +1078,14 @@ To retrieve free memory metrics for a given droplet, send a GET request to `/v2/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1095,12 +1095,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -1112,7 +1112,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet Free Memory Metrics
         api_response = api_instance.get_droplet_memory_free_metrics(host_id, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_memory_free_metrics: %s\n" % e)
 ```
 
@@ -1164,14 +1164,14 @@ To retrieve total memory metrics for a given droplet, send a GET request to `/v2
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.metrics import Metrics
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.metrics import Metrics
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1181,12 +1181,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     host_id = "17209102" # str | The droplet ID.
@@ -1198,7 +1198,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Droplet Total Memory Metrics
         api_response = api_instance.get_droplet_memory_total_metrics(host_id, start, end)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->get_droplet_memory_total_metrics: %s\n" % e)
 ```
 
@@ -1250,13 +1250,13 @@ Returns all alert policies that are configured for the given account. To List al
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1266,12 +1266,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     per_page = 2 # int | Number of items returned per page (optional) if omitted the server will use the default value of 20
@@ -1283,7 +1283,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Alert Policies
         api_response = api_instance.list_alert_policies(per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->list_alert_policies: %s\n" % e)
 ```
 
@@ -1334,15 +1334,15 @@ To update en existing policy, send a PUT request to `v2/monitoring/alerts/{alert
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import monitoring_api
-from openapi_client.model.error import Error
-from openapi_client.model.alert_policy_request import AlertPolicyRequest
-from openapi_client.model.alert_policy import AlertPolicy
+import digitalocean_client
+from digitalocean_client.api import monitoring_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.alert_policy_request import AlertPolicyRequest
+from digitalocean_client.model.alert_policy import AlertPolicy
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1352,12 +1352,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_api.MonitoringApi(api_client)
     alert_uuid = "4de7ac8b-495b-4884-9a69-1050c6793cd6" # str | A unique identifier for an alert policy.
@@ -1386,7 +1386,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Update an Alert Policy
         api_response = api_instance.update_alert_policy(alert_uuid, alert_policy_request)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling MonitoringApi->update_alert_policy: %s\n" % e)
 ```
 

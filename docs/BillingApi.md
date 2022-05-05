@@ -1,4 +1,4 @@
-# openapi_client.BillingApi
+# digitalocean_client.BillingApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -26,14 +26,14 @@ To retrieve the balances on a customer's account, send a GET request to `/v2/cus
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import billing_api
-from openapi_client.model.balance import Balance
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import billing_api
+from digitalocean_client.model.balance import Balance
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -43,12 +43,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
 
@@ -57,7 +57,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Get Customer Balance
         api_response = api_instance.get_customer_balance()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BillingApi->get_customer_balance: %s\n" % e)
 ```
 
@@ -105,13 +105,13 @@ To retrieve the invoice items for an invoice, send a GET request to `/v2/custome
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import billing_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import billing_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -121,12 +121,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
     invoice_uuid = "22737513-0ea7-4206-8ceb-98a575af7681" # str | UUID of the invoice
@@ -136,7 +136,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Invoice by UUID
         api_response = api_instance.get_invoice_by_uuid(invoice_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BillingApi->get_invoice_by_uuid: %s\n" % e)
 ```
 
@@ -187,13 +187,13 @@ To retrieve a CSV for an invoice, send a GET request to `/v2/customers/my/invoic
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import billing_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import billing_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -203,12 +203,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
     invoice_uuid = "22737513-0ea7-4206-8ceb-98a575af7681" # str | UUID of the invoice
@@ -218,7 +218,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Invoice CSV by UUID
         api_response = api_instance.get_invoice_csv_by_uuid(invoice_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BillingApi->get_invoice_csv_by_uuid: %s\n" % e)
 ```
 
@@ -269,13 +269,13 @@ To retrieve a PDF for an invoice, send a GET request to `/v2/customers/my/invoic
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import billing_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import billing_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -285,12 +285,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
     invoice_uuid = "22737513-0ea7-4206-8ceb-98a575af7681" # str | UUID of the invoice
@@ -300,7 +300,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Invoice PDF by UUID
         api_response = api_instance.get_invoice_pdf_by_uuid(invoice_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BillingApi->get_invoice_pdf_by_uuid: %s\n" % e)
 ```
 
@@ -351,14 +351,14 @@ To retrieve a summary for an invoice, send a GET request to `/v2/customers/my/in
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import billing_api
-from openapi_client.model.invoice_summary import InvoiceSummary
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import billing_api
+from digitalocean_client.model.invoice_summary import InvoiceSummary
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -368,12 +368,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
     invoice_uuid = "22737513-0ea7-4206-8ceb-98a575af7681" # str | UUID of the invoice
@@ -383,7 +383,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Invoice Summary by UUID
         api_response = api_instance.get_invoice_summary_by_uuid(invoice_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BillingApi->get_invoice_summary_by_uuid: %s\n" % e)
 ```
 
@@ -434,13 +434,13 @@ To retrieve a list of all billing history entries, send a GET request to `/v2/cu
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import billing_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import billing_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -450,12 +450,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
 
@@ -464,7 +464,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Billing History
         api_response = api_instance.list_billing_history()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BillingApi->list_billing_history: %s\n" % e)
 ```
 
@@ -512,13 +512,13 @@ To retrieve a list of all invoices, send a GET request to `/v2/customers/my/invo
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import billing_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import billing_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -528,12 +528,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = billing_api.BillingApi(api_client)
 
@@ -542,7 +542,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Invoices
         api_response = api_instance.list_invoices()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling BillingApi->list_invoices: %s\n" % e)
 ```
 

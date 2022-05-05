@@ -1,4 +1,4 @@
-# openapi_client.DatabasesApi
+# digitalocean_client.DatabasesApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -54,15 +54,15 @@ For PostgreSQL database clusters, connection pools can be used to allow a databa
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.connection_pool import ConnectionPool
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response2015 import InlineResponse2015
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.connection_pool import ConnectionPool
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response2015 import InlineResponse2015
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -72,12 +72,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -96,7 +96,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Add a New Connection Pool (PostgreSQL)
         api_response = api_instance.add_connection_pool(database_cluster_uuid, connection_pool)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->add_connection_pool: %s\n" % e)
 ```
 
@@ -148,15 +148,15 @@ To add a new database to an existing cluster, send a POST request to `/v2/databa
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.inline_response2014 import InlineResponse2014
-from openapi_client.model.error import Error
-from openapi_client.model.database import Database
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.inline_response2014 import InlineResponse2014
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.database import Database
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -166,12 +166,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -184,7 +184,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Add a New Database
         api_response = api_instance.add_database(database_cluster_uuid, database)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->add_database: %s\n" % e)
 ```
 
@@ -236,15 +236,15 @@ To add a new database user, send a POST request to `/v2/databases/$DATABASE_ID/u
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.inline_response2013 import InlineResponse2013
-from openapi_client.model.database_user import DatabaseUser
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.inline_response2013 import InlineResponse2013
+from digitalocean_client.model.database_user import DatabaseUser
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -254,12 +254,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -275,7 +275,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Add a Database User
         api_response = api_instance.add_user(database_cluster_uuid, database_user)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->add_user: %s\n" % e)
 ```
 
@@ -327,15 +327,15 @@ To create a database cluster, send a POST request to `/v2/databases`. The respon
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.inline_response2011 import InlineResponse2011
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.inline_response2011 import InlineResponse2011
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -345,12 +345,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     unknown_base_type = None # UNKNOWN_BASE_TYPE | 
@@ -360,7 +360,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Database Cluster
         api_response = api_instance.create_database_cluster(unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->create_database_cluster: %s\n" % e)
 ```
 
@@ -411,15 +411,15 @@ To create a read-only replica for a PostgreSQL or MySQL database cluster, send a
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.inline_response2012 import InlineResponse2012
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.inline_response2012 import InlineResponse2012
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -429,12 +429,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -445,7 +445,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a Read-only Replica
         api_response = api_instance.create_replica(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->create_replica: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -454,7 +454,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a Read-only Replica
         api_response = api_instance.create_replica(database_cluster_uuid, unknown_base_type=unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->create_replica: %s\n" % e)
 ```
 
@@ -506,13 +506,13 @@ To delete a specific connection pool for a PostgreSQL database cluster, send a D
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -522,12 +522,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -537,7 +537,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Connection Pool (PostgreSQL)
         api_instance.delete_connection_pool(database_cluster_uuid, pool_name)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->delete_connection_pool: %s\n" % e)
 ```
 
@@ -589,13 +589,13 @@ To delete a specific database, send a DELETE request to `/v2/databases/$DATABASE
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -605,12 +605,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -620,7 +620,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete a Database
         api_instance.delete_database(database_cluster_uuid, database_name)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->delete_database: %s\n" % e)
 ```
 
@@ -672,13 +672,13 @@ To stop an online migration, send a DELETE request to `/v2/databases/$DATABASE_I
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -688,12 +688,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -703,7 +703,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Stop an Online Migration
         api_instance.delete_online_migration(database_cluster_uuid, migration_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->delete_online_migration: %s\n" % e)
 ```
 
@@ -755,13 +755,13 @@ To remove a specific database user, send a DELETE request to `/v2/databases/$DAT
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -771,12 +771,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -786,7 +786,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Remove a Database User
         api_instance.delete_user(database_cluster_uuid, username)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->delete_user: %s\n" % e)
 ```
 
@@ -838,13 +838,13 @@ To destroy a specific database, send a DELETE request to `/v2/databases/$DATABAS
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -854,12 +854,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -868,7 +868,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Destroy a Database Cluster
         api_instance.destroy_cluster(database_cluster_uuid)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->destroy_cluster: %s\n" % e)
 ```
 
@@ -919,13 +919,13 @@ To destroy a specific read-only replica, send a DELETE request to `/v2/databases
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -935,12 +935,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -950,7 +950,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Destroy a Read-only Replica
         api_instance.destroy_replica(database_cluster_uuid, replica_name)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->destroy_replica: %s\n" % e)
 ```
 
@@ -1002,14 +1002,14 @@ To retrieve the public certificate used to secure the connection to the database
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.inline_response2001 import InlineResponse2001
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.inline_response2001 import InlineResponse2001
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1019,12 +1019,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1034,7 +1034,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve the Public Certificate
         api_response = api_instance.get_ca(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->get_ca: %s\n" % e)
 ```
 
@@ -1085,14 +1085,14 @@ To show information about an existing connection pool for a PostgreSQL database 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response2015 import InlineResponse2015
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response2015 import InlineResponse2015
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1102,12 +1102,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1118,7 +1118,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve Existing Connection Pool (PostgreSQL)
         api_response = api_instance.get_connection_pool(database_cluster_uuid, pool_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->get_connection_pool: %s\n" % e)
 ```
 
@@ -1170,14 +1170,14 @@ To show information about an existing database cluster, send a GET request to `/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.inline_response2014 import InlineResponse2014
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.inline_response2014 import InlineResponse2014
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1187,12 +1187,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1203,7 +1203,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Database
         api_response = api_instance.get_database(database_cluster_uuid, database_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->get_database: %s\n" % e)
 ```
 
@@ -1255,14 +1255,14 @@ To show information about an existing database cluster, send a GET request to `/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.inline_response2011 import InlineResponse2011
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.inline_response2011 import InlineResponse2011
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1272,12 +1272,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1287,7 +1287,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Database Cluster
         api_response = api_instance.get_database_cluster(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->get_database_cluster: %s\n" % e)
 ```
 
@@ -1338,14 +1338,14 @@ To retrieve the configured eviction policy for an existing Redis cluster, send a
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.eviction_policy import EvictionPolicy
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.eviction_policy import EvictionPolicy
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1355,12 +1355,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1370,7 +1370,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve the Eviction Policy for a Redis Cluster
         api_response = api_instance.get_eviction_policy(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->get_eviction_policy: %s\n" % e)
 ```
 
@@ -1421,14 +1421,14 @@ To retrieve the status of an online migration, send a GET request to `/v2/databa
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
-from openapi_client.model.online_migration import OnlineMigration
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.online_migration import OnlineMigration
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1438,12 +1438,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1453,7 +1453,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve the Status of an Online Migration
         api_response = api_instance.get_migration_status(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->get_migration_status: %s\n" % e)
 ```
 
@@ -1504,14 +1504,14 @@ To show information about an existing database replica, send a GET request to `/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.inline_response2012 import InlineResponse2012
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.inline_response2012 import InlineResponse2012
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1521,12 +1521,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1537,7 +1537,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Read-only Replica
         api_response = api_instance.get_replica(database_cluster_uuid, replica_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->get_replica: %s\n" % e)
 ```
 
@@ -1589,14 +1589,14 @@ To retrieve the configured SQL modes for an existing MySQL cluster, send a GET r
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
-from openapi_client.model.sql_mode import SqlMode
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.sql_mode import SqlMode
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1606,12 +1606,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1621,7 +1621,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve the SQL Modes for a MySQL Cluster
         api_response = api_instance.get_sql_mode(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->get_sql_mode: %s\n" % e)
 ```
 
@@ -1672,14 +1672,14 @@ To show information about an existing database user, send a GET request to `/v2/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.inline_response2013 import InlineResponse2013
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.inline_response2013 import InlineResponse2013
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1689,12 +1689,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1705,7 +1705,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Database User
         api_response = api_instance.get_user(database_cluster_uuid, username)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->get_user: %s\n" % e)
 ```
 
@@ -1757,14 +1757,14 @@ To list all of the connection pools available to a PostgreSQL database cluster, 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.connection_pools import ConnectionPools
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.connection_pools import ConnectionPools
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1774,12 +1774,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1789,7 +1789,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Connection Pools (PostgreSQL)
         api_response = api_instance.list_connection_pools(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->list_connection_pools: %s\n" % e)
 ```
 
@@ -1840,14 +1840,14 @@ To list all of the available backups of a PostgreSQL or MySQL database cluster, 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
-from openapi_client.model.inline_response2002 import InlineResponse2002
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_response2002 import InlineResponse2002
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1857,12 +1857,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -1872,7 +1872,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Backups for a Database Cluster
         api_response = api_instance.list_database_backups(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->list_database_backups: %s\n" % e)
 ```
 
@@ -1923,13 +1923,13 @@ To list all of the database clusters available on your account, send a GET reque
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1939,12 +1939,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     tag_name = "production" # str | Limits the results to database clusters with a specific tag. (optional)
@@ -1955,7 +1955,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Database Clusters
         api_response = api_instance.list_database_clusters(tag_name=tag_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->list_database_clusters: %s\n" % e)
 ```
 
@@ -2006,13 +2006,13 @@ To list all of a database cluster's firewall rules (known as \"trusted sources\"
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2022,12 +2022,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2037,7 +2037,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Firewall Rules (Trusted Sources) for a Database Cluster
         api_response = api_instance.list_database_firewalls(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->list_database_firewalls: %s\n" % e)
 ```
 
@@ -2088,13 +2088,13 @@ To list all of the databases in a clusters, send a GET request to `/v2/databases
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2104,12 +2104,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2119,7 +2119,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Databases
         api_response = api_instance.list_databases(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->list_databases: %s\n" % e)
 ```
 
@@ -2170,13 +2170,13 @@ To list all of the read-only replicas associated with a database cluster, send a
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2186,12 +2186,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2201,7 +2201,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Read-only Replicas
         api_response = api_instance.list_replicas(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->list_replicas: %s\n" % e)
 ```
 
@@ -2252,13 +2252,13 @@ To list all of the users for your database cluster, send a GET request to `/v2/d
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2268,12 +2268,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2283,7 +2283,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List all Database Users
         api_response = api_instance.list_users(database_cluster_uuid)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->list_users: %s\n" % e)
 ```
 
@@ -2334,15 +2334,15 @@ To reset the password for a database user, send a POST request to `/v2/databases
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.inline_response2013 import InlineResponse2013
-from openapi_client.model.inline_object3 import InlineObject3
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.inline_response2013 import InlineResponse2013
+from digitalocean_client.model.inline_object3 import InlineObject3
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2352,12 +2352,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2373,7 +2373,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Reset a Database User's Password or Authentication Method
         api_response = api_instance.reset_auth(database_cluster_uuid, username, inline_object3)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->reset_auth: %s\n" % e)
 ```
 
@@ -2426,14 +2426,14 @@ To migrate a database cluster to a new region, send a `PUT` request to `/v2/data
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
-from openapi_client.model.inline_object1 import InlineObject1
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_object1 import InlineObject1
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2443,12 +2443,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2460,7 +2460,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Migrate a Database Cluster to a New Region
         api_instance.update_database_cluster(database_cluster_uuid, inline_object1)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->update_database_cluster: %s\n" % e)
 ```
 
@@ -2512,14 +2512,14 @@ To resize a database cluster, send a PUT request to `/v2/databases/$DATABASE_ID/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.database_cluster_resize import DatabaseClusterResize
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.database_cluster_resize import DatabaseClusterResize
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2529,12 +2529,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2547,7 +2547,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Resize a Database Cluster
         api_instance.update_database_cluster_size(database_cluster_uuid, database_cluster_resize)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->update_database_cluster_size: %s\n" % e)
 ```
 
@@ -2599,14 +2599,14 @@ To update a database cluster's firewall rules (known as \"trusted sources\" in t
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
-from openapi_client.model.inline_object2 import InlineObject2
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.inline_object2 import InlineObject2
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2616,12 +2616,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2640,7 +2640,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update Firewall Rules (Trusted Sources) for a Database
         api_instance.update_database_firewall(database_cluster_uuid, inline_object2)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->update_database_firewall: %s\n" % e)
 ```
 
@@ -2692,14 +2692,14 @@ To configure an eviction policy for an existing Redis cluster, send a PUT reques
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.eviction_policy import EvictionPolicy
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.eviction_policy import EvictionPolicy
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2709,12 +2709,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2726,7 +2726,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Configure the Eviction Policy for a Redis Cluster
         api_instance.update_eviction_policy(database_cluster_uuid, eviction_policy)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->update_eviction_policy: %s\n" % e)
 ```
 
@@ -2778,14 +2778,14 @@ To configure the window when automatic maintenance should be performed for a dat
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.database_maintenance_window import DatabaseMaintenanceWindow
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.database_maintenance_window import DatabaseMaintenanceWindow
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2795,12 +2795,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2813,7 +2813,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Configure a Database Cluster's Maintenance Window
         api_instance.update_maintenance_window(database_cluster_uuid, database_maintenance_window)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->update_maintenance_window: %s\n" % e)
 ```
 
@@ -2865,15 +2865,15 @@ To start an online migration, send a PUT request to `/v2/databases/$DATABASE_ID/
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
-from openapi_client.model.source_database import SourceDatabase
-from openapi_client.model.online_migration import OnlineMigration
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.source_database import SourceDatabase
+from digitalocean_client.model.online_migration import OnlineMigration
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2883,12 +2883,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2902,7 +2902,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Start an Online Migration
         api_response = api_instance.update_online_migration(database_cluster_uuid, source_database)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->update_online_migration: %s\n" % e)
 ```
 
@@ -2954,14 +2954,14 @@ To configure the SQL modes for an existing MySQL cluster, send a PUT request to 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import databases_api
-from openapi_client.model.error import Error
-from openapi_client.model.sql_mode import SqlMode
+import digitalocean_client
+from digitalocean_client.api import databases_api
+from digitalocean_client.model.error import Error
+from digitalocean_client.model.sql_mode import SqlMode
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -2971,12 +2971,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = databases_api.DatabasesApi(api_client)
     database_cluster_uuid = "9cc10173-e9ea-4176-9dbc-a4cee4c4ff30" # str | A unique identifier for a database cluster.
@@ -2988,7 +2988,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Update SQL Mode for a Cluster
         api_instance.update_sql_mode(database_cluster_uuid, sql_mode)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DatabasesApi->update_sql_mode: %s\n" % e)
 ```
 

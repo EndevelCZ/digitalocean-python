@@ -1,4 +1,4 @@
-# openapi_client.DropletsApi
+# digitalocean_client.DropletsApi
 
 All URIs are relative to *https://api.digitalocean.com*
 
@@ -35,14 +35,14 @@ To create a new Droplet, send a POST request to `/v2/droplets` setting the requi
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.unknownbasetype import UNKNOWNBASETYPE
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.unknownbasetype import UNKNOWNBASETYPE
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -52,12 +52,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     unknown_base_type = None # UNKNOWN_BASE_TYPE |  (optional)
@@ -68,7 +68,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Create a New Droplet
         api_response = api_instance.create_droplet(unknown_base_type=unknown_base_type)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->create_droplet: %s\n" % e)
 ```
 
@@ -118,13 +118,13 @@ To delete a Droplet, send a DELETE request to `/v2/droplets/$DROPLET_ID`.  A suc
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -134,12 +134,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -148,7 +148,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Delete an Existing Droplet
         api_instance.destroy_droplet(droplet_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->destroy_droplet: %s\n" % e)
 ```
 
@@ -199,13 +199,13 @@ To delete **all** Droplets assigned to a specific tag, include the `tag_name` qu
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -215,12 +215,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     tag_name = "env:test" # str | Specifies Droplets to be deleted by tag.
@@ -229,7 +229,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Deleting Droplets by Tag
         api_instance.destroy_droplets_by_tag(tag_name)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->destroy_droplets_by_tag: %s\n" % e)
 ```
 
@@ -280,13 +280,13 @@ To destroy a Droplet along with all of its associated resources, send a DELETE r
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -296,12 +296,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -311,7 +311,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Destroy a Droplet and All of its Associated Resources (Dangerous)
         api_instance.destroy_with_associated_resources_dangerous(droplet_id, x_dangerous)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->destroy_with_associated_resources_dangerous: %s\n" % e)
 ```
 
@@ -363,13 +363,13 @@ To destroy a Droplet along with a sub-set of its associated resources, send a DE
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -379,12 +379,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -393,7 +393,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Selectively Destroy a Droplet and its Associated Resources
         api_instance.destroy_with_associated_resources_selective(droplet_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->destroy_with_associated_resources_selective: %s\n" % e)
 ```
 
@@ -444,14 +444,14 @@ To check on the status of a request to destroy a Droplet with its associated res
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.associated_resource_status import AssociatedResourceStatus
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.associated_resource_status import AssociatedResourceStatus
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -461,12 +461,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -476,7 +476,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Check Status of a Droplet Destroy with Associated Resources Request
         api_response = api_instance.get_destroy_with_associated_resources_status(droplet_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->get_destroy_with_associated_resources_status: %s\n" % e)
 ```
 
@@ -527,13 +527,13 @@ To show information about an individual Droplet, send a GET request to `/v2/drop
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -543,12 +543,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -558,7 +558,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # Retrieve an Existing Droplet
         api_response = api_instance.get_droplet(droplet_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->get_droplet: %s\n" % e)
 ```
 
@@ -609,14 +609,14 @@ To retrieve a list of all Droplets that are co-located on the same physical hard
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.neighbor_ids import NeighborIds
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.neighbor_ids import NeighborIds
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -626,12 +626,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
 
@@ -640,7 +640,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Droplet Neighbors
         api_response = api_instance.list_all_droplet_neighbors_ids()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_all_droplet_neighbors_ids: %s\n" % e)
 ```
 
@@ -688,13 +688,13 @@ To list all Droplets in your account, send a GET request to `/v2/droplets`.  The
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -704,12 +704,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     per_page = 2 # int | Number of items returned per page (optional) if omitted the server will use the default value of 20
@@ -722,7 +722,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Droplets
         api_response = api_instance.list_all_droplets(per_page=per_page, page=page, tag_name=tag_name)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_all_droplets: %s\n" % e)
 ```
 
@@ -774,13 +774,13 @@ To list the associated billable resources that can be destroyed along with a Dro
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -790,12 +790,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -805,7 +805,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Associated Resources for a Droplet
         api_response = api_instance.list_droplet_associated_resources(droplet_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_droplet_associated_resources: %s\n" % e)
 ```
 
@@ -856,13 +856,13 @@ To retrieve any backups associated with a Droplet, send a GET request to `/v2/dr
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -872,12 +872,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -889,7 +889,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Backups for a Droplet
         api_response = api_instance.list_droplet_backups(droplet_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_droplet_backups: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -898,7 +898,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Backups for a Droplet
         api_response = api_instance.list_droplet_backups(droplet_id, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_droplet_backups: %s\n" % e)
 ```
 
@@ -951,13 +951,13 @@ To retrieve a list of all firewalls available to a Droplet, send a GET request t
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -967,12 +967,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -984,7 +984,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List all Firewalls Applied to a Droplet
         api_response = api_instance.list_droplet_firewalls(droplet_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_droplet_firewalls: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -993,7 +993,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List all Firewalls Applied to a Droplet
         api_response = api_instance.list_droplet_firewalls(droplet_id, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_droplet_firewalls: %s\n" % e)
 ```
 
@@ -1046,13 +1046,13 @@ To retrieve a list of all kernels available to a Droplet, send a GET request to 
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1062,12 +1062,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -1079,7 +1079,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Available Kernels for a Droplet
         api_response = api_instance.list_droplet_kernels(droplet_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_droplet_kernels: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1088,7 +1088,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List All Available Kernels for a Droplet
         api_response = api_instance.list_droplet_kernels(droplet_id, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_droplet_kernels: %s\n" % e)
 ```
 
@@ -1141,13 +1141,13 @@ To retrieve a list of any \"neighbors\" (i.e. Droplets that are co-located on th
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1157,12 +1157,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -1172,7 +1172,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Neighbors for a Droplet
         api_response = api_instance.list_droplet_neighbors(droplet_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_droplet_neighbors: %s\n" % e)
 ```
 
@@ -1223,13 +1223,13 @@ To retrieve the snapshots that have been created from a Droplet, send a GET requ
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1239,12 +1239,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -1256,7 +1256,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Snapshots for a Droplet
         api_response = api_instance.list_droplet_snapshots(droplet_id)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_droplet_snapshots: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1265,7 +1265,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         # List Snapshots for a Droplet
         api_response = api_instance.list_droplet_snapshots(droplet_id, per_page=per_page, page=page)
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->list_droplet_snapshots: %s\n" % e)
 ```
 
@@ -1318,13 +1318,13 @@ If the status of a request to destroy a Droplet with its associated resources re
 
 ```python
 import time
-import openapi_client
-from openapi_client.api import droplets_api
-from openapi_client.model.error import Error
+import digitalocean_client
+from digitalocean_client.api import droplets_api
+from digitalocean_client.model.error import Error
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.digitalocean.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     host = "https://api.digitalocean.com"
 )
 
@@ -1334,12 +1334,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: bearer_auth
-configuration = openapi_client.Configuration(
+configuration = digitalocean_client.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with digitalocean_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = droplets_api.DropletsApi(api_client)
     droplet_id = 3164444 # int | A unique identifier for a Droplet instance.
@@ -1348,7 +1348,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         # Retry a Droplet Destroy with Associated Resources Request
         api_instance.retry_destroy_with_associated_resource(droplet_id)
-    except openapi_client.ApiException as e:
+    except digitalocean_client.ApiException as e:
         print("Exception when calling DropletsApi->retry_destroy_with_associated_resource: %s\n" % e)
 ```
 
